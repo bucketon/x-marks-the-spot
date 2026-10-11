@@ -1,0 +1,106 @@
+[gd_scene load_steps=12 format=3 uid="uid://cbw3aadmra4qe"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_5n85r"]
+[ext_resource type="Texture2D" uid="uid://dcrlu46xm21jr" path="res://resources/radial.png" id="2_h4jp6"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_rgx2l"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_uo2s0"]
+
+[sub_resource type="Environment" id="Environment_0dvor"]
+background_mode = 1
+background_color = Color(0.409047, 0.578269, 1, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_61vq8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t4q55"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_gths5"]
+colors = PackedColorArray(1, 0.905882, 0, 1, 1, 0.294118, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ha6oe"]
+gradient = SubResource("Gradient_gths5")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hyugj"]
+particle_flag_rotate_y = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 1.3
+emission_ring_inner_radius = 0.0
+angle_min = -720.0
+angle_max = 720.0
+direction = Vector3(0, 0, 0)
+spread = 11.972
+gravity = Vector3(0, -4, 0)
+attractor_interaction_enabled = false
+color = Color(0.830392, 0.926758, 1.54018e-06, 1)
+color_ramp = SubResource("GradientTexture1D_ha6oe")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+turbulence_enabled = true
+turbulence_noise_strength = 2.04
+turbulence_noise_scale = 0.217
+turbulence_noise_speed = Vector3(2, 2, 2)
+turbulence_noise_speed_random = 0.58
+turbulence_influence_max = 0.246
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fbc7u"]
+size = Vector2(0.05, 0.05)
+orientation = 0
+
+[node name="player" type="CharacterBody3D"]
+script = ExtResource("1_5n85r")
+shake_amt = 0.05
+
+[node name="pivot" type="Node3D" parent="."]
+
+[node name="character" type="Node3D" parent="pivot"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="pivot/character"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.126825, 0)
+layers = 262144
+mesh = SubResource("CapsuleMesh_rgx2l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.667469, 0)
+shape = SubResource("SphereShape3D_uo2s0")
+
+[node name="camera" type="Camera3D" parent="."]
+cull_mask = 262143
+environment = SubResource("Environment_0dvor")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12656, 0)
+shape = SubResource("CapsuleShape3D_61vq8")
+
+[node name="radial" type="TextureProgressBar" parent="."]
+offset_left = 525.0
+offset_top = 273.0
+offset_right = 625.0
+offset_bottom = 373.0
+max_value = 1.0
+step = 0.01
+fill_mode = 4
+texture_progress = ExtResource("2_h4jp6")
+
+[node name="victory" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.52207, 0)
+layers = 131072
+material_override = SubResource("StandardMaterial3D_t4q55")
+emitting = false
+amount = 500
+lifetime = 2.63
+one_shot = true
+explosiveness = 0.31
+randomness = 0.51
+visibility_aabb = AABB(-1.50946, -3.69443, -1.27238, 3.14962, 4.94236, 2.68263)
+trail_lifetime = 0.01
+process_material = SubResource("ParticleProcessMaterial_hyugj")
+draw_pass_1 = SubResource("PlaneMesh_fbc7u")
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
+[connection signal="area_exited" from="Area3D" to="." method="_on_area_3d_area_exited"]

@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://dokgy7tyutpiq"]
+
+[ext_resource type="PackedScene" uid="uid://b7j642akrgyes" path="res://level_manager.tscn" id="1_da03a"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_right = 1149.0
+offset_bottom = 646.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "
+
+
+[center]Thank you for playing X Marks the Spot!
+
+Executive Producer: Zac Bauermeister
+Game Director: Zac Bauermeister
+Lead Artist: Zac Bauermeister
+Game Design: Zac Bauermeister
+Programming: Zac Bauermeister
+Sound Design: Zac Bauermeister
+Composer: Zac Bauermeister
+
+And You, for playing![/center]"
+scroll_active = false
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Button" type="Button" parent="PanelContainer/PanelContainer"]
+layout_mode = 2
+text = "Back to Main Menu"
+
+[node name="LevelManager" parent="." instance=ExtResource("1_da03a")]
+
+[connection signal="pressed" from="PanelContainer/PanelContainer/Button" to="LevelManager" method="goToMainMenu"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgue0108h6at7"]
+
+[ext_resource type="Script" path="res://popupDisplay.gd" id="1_xok3r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1jon6"]
+bg_color = Color(0, 0.496137, 0.25013, 1)
+
+[node name="winPopup" type="PanelContainer"]
+offset_left = 273.0
+offset_top = 121.0
+offset_right = 873.0
+offset_bottom = 521.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1jon6")
+script = ExtResource("1_xok3r")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 2
+text = "You found the secret spot!"
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Continue"

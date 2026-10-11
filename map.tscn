@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://m6ehkiqky0vd"]
+
+[ext_resource type="Script" path="res://map.gd" id="1_eu540"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_1kt8l"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_qxy7c"]
+viewport_path = NodePath("SubViewport")
+
+[node name="map" type="Node2D"]
+script = ExtResource("1_eu540")
+
+[node name="minimap" type="MeshInstance2D" parent="."]
+position = Vector2(128, 128)
+scale = Vector2(255.099, 256)
+mesh = SubResource("QuadMesh_1kt8l")
+texture = SubResource("ViewportTexture_qxy7c")
+
+[node name="bigmap" type="MeshInstance2D" parent="."]
+visible = false
+position = Vector2(580, 323)
+scale = Vector2(645.259, 647.538)
+mesh = SubResource("QuadMesh_1kt8l")
+texture = SubResource("ViewportTexture_qxy7c")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(500, 500)
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 28, 0)
+cull_mask = 655359
+projection = 1
+current = true
+size = 60.381

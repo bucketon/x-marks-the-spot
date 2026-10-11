@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://chvf7mbkfb878"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_s54fu"]
+radius = 4.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_urfqm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j2y4q"]
+albedo_color = Color(0.899965, 0.548962, 5.77569e-07, 1)
+
+[node name="Area3D" type="Area3D"]
+
+[node name="goal" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_s54fu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 6, 0, 0, 0)
+layers = 524288
+mesh = SubResource("CylinderMesh_urfqm")
+surface_material_override/0 = SubResource("StandardMaterial3D_j2y4q")
