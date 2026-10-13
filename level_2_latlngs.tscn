@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://hkbv57uc4cqs"]
+
+[ext_resource type="PackedScene" uid="uid://dlgglbiwa7gnn" path="res://level_base.tscn" id="1_6epyw"]
+[ext_resource type="PackedScene" uid="uid://cv6cvc3b2vsyi" path="res://latlng.tscn" id="2_l3yut"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ykuof"]
+albedo_color = Color(0.051971, 0.051971, 0.051971, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_1xxox"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_ykuof")
+text = "A, 06"
+font_size = 26
+
+[sub_resource type="TextMesh" id="TextMesh_10vmh"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_ykuof")
+text = "E, 02"
+font_size = 26
+
+[sub_resource type="TextMesh" id="TextMesh_glf8d"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_ykuof")
+text = "B, 06"
+font_size = 26
+
+[node name="main" instance=ExtResource("1_6epyw")]
+
+[node name="goal" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, -16)
+
+[node name="MeshInstance3D" parent="." index="7" instance=ExtResource("2_l3yut")]
+transform = Transform3D(0.5, 0, 0.866025, 0, 0.6, 0, -0.866025, 0, 0.5, -8, -0.429875, 8)
+
+[node name="MeshInstance3D2" parent="." index="8" instance=ExtResource("2_l3yut")]
+transform = Transform3D(0.258819, 0, -0.965926, 0, 0.6, 0, 0.965926, 0, 0.258819, 24, -0.429875, -16)
+
+[node name="MeshInstance3D" parent="MeshInstance3D2" index="0"]
+mesh = SubResource("TextMesh_1xxox")
+
+[node name="MeshInstance3D3" parent="." index="9" instance=ExtResource("2_l3yut")]
+transform = Transform3D(0.986286, 0, 0.165048, 0, 0.6, 0, -0.165048, 0, 0.986286, -8, -0.43, 16)
+
+[node name="MeshInstance3D" parent="MeshInstance3D3" index="0"]
+mesh = SubResource("TextMesh_10vmh")
+
+[node name="MeshInstance3D4" parent="." index="10" instance=ExtResource("2_l3yut")]
+transform = Transform3D(0.676876, 0, -0.736097, 0, 0.6, 0, 0.736097, 0, 0.676876, 16, -0.43, -16)
+
+[node name="MeshInstance3D" parent="MeshInstance3D4" index="0"]
+mesh = SubResource("TextMesh_glf8d")
+
+[connection signal="pressed" from="HUD/winPopup/PanelContainer/Button" to="LevelManager" method="progress"]
+[connection signal="pressed" from="HUD/losePopup/PanelContainer/Button" to="LevelManager" method="retry"]
+
+[editable path="HUD/winPopup"]
+[editable path="HUD/losePopup"]
+[editable path="MeshInstance3D2"]
+[editable path="MeshInstance3D3"]
+[editable path="MeshInstance3D4"]
