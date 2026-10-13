@@ -1,13 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://3pbqyqrnxsn3"]
+[gd_scene load_steps=12 format=3 uid="uid://dlgglbiwa7gnn"]
 
-[ext_resource type="Texture2D" uid="uid://k3ffn52ybs1n" path="res://resources/grass03.png" id="1_skyne"]
-[ext_resource type="PackedScene" uid="uid://cbw3aadmra4qe" path="res://player.tscn" id="2_5t8op"]
-[ext_resource type="PackedScene" uid="uid://dqri7slei5qoe" path="res://rock.tscn" id="3_onfhi"]
-[ext_resource type="PackedScene" uid="uid://chvf7mbkfb878" path="res://goal.tscn" id="4_8g344"]
-[ext_resource type="PackedScene" uid="uid://m6ehkiqky0vd" path="res://map.tscn" id="5_ohrfk"]
-[ext_resource type="PackedScene" uid="uid://cgue0108h6at7" path="res://popup.tscn" id="6_wmvdq"]
-[ext_resource type="PackedScene" uid="uid://b13x7wdb5cynq" path="res://lose_popup.tscn" id="7_vjdgj"]
-[ext_resource type="PackedScene" uid="uid://b7j642akrgyes" path="res://level_manager.tscn" id="8_qg4pm"]
+[ext_resource type="Texture2D" uid="uid://k3ffn52ybs1n" path="res://resources/grass03.png" id="1_na7lp"]
+[ext_resource type="PackedScene" uid="uid://cbw3aadmra4qe" path="res://player.tscn" id="2_84uvl"]
+[ext_resource type="PackedScene" uid="uid://chvf7mbkfb878" path="res://goal.tscn" id="4_chwl2"]
+[ext_resource type="PackedScene" uid="uid://m6ehkiqky0vd" path="res://map.tscn" id="5_iqilm"]
+[ext_resource type="PackedScene" uid="uid://cgue0108h6at7" path="res://popup.tscn" id="6_pb3wa"]
+[ext_resource type="PackedScene" uid="uid://b13x7wdb5cynq" path="res://lose_popup.tscn" id="7_ru8oh"]
+[ext_resource type="PackedScene" uid="uid://b7j642akrgyes" path="res://level_manager.tscn" id="8_ivdi8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_q7fcr"]
 size = Vector3(120, 10, 1)
@@ -22,11 +21,8 @@ size = Vector3(120, 1, 120)
 albedo_color = Color(0, 0.334308, 0.204726, 1)
 roughness_texture_channel = 4
 normal_enabled = true
-normal_texture = ExtResource("1_skyne")
+normal_texture = ExtResource("1_na7lp")
 uv1_scale = Vector3(10, 10, 10)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gluno"]
-bg_color = Color(0.303233, 0.303233, 0.303233, 1)
 
 [node name="main" type="Node3D"]
 
@@ -63,20 +59,13 @@ transform = Transform3D(1, 0, 0, 0, -0.258819, 0.965926, 0, -0.965926, -0.258819
 light_energy = 2.586
 shadow_enabled = true
 
-[node name="player" parent="." instance=ExtResource("2_5t8op")]
+[node name="player" parent="." instance=ExtResource("2_84uvl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="rock" parent="." instance=ExtResource("3_onfhi")]
-
-[node name="rock2" parent="." instance=ExtResource("3_onfhi")]
-transform = Transform3D(-0.173205, 0, 0.1, 0, 0.2, 0, -0.1, 0, -0.173205, 0, 0, -24)
-
-[node name="goal" parent="." instance=ExtResource("4_8g344")]
+[node name="goal" parent="." instance=ExtResource("4_chwl2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -16)
 
 [node name="HUD" type="Node2D" parent="."]
-
-[node name="map" parent="HUD" instance=ExtResource("5_ohrfk")]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HUD"]
 offset_left = 438.0
@@ -86,42 +75,23 @@ offset_bottom = 57.0
 text = "Q: Open Map, LMB: Plant Flag"
 metadata/_edit_use_anchors_ = true
 
-[node name="winPopup" parent="HUD" instance=ExtResource("6_wmvdq")]
+[node name="map" parent="HUD" instance=ExtResource("5_iqilm")]
+
+[node name="winPopup" parent="HUD" instance=ExtResource("6_pb3wa")]
 visible = false
 offset_left = 274.0
 offset_top = 122.0
 offset_right = 874.0
 offset_bottom = 522.0
 
-[node name="losePopup" parent="HUD" instance=ExtResource("7_vjdgj")]
+[node name="losePopup" parent="HUD" instance=ExtResource("7_ru8oh")]
 visible = false
 offset_left = 275.0
 offset_top = 120.0
 offset_right = 875.0
 offset_bottom = 520.0
 
-[node name="tutorial" type="PanelContainer" parent="HUD"]
-offset_left = 276.0
-offset_top = 120.0
-offset_right = 874.0
-offset_bottom = 520.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_gluno")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="HUD/tutorial"]
-layout_mode = 2
-text = "Welcome to X Marks the Spot!
-
-In this game, you must use your map to figure out the location of a hidden zone, and plant your flag there! If you get it wrong, you have to start the level over, whereas if you get it right you get to move on to the next level! Your map shows an overhead view of the island, but might not show the entire area, and might be missing some features (or have extra information added that isn't just what an overhead view would show...). Good luck!"
-
-[node name="PanelContainer" type="PanelContainer" parent="HUD/tutorial"]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="HUD/tutorial/PanelContainer"]
-layout_mode = 2
-size_flags_vertical = 8
-text = "Continue"
-
-[node name="LevelManager" parent="." instance=ExtResource("8_qg4pm")]
+[node name="LevelManager" parent="." instance=ExtResource("8_ivdi8")]
 
 [connection signal="defeat" from="player" to="HUD/losePopup" method="showPopup"]
 [connection signal="mapClose" from="player" to="HUD/map" method="closeMap"]
@@ -129,9 +99,6 @@ text = "Continue"
 [connection signal="victory" from="player" to="HUD/winPopup" method="showPopup"]
 [connection signal="pressed" from="HUD/winPopup/PanelContainer/Button" to="LevelManager" method="progress"]
 [connection signal="pressed" from="HUD/losePopup/PanelContainer/Button" to="LevelManager" method="retry"]
-[connection signal="ready" from="HUD/tutorial" to="player" method="release_mouse"]
-[connection signal="pressed" from="HUD/tutorial/PanelContainer/Button" to="player" method="capture_mouse"]
-[connection signal="pressed" from="HUD/tutorial/PanelContainer/Button" to="HUD/tutorial" method="hide"]
 
 [editable path="HUD/winPopup"]
 [editable path="HUD/losePopup"]

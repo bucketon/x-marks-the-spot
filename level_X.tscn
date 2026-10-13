@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://bn4q5wedx124i"]
+
+[ext_resource type="PackedScene" uid="uid://dlgglbiwa7gnn" path="res://level_base.tscn" id="1_rwpei"]
+[ext_resource type="PackedScene" uid="uid://cgue0108h6at7" path="res://popup.tscn" id="2_t4uhy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_chbhc"]
+bg_color = Color(0.201285, 0.619613, 0.976066, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vhqr1"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mnms1"]
+material = SubResource("StandardMaterial3D_vhqr1")
+
+[node name="main" instance=ExtResource("1_rwpei")]
+
+[node name="goal" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 15)
+
+[node name="tutorial" parent="HUD" index="4" instance=ExtResource("2_t4uhy")]
+theme_override_styles/panel = SubResource("StyleBoxFlat_chbhc")
+
+[node name="RichTextLabel" parent="HUD/tutorial" index="0"]
+bbcode_enabled = true
+text = "Welcome to X Marks the Spot!
+
+
+You need to find the [color=\"yellow\"]yellow goal[/color] location marked on your map! See if you can find some sort of reference point to help locate it.
+
+Once you think you're standing on the [color=\"yellow\"]yellow goal[/color], plant your flag!"
+
+[node name="X" type="Node3D" parent="." index="7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0306, -0.761076, 15.1249)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="X" index="0"]
+transform = Transform3D(10.92, 0, 0, 0, 1, 0, 0, 0, 1.9, 0, 0, 0)
+mesh = SubResource("BoxMesh_mnms1")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="X" index="1"]
+transform = Transform3D(2.29798, 0, -1.85745, 0, 1, 0, 10.6755, 0, 0.399832, 0, 0, 0)
+mesh = SubResource("BoxMesh_mnms1")
+skeleton = NodePath("../..")
+
+[connection signal="pressed" from="HUD/winPopup/PanelContainer/Button" to="LevelManager" method="progress"]
+[connection signal="pressed" from="HUD/losePopup/PanelContainer/Button" to="LevelManager" method="retry"]
+[connection signal="ready" from="HUD/tutorial" to="player" method="release_mouse"]
+[connection signal="pressed" from="HUD/tutorial/PanelContainer/Button" to="player" method="capture_mouse"]
+[connection signal="pressed" from="HUD/tutorial/PanelContainer/Button" to="HUD/tutorial" method="hide"]
+
+[editable path="HUD/winPopup"]
+[editable path="HUD/losePopup"]
+[editable path="HUD/tutorial"]

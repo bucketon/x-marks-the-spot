@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cv6cvc3b2vsyi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e7teg"]
+albedo_color = Color(0.475659, 0.289571, 0.149007, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o3urh"]
+material = SubResource("StandardMaterial3D_e7teg")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ykuof"]
+albedo_color = Color(0.051971, 0.051971, 0.051971, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_p7xig"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_ykuof")
+text = "E, 03"
+font_size = 26
+
+[node name="MeshInstance3D" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 0.6, 0, 0, 0, 1, 0, 0, 0)
+layers = 131072
+mesh = SubResource("BoxMesh_o3urh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.519747, 0)
+layers = 131072
+mesh = SubResource("TextMesh_p7xig")

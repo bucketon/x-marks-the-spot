@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddrxisq0awqjl"]
+
+[ext_resource type="PackedScene" uid="uid://dlgglbiwa7gnn" path="res://level_base.tscn" id="1_f5mto"]
+[ext_resource type="PackedScene" uid="uid://cneidob1kh68o" path="res://projector.tscn" id="2_r000g"]
+[ext_resource type="PackedScene" uid="uid://8d5orpv1u0ek" path="res://invisible_rock.tscn" id="3_yjye6"]
+
+[node name="main" instance=ExtResource("1_f5mto")]
+
+[node name="goal" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 11)
+
+[node name="projector" parent="." index="7" instance=ExtResource("2_r000g")]
+transform = Transform3D(-5.96046e-08, 0, 1, 0, 1, 0, -1, 0, -5.96046e-08, 9, 0, -11)
+
+[node name="rock" parent="." index="8" instance=ExtResource("3_yjye6")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -19, 1, 19)
+
+[editable path="HUD/winPopup"]
+[editable path="HUD/losePopup"]
