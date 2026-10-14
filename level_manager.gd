@@ -41,6 +41,7 @@ func saveData():
 	var save_file = FileAccess.open("user://savegame.save", FileAccess.WRITE)
 	save_file.store_line(JSON.stringify(save_dict))
 	
+
 func loadData():
 	if not FileAccess.file_exists("user://savegame.save"):
 		return # Error! We don't have a save to load.

@@ -50,9 +50,6 @@ transform = Transform3D(0.676876, 0, -0.736097, 0, 0.6, 0, 0.736097, 0, 0.676876
 [node name="MeshInstance3D" parent="MeshInstance3D4" index="0"]
 mesh = SubResource("TextMesh_glf8d")
 
-[connection signal="pressed" from="HUD/winPopup/PanelContainer/Button" to="LevelManager" method="progress"]
-[connection signal="pressed" from="HUD/losePopup/PanelContainer/Button" to="LevelManager" method="retry"]
-
 [editable path="HUD/winPopup"]
 [editable path="HUD/losePopup"]
 [editable path="MeshInstance3D2"]

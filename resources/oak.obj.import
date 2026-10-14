@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://wbqblrvd4m2c"
+path="res://.godot/imported/oak.obj-aad3d6b39bb726e07765f368d77ba4ed.mesh"
+
+[deps]
+
+files=["res://.godot/imported/oak.obj-aad3d6b39bb726e07765f368d77ba4ed.mesh"]
+
+source_file="res://resources/oak.obj"
+dest_files=["res://.godot/imported/oak.obj-aad3d6b39bb726e07765f368d77ba4ed.mesh", "res://.godot/imported/oak.obj-aad3d6b39bb726e07765f368d77ba4ed.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -30,6 +30,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 
 func capture_mouse() -> void:
+	print("captured")
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	mouse_captured = true
 	

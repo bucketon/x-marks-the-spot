@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bn4q5wedx124i"]
+[gd_scene load_steps=7 format=3 uid="uid://bn4q5wedx124i"]
 
 [ext_resource type="PackedScene" uid="uid://dlgglbiwa7gnn" path="res://level_base.tscn" id="1_rwpei"]
 [ext_resource type="PackedScene" uid="uid://cgue0108h6at7" path="res://popup.tscn" id="2_t4uhy"]
+[ext_resource type="ArrayMesh" uid="uid://wbqblrvd4m2c" path="res://resources/oak.obj" id="3_io5bs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_chbhc"]
 bg_color = Color(0.201285, 0.619613, 0.976066, 1)
@@ -19,6 +20,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 15)
 
 [node name="tutorial" parent="HUD" index="4" instance=ExtResource("2_t4uhy")]
 theme_override_styles/panel = SubResource("StyleBoxFlat_chbhc")
+level = 1
 
 [node name="RichTextLabel" parent="HUD/tutorial" index="0"]
 bbcode_enabled = true
@@ -42,9 +44,15 @@ transform = Transform3D(2.29798, 0, -1.85745, 0, 1, 0, 10.6755, 0, 0.399832, 0, 
 mesh = SubResource("BoxMesh_mnms1")
 skeleton = NodePath("../..")
 
-[connection signal="pressed" from="HUD/winPopup/PanelContainer/Button" to="LevelManager" method="progress"]
-[connection signal="pressed" from="HUD/losePopup/PanelContainer/Button" to="LevelManager" method="retry"]
-[connection signal="ready" from="HUD/tutorial" to="player" method="release_mouse"]
+[node name="oak" type="CollisionShape3D" parent="." index="8"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="oak" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -16)
+mesh = ExtResource("3_io5bs")
+
+[connection signal="closed" from="HUD/tutorial" to="player" method="capture_mouse"]
+[connection signal="closed" from="HUD/tutorial" to="HUD/tutorial" method="hide"]
+[connection signal="opened" from="HUD/tutorial" to="player" method="release_mouse"]
 [connection signal="pressed" from="HUD/tutorial/PanelContainer/Button" to="player" method="capture_mouse"]
 [connection signal="pressed" from="HUD/tutorial/PanelContainer/Button" to="HUD/tutorial" method="hide"]
 
