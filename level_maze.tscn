@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://b08osct2oeah2"]
+[gd_scene format=3 uid="uid://b08osct2oeah2"]
 
 [ext_resource type="PackedScene" uid="uid://dlgglbiwa7gnn" path="res://level_base.tscn" id="1_ccpkd"]
 
@@ -8,495 +8,495 @@ size = Vector3(9, 10, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_au6sx"]
 size = Vector3(10, 10, 1)
 
-[node name="main" instance=ExtResource("1_ccpkd")]
+[node name="main" unique_id=431957502 instance=ExtResource("1_ccpkd")]
 
-[node name="player" parent="." index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1, -12)
+[node name="player" parent="." index="4" unique_id=1680852924]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -12, 1, -12)
 
-[node name="goal" parent="." index="4"]
+[node name="goal" parent="." index="5" unique_id=1716796764]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 12)
 
-[node name="maze" type="Node3D" parent="." index="7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 8)
+[node name="maze" type="Node3D" parent="." index="7" unique_id=1308570615]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1, 8)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="maze" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="maze" index="0" unique_id=306645929]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, 8)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D" index="0" unique_id=1114040574]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D" index="1" unique_id=1316598073]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D19" type="StaticBody3D" parent="maze" index="1"]
+[node name="StaticBody3D19" type="StaticBody3D" parent="maze" index="1" unique_id=1465486570]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 4, 8)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D19" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D19" index="0" unique_id=1870073812]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D19" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D19" index="1" unique_id=312239645]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D20" type="StaticBody3D" parent="maze" index="2"]
+[node name="StaticBody3D20" type="StaticBody3D" parent="maze" index="2" unique_id=1946796649]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 4, 8)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D20" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D20" index="0" unique_id=681320491]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D20" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D20" index="1" unique_id=297266332]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D7" type="StaticBody3D" parent="maze" index="3"]
+[node name="StaticBody3D7" type="StaticBody3D" parent="maze" index="3" unique_id=2047248909]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, 16)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D7" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D7" index="0" unique_id=531596597]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D7" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D7" index="1" unique_id=1174743306]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D8" type="StaticBody3D" parent="maze" index="4"]
+[node name="StaticBody3D8" type="StaticBody3D" parent="maze" index="4" unique_id=946134942]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 4, 16)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D8" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D8" index="0" unique_id=2093054448]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D8" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D8" index="1" unique_id=1634316123]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D9" type="StaticBody3D" parent="maze" index="5"]
+[node name="StaticBody3D9" type="StaticBody3D" parent="maze" index="5" unique_id=461501570]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 4, 16)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D9" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D9" index="0" unique_id=110745969]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D9" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D9" index="1" unique_id=1142417600]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D10" type="StaticBody3D" parent="maze" index="6"]
+[node name="StaticBody3D10" type="StaticBody3D" parent="maze" index="6" unique_id=1843965663]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 4, 16)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D10" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D10" index="0" unique_id=272647776]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D10" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D10" index="1" unique_id=563212390]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D11" type="StaticBody3D" parent="maze" index="7"]
+[node name="StaticBody3D11" type="StaticBody3D" parent="maze" index="7" unique_id=2016422160]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 4, 16)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D11" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D11" index="0" unique_id=2029905052]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D11" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D11" index="1" unique_id=294383125]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D12" type="StaticBody3D" parent="maze" index="8"]
+[node name="StaticBody3D12" type="StaticBody3D" parent="maze" index="8" unique_id=962668352]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 4, 16)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D12" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D12" index="0" unique_id=476706792]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D12" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D12" index="1" unique_id=2047142159]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="maze" index="9"]
+[node name="StaticBody3D2" type="StaticBody3D" parent="maze" index="9" unique_id=1991164559]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D2" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D2" index="0" unique_id=2043655096]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D2" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D2" index="1" unique_id=1439589574]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D17" type="StaticBody3D" parent="maze" index="10"]
+[node name="StaticBody3D17" type="StaticBody3D" parent="maze" index="10" unique_id=1897314583]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 4, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D17" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D17" index="0" unique_id=1580298644]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D17" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D17" index="1" unique_id=465321345]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D5" type="StaticBody3D" parent="maze" index="11"]
+[node name="StaticBody3D5" type="StaticBody3D" parent="maze" index="11" unique_id=992443164]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 4, -16)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D5" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D5" index="0" unique_id=307858367]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D5" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D5" index="1" unique_id=844007608]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D25" type="StaticBody3D" parent="maze" index="12"]
+[node name="StaticBody3D25" type="StaticBody3D" parent="maze" index="12" unique_id=1005228029]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 4, -24)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D25" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D25" index="0" unique_id=318656544]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D25" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D25" index="1" unique_id=301632634]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D27" type="StaticBody3D" parent="maze" index="13"]
+[node name="StaticBody3D27" type="StaticBody3D" parent="maze" index="13" unique_id=143386934]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 4, -24)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D27" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D27" index="0" unique_id=1900967876]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D27" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D27" index="1" unique_id=1591740185]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D31" type="StaticBody3D" parent="maze" index="14"]
+[node name="StaticBody3D31" type="StaticBody3D" parent="maze" index="14" unique_id=1882315170]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 4, -16)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D31" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D31" index="0" unique_id=1848813127]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D31" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D31" index="1" unique_id=1235928867]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D32" type="StaticBody3D" parent="maze" index="15"]
+[node name="StaticBody3D32" type="StaticBody3D" parent="maze" index="15" unique_id=1455705198]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 4, -16)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D32" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D32" index="0" unique_id=2061425926]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D32" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D32" index="1" unique_id=831242847]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D47" type="StaticBody3D" parent="maze" index="16"]
+[node name="StaticBody3D47" type="StaticBody3D" parent="maze" index="16" unique_id=1951758766]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 4, -16)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D47" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D47" index="0" unique_id=1274651780]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D47" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D47" index="1" unique_id=264539952]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D28" type="StaticBody3D" parent="maze" index="17"]
+[node name="StaticBody3D28" type="StaticBody3D" parent="maze" index="17" unique_id=926888127]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 4, -32)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D28" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D28" index="0" unique_id=906784071]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D28" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D28" index="1" unique_id=1378535755]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D34" type="StaticBody3D" parent="maze" index="18"]
+[node name="StaticBody3D34" type="StaticBody3D" parent="maze" index="18" unique_id=1644100519]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 4, -32)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D34" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D34" index="0" unique_id=645290129]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D34" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D34" index="1" unique_id=575544840]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D35" type="StaticBody3D" parent="maze" index="19"]
+[node name="StaticBody3D35" type="StaticBody3D" parent="maze" index="19" unique_id=203476473]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 4, -32)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D35" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D35" index="0" unique_id=807530374]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D35" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D35" index="1" unique_id=1589992872]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D36" type="StaticBody3D" parent="maze" index="20"]
+[node name="StaticBody3D36" type="StaticBody3D" parent="maze" index="20" unique_id=249213957]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 4, -32)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D36" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D36" index="0" unique_id=2140615561]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D36" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D36" index="1" unique_id=201683918]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D39" type="StaticBody3D" parent="maze" index="21"]
+[node name="StaticBody3D39" type="StaticBody3D" parent="maze" index="21" unique_id=1238401931]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 4, -24)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D39" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D39" index="0" unique_id=1531633291]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D39" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D39" index="1" unique_id=257286282]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D44" type="StaticBody3D" parent="maze" index="22"]
+[node name="StaticBody3D44" type="StaticBody3D" parent="maze" index="22" unique_id=626012066]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 4, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D44" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D44" index="0" unique_id=1813879830]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D44" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D44" index="1" unique_id=19650948]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D29" type="StaticBody3D" parent="maze" index="23"]
+[node name="StaticBody3D29" type="StaticBody3D" parent="maze" index="23" unique_id=132575413]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 4, -32)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D29" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D29" index="0" unique_id=1163003311]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D29" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D29" index="1" unique_id=23873165]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D30" type="StaticBody3D" parent="maze" index="24"]
+[node name="StaticBody3D30" type="StaticBody3D" parent="maze" index="24" unique_id=223005379]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, -32)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D30" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D30" index="0" unique_id=75374576]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D30" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D30" index="1" unique_id=2072758846]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D3" type="StaticBody3D" parent="maze" index="25"]
+[node name="StaticBody3D3" type="StaticBody3D" parent="maze" index="25" unique_id=1474087336]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8, 4, 4)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D3" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D3" index="0" unique_id=898972804]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D3" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D3" index="1" unique_id=2066090594]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D22" type="StaticBody3D" parent="maze" index="26"]
+[node name="StaticBody3D22" type="StaticBody3D" parent="maze" index="26" unique_id=1818794219]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8, 4, -12)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D22" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D22" index="0" unique_id=1831662615]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D22" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D22" index="1" unique_id=1255386478]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D23" type="StaticBody3D" parent="maze" index="27"]
+[node name="StaticBody3D23" type="StaticBody3D" parent="maze" index="27" unique_id=786955297]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8, 4, -20)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D23" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D23" index="0" unique_id=1265604273]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D23" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D23" index="1" unique_id=347788880]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D26" type="StaticBody3D" parent="maze" index="28"]
+[node name="StaticBody3D26" type="StaticBody3D" parent="maze" index="28" unique_id=1058305299]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 4, -20)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D26" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D26" index="0" unique_id=529931169]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D26" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D26" index="1" unique_id=1901671510]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D24" type="StaticBody3D" parent="maze" index="29"]
+[node name="StaticBody3D24" type="StaticBody3D" parent="maze" index="29" unique_id=178982381]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8, 4, -28)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D24" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D24" index="0" unique_id=1155538988]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D24" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D24" index="1" unique_id=1282275239]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D37" type="StaticBody3D" parent="maze" index="30"]
+[node name="StaticBody3D37" type="StaticBody3D" parent="maze" index="30" unique_id=659610354]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24, 4, -28)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D37" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D37" index="0" unique_id=1578442428]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D37" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D37" index="1" unique_id=231854563]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D38" type="StaticBody3D" parent="maze" index="31"]
+[node name="StaticBody3D38" type="StaticBody3D" parent="maze" index="31" unique_id=471454441]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -40, 4, -28)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D38" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D38" index="0" unique_id=815229438]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D38" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D38" index="1" unique_id=1446685270]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D40" type="StaticBody3D" parent="maze" index="32"]
+[node name="StaticBody3D40" type="StaticBody3D" parent="maze" index="32" unique_id=732281349]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -40, 4, -20)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D40" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D40" index="0" unique_id=832609368]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D40" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D40" index="1" unique_id=2122981298]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D41" type="StaticBody3D" parent="maze" index="33"]
+[node name="StaticBody3D41" type="StaticBody3D" parent="maze" index="33" unique_id=172132488]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -40, 4, -12)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D41" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D41" index="0" unique_id=921847341]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D41" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D41" index="1" unique_id=1767390221]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D42" type="StaticBody3D" parent="maze" index="34"]
+[node name="StaticBody3D42" type="StaticBody3D" parent="maze" index="34" unique_id=334091048]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -40, 4, -4)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D42" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D42" index="0" unique_id=47323000]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D42" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D42" index="1" unique_id=855667492]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D43" type="StaticBody3D" parent="maze" index="35"]
+[node name="StaticBody3D43" type="StaticBody3D" parent="maze" index="35" unique_id=608119815]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -40, 4, 4)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D43" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D43" index="0" unique_id=1642797706]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D43" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D43" index="1" unique_id=1106289485]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D6" type="StaticBody3D" parent="maze" index="36"]
+[node name="StaticBody3D6" type="StaticBody3D" parent="maze" index="36" unique_id=1703865920]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8, 4, 12)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D6" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D6" index="0" unique_id=845115090]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D6" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D6" index="1" unique_id=1759663771]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D4" type="StaticBody3D" parent="maze" index="37"]
+[node name="StaticBody3D4" type="StaticBody3D" parent="maze" index="37" unique_id=1093079705]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 4, -4)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D4" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D4" index="0" unique_id=2131755450]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D4" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D4" index="1" unique_id=344328068]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D14" type="StaticBody3D" parent="maze" index="38"]
+[node name="StaticBody3D14" type="StaticBody3D" parent="maze" index="38" unique_id=1892376819]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 4, -12)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D14" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D14" index="0" unique_id=209944606]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D14" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D14" index="1" unique_id=1692837751]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D15" type="StaticBody3D" parent="maze" index="39"]
+[node name="StaticBody3D15" type="StaticBody3D" parent="maze" index="39" unique_id=402106914]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 4, -12)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D15" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D15" index="0" unique_id=1318367409]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D15" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D15" index="1" unique_id=1480681222]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D16" type="StaticBody3D" parent="maze" index="40"]
+[node name="StaticBody3D16" type="StaticBody3D" parent="maze" index="40" unique_id=1070976631]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 4, -4)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D16" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D16" index="0" unique_id=1638075376]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D16" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D16" index="1" unique_id=1743090626]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D18" type="StaticBody3D" parent="maze" index="41"]
+[node name="StaticBody3D18" type="StaticBody3D" parent="maze" index="41" unique_id=1911781776]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -16, 4, -4)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D18" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D18" index="0" unique_id=508038526]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D18" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D18" index="1" unique_id=1712489599]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D33" type="StaticBody3D" parent="maze" index="42"]
+[node name="StaticBody3D33" type="StaticBody3D" parent="maze" index="42" unique_id=1944766961]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24, 4, -4)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D33" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D33" index="0" unique_id=479289633]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D33" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D33" index="1" unique_id=1872116276]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D48" type="StaticBody3D" parent="maze" index="43"]
+[node name="StaticBody3D48" type="StaticBody3D" parent="maze" index="43" unique_id=783983371]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24, 4, 4)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D48" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D48" index="0" unique_id=1318795867]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D48" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D48" index="1" unique_id=167762727]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D45" type="StaticBody3D" parent="maze" index="44"]
+[node name="StaticBody3D45" type="StaticBody3D" parent="maze" index="44" unique_id=1577596177]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32, 4, -4)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D45" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D45" index="0" unique_id=2112686394]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D45" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D45" index="1" unique_id=62932719]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D46" type="StaticBody3D" parent="maze" index="45"]
+[node name="StaticBody3D46" type="StaticBody3D" parent="maze" index="45" unique_id=1656898296]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32, 4, -12)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D46" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D46" index="0" unique_id=1859540852]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D46" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D46" index="1" unique_id=1253317482]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D21" type="StaticBody3D" parent="maze" index="46"]
+[node name="StaticBody3D21" type="StaticBody3D" parent="maze" index="46" unique_id=965118191]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32, 4, 12)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D21" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D21" index="0" unique_id=1843609548]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D21" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D21" index="1" unique_id=281006628]
 shape = SubResource("BoxShape3D_au6sx")
 
-[node name="StaticBody3D13" type="StaticBody3D" parent="maze" index="47"]
+[node name="StaticBody3D13" type="StaticBody3D" parent="maze" index="47" unique_id=2090418054]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 4, 4)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D13" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="maze/StaticBody3D13" index="0" unique_id=76476621]
 mesh = SubResource("BoxMesh_gql5n")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D13" index="1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="maze/StaticBody3D13" index="1" unique_id=1611618834]
 shape = SubResource("BoxShape3D_au6sx")
 
 [editable path="HUD/winPopup"]

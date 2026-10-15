@@ -1,6 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://m6ehkiqky0vd"]
+[gd_scene format=3 uid="uid://m6ehkiqky0vd"]
 
-[ext_resource type="Script" path="res://map.gd" id="1_eu540"]
+[ext_resource type="Script" uid="uid://dkwwuhq0gl1lk" path="res://map.gd" id="1_eu540"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_1kt8l"]
 
@@ -67,338 +67,339 @@ font_size = 120
 text = "G"
 font_size = 120
 
-[node name="map" type="Node2D"]
+[node name="map" type="Node2D" unique_id=227470733]
 script = ExtResource("1_eu540")
 
-[node name="minimap" type="MeshInstance2D" parent="."]
+[node name="minimap" type="MeshInstance2D" parent="." unique_id=263915967]
 position = Vector2(130, 128)
 scale = Vector2(-256, 256.904)
 mesh = SubResource("QuadMesh_1kt8l")
 texture = SubResource("ViewportTexture_qxy7c")
 
-[node name="bigmap" type="MeshInstance2D" parent="."]
+[node name="bigmap" type="MeshInstance2D" parent="." unique_id=1553415021]
 visible = false
 position = Vector2(575, 323)
 scale = Vector2(-647.538, 647.538)
 mesh = SubResource("QuadMesh_1kt8l")
 texture = SubResource("ViewportTexture_qxy7c")
 
-[node name="SubViewport" type="SubViewport" parent="."]
+[node name="SubViewport" type="SubViewport" parent="." unique_id=520529462]
 size = Vector2i(3000, 3000)
 
-[node name="Camera3D" type="Camera3D" parent="SubViewport"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 28, 0)
+[node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=386123071]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 29, 0)
 cull_mask = 655359
 projection = 1
 current = true
 size = 60.381
 
-[node name="Markers" type="Node3D" parent="."]
+[node name="Markers" type="Node3D" parent="." unique_id=1414502942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers" unique_id=645728849]
 transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 0.48, 29.7676, -0.456387, 0)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D" unique_id=1580668095]
 transform = Transform3D(-2, 3.01992e-07, 1.32005e-14, 0, -8.74228e-08, 2, 3.01992e-07, 2, 8.74228e-08, -2, 0, 0)
 layers = 524288
 mesh = SubResource("TextMesh_wjxie")
 
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Markers" unique_id=594201703]
 transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 0.48, 29.7676, -0.456387, 8)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D5"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D5" unique_id=1180701180]
 transform = Transform3D(-2, 3.01992e-07, 1.32005e-14, 0, -8.74228e-08, 2, 3.01992e-07, 2, 8.74228e-08, -2, 0, 0)
 layers = 524288
 mesh = SubResource("TextMesh_h3afh")
 
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Markers" unique_id=1750077623]
 transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 0.48, 29.7676, -0.456387, 16)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D6"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D6" unique_id=1851558332]
 transform = Transform3D(-2, 3.01992e-07, 1.32005e-14, 0, -8.74228e-08, 2, 3.01992e-07, 2, 8.74228e-08, -2, 0, 0)
 layers = 524288
 mesh = SubResource("TextMesh_u0a58")
 
-[node name="MeshInstance3D7" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Markers" unique_id=379310271]
 transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 0.48, 29.7676, -0.456387, 24)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D7"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D7" unique_id=158072825]
 transform = Transform3D(-2, 3.01992e-07, 1.32005e-14, 0, -8.74228e-08, 2, 3.01992e-07, 2, 8.74228e-08, -2, 0, 0)
 layers = 524288
 mesh = SubResource("TextMesh_fh5vg")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Markers" unique_id=1415910730]
 transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 0.48, 29.7676, -0.456387, -8)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D2"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D2" unique_id=1747315926]
 transform = Transform3D(-2, 3.01992e-07, 1.32005e-14, 0, -8.74228e-08, 2, 3.01992e-07, 2, 8.74228e-08, -2, 0, 0)
 layers = 524288
 mesh = SubResource("TextMesh_pr8ev")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Markers" unique_id=766806355]
 transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 0.48, 29.7676, -0.456387, -16)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D3"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D3" unique_id=799502226]
 transform = Transform3D(-2, 3.01992e-07, 1.32005e-14, 0, -8.74228e-08, 2, 3.01992e-07, 2, 8.74228e-08, -2, 0, 0)
 layers = 524288
 mesh = SubResource("TextMesh_d647r")
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Markers" unique_id=364749013]
 transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 0.48, 29.7676, -0.456387, -24)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D4"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D4" unique_id=904877131]
 transform = Transform3D(-2, 3.01992e-07, 1.32005e-14, 0, -8.74228e-08, 2, 3.01992e-07, 2, 8.74228e-08, -2, 0, 0)
 layers = 524288
 mesh = SubResource("TextMesh_ml2dr")
 
-[node name="MeshInstance3D8" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Markers" unique_id=1914830312]
 transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 0.48, -29.768, -0.456387, 0)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D8"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D8" unique_id=1497135967]
 transform = Transform3D(-2, 3.01992e-07, 1.32005e-14, 0, -8.74228e-08, 2, 3.01992e-07, 2, 8.74228e-08, 2, 0, 0)
 layers = 524288
 mesh = SubResource("TextMesh_wjxie")
 
-[node name="MeshInstance3D9" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Markers" unique_id=1824158894]
 transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 0.48, -29.768, -0.456387, 8)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D9"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D9" unique_id=1234926634]
 transform = Transform3D(-2, 3.01992e-07, 1.32005e-14, 0, -8.74228e-08, 2, 3.01992e-07, 2, 8.74228e-08, 2, 0, 0)
 layers = 524288
 mesh = SubResource("TextMesh_h3afh")
 
-[node name="MeshInstance3D10" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Markers" unique_id=616696083]
 transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 0.48, -29.768, -0.456387, 16)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D10"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D10" unique_id=291300332]
 transform = Transform3D(-2, 3.01992e-07, 1.32005e-14, 0, -8.74228e-08, 2, 3.01992e-07, 2, 8.74228e-08, 2, 0, 0)
 layers = 524288
 mesh = SubResource("TextMesh_u0a58")
 
-[node name="MeshInstance3D11" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="Markers" unique_id=2107634549]
 transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 0.48, -29.768, -0.456387, 24)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D11"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D11" unique_id=836777792]
 transform = Transform3D(-2, 3.01992e-07, 1.32005e-14, 0, -8.74228e-08, 2, 3.01992e-07, 2, 8.74228e-08, 2, 0, 0)
 layers = 524288
 mesh = SubResource("TextMesh_fh5vg")
 
-[node name="MeshInstance3D12" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="Markers" unique_id=692977143]
 transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 0.48, -29.768, -0.456387, -8)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D12"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D12" unique_id=1046401494]
 transform = Transform3D(-2, 3.01992e-07, 1.32005e-14, 0, -8.74228e-08, 2, 3.01992e-07, 2, 8.74228e-08, 2, 0, 0)
 layers = 524288
 mesh = SubResource("TextMesh_pr8ev")
 
-[node name="MeshInstance3D13" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="Markers" unique_id=1740368756]
 transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 0.48, -29.768, -0.456387, -16)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D13"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D13" unique_id=1141729961]
 transform = Transform3D(-2, 3.01992e-07, 1.32005e-14, 0, -8.74228e-08, 2, 3.01992e-07, 2, 8.74228e-08, 2, 0, 0)
 layers = 524288
 mesh = SubResource("TextMesh_d647r")
 
-[node name="MeshInstance3D14" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="Markers" unique_id=1483801796]
 transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 0.48, -29.768, -0.456387, -24)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D14"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D14" unique_id=1039171466]
 transform = Transform3D(-2, 3.01992e-07, 1.32005e-14, 0, -8.74228e-08, 2, 3.01992e-07, 2, 8.74228e-08, 2, 0, 0)
 layers = 524288
 mesh = SubResource("TextMesh_ml2dr")
 
-[node name="MeshInstance3D15" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="Markers" unique_id=1808304031]
 transform = Transform3D(-0.000488683, 0, 0.48, 0, 0.2, 0, -1, 0, -0.000234568, -0.0147353, -0.456387, -29.7678)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D15"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D15" unique_id=1663289738]
 transform = Transform3D(-8.74279e-08, -2, -8.74228e-08, 0, -8.74228e-08, 2, -2, 8.73115e-08, 3.82333e-15, -2, 0, -0.00407236)
 layers = 524288
 mesh = SubResource("TextMesh_bxrp3")
 
-[node name="MeshInstance3D16" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="Markers" unique_id=654380121]
 transform = Transform3D(-0.000488683, 0, 0.48, 0, 0.2, 0, -1, 0, -0.000234568, 7.98526, -0.456387, -29.7717)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D16"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D16" unique_id=1210403140]
 transform = Transform3D(-8.74279e-08, -2, -8.74228e-08, 0, -8.74228e-08, 2, -2, 8.73115e-08, 3.82333e-15, -2, 0, -0.00407236)
 layers = 524288
 mesh = SubResource("TextMesh_oog3i")
 
-[node name="MeshInstance3D17" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="Markers" unique_id=698709898]
 transform = Transform3D(-0.000488683, 0, 0.48, 0, 0.2, 0, -1, 0, -0.000234568, 15.9853, -0.456387, -29.7756)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D17"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D17" unique_id=70685504]
 transform = Transform3D(-8.74279e-08, -2, -8.74228e-08, 0, -8.74228e-08, 2, -2, 8.73115e-08, 3.82333e-15, -2, 0, -0.00407236)
 layers = 524288
 mesh = SubResource("TextMesh_ngctt")
 
-[node name="MeshInstance3D18" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="Markers" unique_id=1542684661]
 transform = Transform3D(-0.000488683, 0, 0.48, 0, 0.2, 0, -1, 0, -0.000234568, 23.9853, -0.456387, -29.7795)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D18"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D18" unique_id=627368837]
 transform = Transform3D(-8.74279e-08, -2, -8.74228e-08, 0, -8.74228e-08, 2, -2, 8.73115e-08, 3.82333e-15, -2, 0, -0.00407236)
 layers = 524288
 mesh = SubResource("TextMesh_ct0rw")
 
-[node name="MeshInstance3D19" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="Markers" unique_id=769913951]
 transform = Transform3D(-0.000488683, 0, 0.48, 0, 0.2, 0, -1, 0, -0.000234568, -8.01473, -0.456387, -29.7639)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D19"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D19" unique_id=2137962352]
 transform = Transform3D(-8.74279e-08, -2, -8.74228e-08, 0, -8.74228e-08, 2, -2, 8.73115e-08, 3.82333e-15, -2, 0, -0.00407236)
 layers = 524288
 mesh = SubResource("TextMesh_mf6wj")
 
-[node name="MeshInstance3D20" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D20" type="MeshInstance3D" parent="Markers" unique_id=1773982781]
 transform = Transform3D(-0.000488683, 0, 0.48, 0, 0.2, 0, -1, 0, -0.000234568, -16.0147, -0.456387, -29.76)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D20"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D20" unique_id=1727195481]
 transform = Transform3D(-8.74279e-08, -2, -8.74228e-08, 0, -8.74228e-08, 2, -2, 8.73115e-08, 3.82333e-15, -2, 0, -0.00407236)
 layers = 524288
 mesh = SubResource("TextMesh_c5pvt")
 
-[node name="MeshInstance3D21" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D21" type="MeshInstance3D" parent="Markers" unique_id=1729846672]
 transform = Transform3D(-0.000488683, 0, 0.48, 0, 0.2, 0, -1, 0, -0.000234568, -24.0147, -0.456387, -29.7561)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D21"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D21" unique_id=1275890942]
 transform = Transform3D(-8.74279e-08, -2, -8.74228e-08, 0, -8.74228e-08, 2, -2, 8.73115e-08, 3.82333e-15, -2, 0, -0.00407236)
 layers = 524288
 mesh = SubResource("TextMesh_0tgqr")
 
-[node name="MeshInstance3D22" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D22" type="MeshInstance3D" parent="Markers" unique_id=1296933137]
 transform = Transform3D(-0.000488683, 0, 0.48, 0, 0.2, 0, -1, 0, -0.000234568, 0.0143587, -0.456387, 29.7678)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D22"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D22" unique_id=1551662834]
 transform = Transform3D(-8.74279e-08, -2, -8.74228e-08, 0, -8.74228e-08, 2, -2, 8.73115e-08, 3.82333e-15, 2, 0, 0)
 layers = 524288
 mesh = SubResource("TextMesh_bxrp3")
 
-[node name="MeshInstance3D23" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D23" type="MeshInstance3D" parent="Markers" unique_id=1008602414]
 transform = Transform3D(-0.000488683, 0, 0.48, 0, 0.2, 0, -1, 0, -0.000234568, 8.01436, -0.456387, 29.7639)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D23"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D23" unique_id=1923702649]
 transform = Transform3D(-8.74279e-08, -2, -8.74228e-08, 0, -8.74228e-08, 2, -2, 8.73115e-08, 3.82333e-15, 2, 0, 1.90735e-06)
 layers = 524288
 mesh = SubResource("TextMesh_oog3i")
 
-[node name="MeshInstance3D24" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D24" type="MeshInstance3D" parent="Markers" unique_id=692297955]
 transform = Transform3D(-0.000488683, 0, 0.48, 0, 0.2, 0, -1, 0, -0.000234568, 16.0144, -0.456387, 29.76)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D24"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D24" unique_id=710003949]
 transform = Transform3D(-8.74279e-08, -2, -8.74228e-08, 0, -8.74228e-08, 2, -2, 8.73115e-08, 3.82333e-15, 2, 0, -3.8147e-06)
 layers = 524288
 mesh = SubResource("TextMesh_ngctt")
 
-[node name="MeshInstance3D25" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D25" type="MeshInstance3D" parent="Markers" unique_id=675982873]
 transform = Transform3D(-0.000488683, 0, 0.48, 0, 0.2, 0, -1, 0, -0.000234568, 24.0144, -0.456387, 29.7561)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D25"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D25" unique_id=1834674351]
 transform = Transform3D(-8.74279e-08, -2, -8.74228e-08, 0, -8.74228e-08, 2, -2, 8.73115e-08, 3.82333e-15, 2, 0, -7.62939e-06)
 layers = 524288
 mesh = SubResource("TextMesh_ct0rw")
 
-[node name="MeshInstance3D26" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D26" type="MeshInstance3D" parent="Markers" unique_id=566023658]
 transform = Transform3D(-0.000488683, 0, 0.48, 0, 0.2, 0, -1, 0, -0.000234568, -7.98564, -0.456387, 29.7717)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D26"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D26" unique_id=1044728959]
 transform = Transform3D(-8.74279e-08, -2, -8.74228e-08, 0, -8.74228e-08, 2, -2, 8.73115e-08, 3.82333e-15, 2, 0, 0)
 layers = 524288
 mesh = SubResource("TextMesh_mf6wj")
 
-[node name="MeshInstance3D27" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D27" type="MeshInstance3D" parent="Markers" unique_id=206583907]
 transform = Transform3D(-0.000488683, 0, 0.48, 0, 0.2, 0, -1, 0, -0.000234568, -15.9856, -0.456387, 29.7756)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D27"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D27" unique_id=1474382554]
 transform = Transform3D(-8.74279e-08, -2, -8.74228e-08, 0, -8.74228e-08, 2, -2, 8.73115e-08, 3.82333e-15, 2, 0, 0)
 layers = 524288
 mesh = SubResource("TextMesh_c5pvt")
 
-[node name="MeshInstance3D28" type="MeshInstance3D" parent="Markers"]
+[node name="MeshInstance3D28" type="MeshInstance3D" parent="Markers" unique_id=440004045]
 transform = Transform3D(-0.000488683, 0, 0.48, 0, 0.2, 0, -1, 0, -0.000234568, -23.9856, -0.456387, 29.7795)
 layers = 524288
 mesh = SubResource("BoxMesh_l4prk")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D28"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Markers/MeshInstance3D28" unique_id=974167154]
 transform = Transform3D(-8.74279e-08, -2, -8.74228e-08, 0, -8.74228e-08, 2, -2, 8.73115e-08, 3.82333e-15, 2, 0, -3.8147e-06)
 layers = 524288
 mesh = SubResource("TextMesh_0tgqr")

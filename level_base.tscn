@@ -1,15 +1,98 @@
-[gd_scene load_steps=12 format=3 uid="uid://dlgglbiwa7gnn"]
+[gd_scene format=3 uid="uid://dlgglbiwa7gnn"]
 
 [ext_resource type="Texture2D" uid="uid://k3ffn52ybs1n" path="res://resources/grass03.png" id="1_na7lp"]
 [ext_resource type="PackedScene" uid="uid://cbw3aadmra4qe" path="res://player.tscn" id="2_84uvl"]
+[ext_resource type="Material" uid="uid://oq2lysblbqpq" path="res://resources/beach_mat.tres" id="3_a5rkb"]
 [ext_resource type="PackedScene" uid="uid://chvf7mbkfb878" path="res://goal.tscn" id="4_chwl2"]
 [ext_resource type="PackedScene" uid="uid://m6ehkiqky0vd" path="res://map.tscn" id="5_iqilm"]
 [ext_resource type="PackedScene" uid="uid://cgue0108h6at7" path="res://popup.tscn" id="6_pb3wa"]
 [ext_resource type="PackedScene" uid="uid://b13x7wdb5cynq" path="res://lose_popup.tscn" id="7_ru8oh"]
+[ext_resource type="Shader" uid="uid://55phu14qetap" path="res://water.gdshader" id="8_agx4c"]
 [ext_resource type="PackedScene" uid="uid://b7j642akrgyes" path="res://level_manager.tscn" id="8_ivdi8"]
+[ext_resource type="ArrayMesh" uid="uid://d4a6m4nk1o8n1" path="res://resources/beach_corner.obj" id="9_x6ek4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a5rkb"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("8_agx4c")
+shader_parameter/max_depth = 9.70000014454164
+shader_parameter/water_level = 0.40000015497247965
+shader_parameter/underwater_fog_color = Color(0.33199525, 0.5377665, 0.9999904, 1)
+shader_parameter/fade_start_depth = 5.70000008493684
+shader_parameter/sea_height = 0.2000000095
+shader_parameter/sea_choppy = 4.8500002303750005
+shader_parameter/sea_speed = 1.5
+shader_parameter/sea_freq = 0.08
+shader_parameter/ITER_GEOMETRY = 3
+shader_parameter/ITER_FRAGMENT = 5
+shader_parameter/refraction_strength = 1.50999996624848
+shader_parameter/refraction_distance_fade = 5.0
+shader_parameter/normal_epsilon = 0.01
+shader_parameter/normal_smoothness_dist = 50.0
+shader_parameter/base_tint_color = Color(0.5122825, 0.70540196, 1, 1)
+shader_parameter/deep_color = Color(5.7756904e-07, 0.47616482, 0.52524126, 1)
+shader_parameter/water_absorption = Color(0.3, 0.06, 0.02, 1)
+shader_parameter/roughness = 0.1310000062225
+shader_parameter/metallic = 0.55600002641
+shader_parameter/specular = 0.7230000343425
+shader_parameter/caustics_scale = 2.0
+shader_parameter/caustics_speed = 0.1
+shader_parameter/caustics_intensity = 1.20000001788144
+shader_parameter/caustics_depth_fade = 0.7
+shader_parameter/foam_color = Color(0.8646751, 0.86467516, 0.8646751, 1)
+shader_parameter/foam_depth_start = 0.8
+shader_parameter/foam_depth_end = 0.0
+shader_parameter/foam_noise_scale = 2.0
+shader_parameter/foam_noise_speed = 1.0
+shader_parameter/foam_cutoff = 0.7
+shader_parameter/foam_crest_threshold = 0.7
+shader_parameter/foam_crest_amount = 2.0
+shader_parameter/foam_edge_color = Color(0, 0.04785054, 0.37507114, 1)
+shader_parameter/foam_edge_offset = Vector2(0.02, 0.02)
+shader_parameter/voronoi_scale = 9.0
+shader_parameter/voronoi_strength = 0.8
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_x6ek4"]
+material = SubResource("ShaderMaterial_a5rkb")
+size = Vector2(200, 200)
+subdivide_width = 200
+subdivide_depth = 200
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_q7fcr"]
-size = Vector3(120, 10, 1)
+size = Vector3(130, 10, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6ek4"]
+albedo_color = Color(0.7001769, 0.92055476, 0.46886802, 1)
+metallic = 0.75
+
+[sub_resource type="PrismMesh" id="PrismMesh_bynoi"]
+material = SubResource("StandardMaterial3D_x6ek4")
+left_to_right = 0.0
+size = Vector3(3, 1, 120)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_agx4c"]
+data = PackedVector3Array(-1.5, 0.5, 60, 1.5, -0.5, 60, -1.5, -0.5, 60, -1.5, 0.5, -60, -1.5, -0.5, -60, 1.5, -0.5, -60, -1.5, 0.5, 60, -1.5, 0.5, -60, 1.5, -0.5, 60, -1.5, 0.5, -60, 1.5, -0.5, -60, 1.5, -0.5, 60, -1.5, 0.5, -60, -1.5, 0.5, 60, -1.5, -0.5, -60, -1.5, 0.5, 60, -1.5, -0.5, 60, -1.5, -0.5, -60, -1.5, -0.5, 60, 1.5, -0.5, 60, -1.5, -0.5, -60, 1.5, -0.5, 60, 1.5, -0.5, -60, -1.5, -0.5, -60)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_x6ek4"]
+data = PackedVector3Array(-1.5, 0.5, 60, 1.5, -0.5, 60, -1.5, -0.5, 60, -1.5, 0.5, -60, -1.5, -0.5, -60, 1.5, -0.5, -60, -1.5, 0.5, 60, -1.5, 0.5, -60, 1.5, -0.5, 60, -1.5, 0.5, -60, 1.5, -0.5, -60, 1.5, -0.5, 60, -1.5, 0.5, -60, -1.5, 0.5, 60, -1.5, -0.5, -60, -1.5, 0.5, 60, -1.5, -0.5, 60, -1.5, -0.5, -60, -1.5, -0.5, 60, 1.5, -0.5, 60, -1.5, -0.5, -60, 1.5, -0.5, 60, 1.5, -0.5, -60, -1.5, -0.5, -60)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_a5rkb"]
+data = PackedVector3Array(-1.5, 0.5, 60, 1.5, -0.5, 60, -1.5, -0.5, 60, -1.5, 0.5, -60, -1.5, -0.5, -60, 1.5, -0.5, -60, -1.5, 0.5, 60, -1.5, 0.5, -60, 1.5, -0.5, 60, -1.5, 0.5, -60, 1.5, -0.5, -60, 1.5, -0.5, 60, -1.5, 0.5, -60, -1.5, 0.5, 60, -1.5, -0.5, -60, -1.5, 0.5, 60, -1.5, -0.5, 60, -1.5, -0.5, -60, -1.5, -0.5, 60, 1.5, -0.5, 60, -1.5, -0.5, -60, 1.5, -0.5, 60, 1.5, -0.5, -60, -1.5, -0.5, -60)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_e6jnn"]
+data = PackedVector3Array(-1.5, 0.5, 60, 1.5, -0.5, 60, -1.5, -0.5, 60, -1.5, 0.5, -60, -1.5, -0.5, -60, 1.5, -0.5, -60, -1.5, 0.5, 60, -1.5, 0.5, -60, 1.5, -0.5, 60, -1.5, 0.5, -60, 1.5, -0.5, -60, 1.5, -0.5, 60, -1.5, 0.5, -60, -1.5, 0.5, 60, -1.5, -0.5, -60, -1.5, 0.5, 60, -1.5, -0.5, 60, -1.5, -0.5, -60, -1.5, -0.5, 60, 1.5, -0.5, 60, -1.5, -0.5, -60, 1.5, -0.5, 60, 1.5, -0.5, -60, -1.5, -0.5, -60)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fdc3t"]
+data = PackedVector3Array(-3, 1, -3, 3, -0.98039997, -3, -3, -0.968, 3, -3, -0.968, 3, 3, -0.98039997, -3, 3, -0.9636, 3, 3, -0.9636, 3, 3, -1, 3, -3, -0.968, 3, -3, -0.968, 3, 3, -1, 3, -3, -1, 3, -3, -0.968, 3, -3, -1, 3, -3, 1, -3, -3, 1, -3, -3, -1, 3, -3, -1, -3, 3, -1, -3, -3, -1, -3, 3, -1, 3, 3, -1, 3, -3, -1, -3, -3, -1, 3, 3, -0.98039997, -3, 3, -1, -3, 3, -0.9636, 3, 3, -0.9636, 3, 3, -1, -3, 3, -1, 3, -3, 1, -3, -3, -1, -3, 3, -0.98039997, -3, 3, -0.98039997, -3, -3, -1, -3, 3, -1, -3)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fbe54"]
+data = PackedVector3Array(-3, 1, -3, 3, -0.98039997, -3, -3, -0.968, 3, -3, -0.968, 3, 3, -0.98039997, -3, 3, -0.9636, 3, 3, -0.9636, 3, 3, -1, 3, -3, -0.968, 3, -3, -0.968, 3, 3, -1, 3, -3, -1, 3, -3, -0.968, 3, -3, -1, 3, -3, 1, -3, -3, 1, -3, -3, -1, 3, -3, -1, -3, 3, -1, -3, -3, -1, -3, 3, -1, 3, 3, -1, 3, -3, -1, -3, -3, -1, 3, 3, -0.98039997, -3, 3, -1, -3, 3, -0.9636, 3, 3, -0.9636, 3, 3, -1, -3, 3, -1, 3, -3, 1, -3, -3, -1, -3, 3, -0.98039997, -3, 3, -0.98039997, -3, -3, -1, -3, 3, -1, -3)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pvn8g"]
+data = PackedVector3Array(-3, 1, -3, 3, -0.98039997, -3, -3, -0.968, 3, -3, -0.968, 3, 3, -0.98039997, -3, 3, -0.9636, 3, 3, -0.9636, 3, 3, -1, 3, -3, -0.968, 3, -3, -0.968, 3, 3, -1, 3, -3, -1, 3, -3, -0.968, 3, -3, -1, 3, -3, 1, -3, -3, 1, -3, -3, -1, 3, -3, -1, -3, 3, -1, -3, -3, -1, -3, 3, -1, 3, 3, -1, 3, -3, -1, -3, -3, -1, 3, 3, -0.98039997, -3, 3, -1, -3, 3, -0.9636, 3, 3, -0.9636, 3, 3, -1, -3, 3, -1, 3, -3, 1, -3, -3, -1, -3, 3, -0.98039997, -3, 3, -0.98039997, -3, -3, -1, -3, 3, -1, -3)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_t5hyg"]
+data = PackedVector3Array(-3, 1, -3, 3, -0.98039997, -3, -3, -0.968, 3, -3, -0.968, 3, 3, -0.98039997, -3, 3, -0.9636, 3, 3, -0.9636, 3, 3, -1, 3, -3, -0.968, 3, -3, -0.968, 3, 3, -1, 3, -3, -1, 3, -3, -0.968, 3, -3, -1, 3, -3, 1, -3, -3, 1, -3, -3, -1, 3, -3, -1, -3, 3, -1, -3, -3, -1, -3, 3, -1, 3, 3, -1, 3, -3, -1, -3, -3, -1, 3, 3, -0.98039997, -3, 3, -1, -3, 3, -0.9636, 3, 3, -0.9636, 3, 3, -1, -3, 3, -1, 3, -3, 1, -3, -3, -1, -3, 3, -0.98039997, -3, 3, -0.98039997, -3, -3, -1, -3, 3, -1, -3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ngoo2"]
 size = Vector3(120, 1, 120)
@@ -24,50 +107,129 @@ normal_enabled = true
 normal_texture = ExtResource("1_na7lp")
 uv1_scale = Vector3(10, 10, 10)
 
-[node name="main" type="Node3D"]
+[node name="main" type="Node3D" unique_id=1561036356]
 
-[node name="wall" type="StaticBody3D" parent="."]
+[node name="water" type="MeshInstance3D" parent="." unique_id=2052976615]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+lod_bias = 0.001
+mesh = SubResource("PlaneMesh_x6ek4")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="wall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 55)
+[node name="wall" type="StaticBody3D" parent="." unique_id=1661750432]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall" unique_id=1110528649]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 60)
 shape = SubResource("BoxShape3D_q7fcr")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="wall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -55)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wall" unique_id=2051998459]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -60)
 shape = SubResource("BoxShape3D_q7fcr")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="wall"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -55, 4, 0)
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="wall" unique_id=1301965930]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -60, 4, 0)
 shape = SubResource("BoxShape3D_q7fcr")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="wall"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 55, 4, 0)
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="wall" unique_id=1063221318]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 60, 4, 0)
 shape = SubResource("BoxShape3D_q7fcr")
 
-[node name="ground" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+[node name="beach" type="StaticBody3D" parent="." unique_id=391534201]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ground"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="beach" unique_id=1640137104]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 61.5)
+mesh = SubResource("PrismMesh_bynoi")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="beach" unique_id=186803828]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 61.5)
+shape = SubResource("ConcavePolygonShape3D_agx4c")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="beach" unique_id=2066187016]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 0, 0, -61.5)
+mesh = SubResource("PrismMesh_bynoi")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="beach" unique_id=6575990]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 0, 0, -61.5)
+shape = SubResource("ConcavePolygonShape3D_x6ek4")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="beach" unique_id=8013948]
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 61.5, 0, 0)
+mesh = SubResource("PrismMesh_bynoi")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="beach" unique_id=1107511595]
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 61.5, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_a5rkb")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="beach" unique_id=2075269271]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -61.5, 0, 0)
+mesh = SubResource("PrismMesh_bynoi")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="beach" unique_id=1000260691]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -61.5, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_e6jnn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="beach" unique_id=526471702]
+transform = Transform3D(-2.111098e-08, -4.2154843e-23, 0.50000006, 1.1512885e-08, 0.50000006, -9.505192e-23, -0.5, 1.1512887e-08, -2.1110978e-08, 61.5, 0, -61.5)
+mesh = ExtResource("9_x6ek4")
+surface_material_override/0 = ExtResource("3_a5rkb")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="beach" unique_id=432233142]
+transform = Transform3D(-2.111098e-08, -4.2154843e-23, 0.50000006, 1.1512885e-08, 0.50000006, -9.505192e-23, -0.5, 1.1512887e-08, -2.1110978e-08, 61.5, 0, -61.5)
+shape = SubResource("ConcavePolygonShape3D_fdc3t")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="beach" unique_id=741620619]
+transform = Transform3D(0.5, -1.1512886e-08, -7.447163e-10, 1.1512884e-08, 0.50000006, -7.961298e-23, 7.4471274e-10, -5.0324435e-16, 0.50000006, 61.5, 0, 61.5)
+mesh = ExtResource("9_x6ek4")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="beach" unique_id=678606283]
+transform = Transform3D(0.5, -1.1512886e-08, -7.447163e-10, 1.1512884e-08, 0.50000006, -7.961298e-23, 7.4471274e-10, -5.0324435e-16, 0.50000006, 61.5, 0, 61.5)
+shape = SubResource("ConcavePolygonShape3D_fbe54")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="beach" unique_id=612839589]
+transform = Transform3D(-2.2600407e-08, 1.0064886e-15, -0.50000006, 1.1512883e-08, 0.50000006, -7.8290097e-23, 0.5, -1.1512885e-08, -2.2600412e-08, -61.5, 0, 61.5)
+mesh = ExtResource("9_x6ek4")
+surface_material_override/0 = ExtResource("3_a5rkb")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="beach" unique_id=215881154]
+transform = Transform3D(-2.2600407e-08, 1.0064886e-15, -0.50000006, 1.1512883e-08, 0.50000006, -7.8290097e-23, 0.5, -1.1512885e-08, -2.2600412e-08, -61.5, 0, 61.5)
+shape = SubResource("ConcavePolygonShape3D_pvn8g")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="beach" unique_id=948492905]
+transform = Transform3D(-0.5, 1.1512884e-08, 4.4456108e-08, 1.1512882e-08, 0.50000006, 1.479586e-23, -4.44561e-08, 1.5097329e-15, -0.50000006, -61.5, 0, -61.5)
+mesh = ExtResource("9_x6ek4")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="beach" unique_id=1615297685]
+transform = Transform3D(-0.5, 1.1512884e-08, 4.4456108e-08, 1.1512882e-08, 0.50000006, 1.479586e-23, -4.44561e-08, 1.5097329e-15, -0.50000006, -61.5, 0, -61.5)
+shape = SubResource("ConcavePolygonShape3D_t5hyg")
+
+[node name="ground" type="StaticBody3D" parent="." unique_id=967196937]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ground" unique_id=1093580062]
 shape = SubResource("BoxShape3D_ngoo2")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="ground"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ground" unique_id=1315322002]
 mesh = SubResource("BoxMesh_vlf5v")
 surface_material_override/0 = SubResource("StandardMaterial3D_kpwny")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.258819, 0.965926, 0, -0.965926, -0.258819, 0, 10, 0)
-light_energy = 2.586
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1773852860]
+transform = Transform3D(1, 0, 0, 0, -0.25881898, 0.9659259, 0, -0.9659259, -0.25881898, 0, 11, 0)
+light_color = Color(0.8467619, 0.7647031, 0.48122323, 1)
+light_energy = 2.089
 shadow_enabled = true
+shadow_blur = 2.056
 
-[node name="player" parent="." instance=ExtResource("2_84uvl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+[node name="player" parent="." unique_id=1680852924 instance=ExtResource("2_84uvl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
-[node name="goal" parent="." instance=ExtResource("4_chwl2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -16)
+[node name="goal" parent="." unique_id=1716796764 instance=ExtResource("4_chwl2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1, -16)
 
-[node name="HUD" type="Node2D" parent="."]
+[node name="HUD" type="Node2D" parent="." unique_id=1899910361]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="HUD"]
+[node name="RichTextLabel" type="RichTextLabel" parent="HUD" unique_id=1506658587]
 offset_left = 438.0
 offset_top = 16.0
 offset_right = 704.0
@@ -75,23 +237,23 @@ offset_bottom = 57.0
 text = "Q: Open Map, LMB: Plant Flag"
 metadata/_edit_use_anchors_ = true
 
-[node name="map" parent="HUD" instance=ExtResource("5_iqilm")]
+[node name="map" parent="HUD" unique_id=1229233451 instance=ExtResource("5_iqilm")]
 
-[node name="winPopup" parent="HUD" instance=ExtResource("6_pb3wa")]
+[node name="winPopup" parent="HUD" unique_id=1155139599 instance=ExtResource("6_pb3wa")]
 visible = false
 offset_left = 274.0
 offset_top = 122.0
 offset_right = 874.0
 offset_bottom = 522.0
 
-[node name="losePopup" parent="HUD" instance=ExtResource("7_ru8oh")]
+[node name="losePopup" parent="HUD" unique_id=1885743364 instance=ExtResource("7_ru8oh")]
 visible = false
 offset_left = 275.0
 offset_top = 120.0
 offset_right = 875.0
 offset_bottom = 520.0
 
-[node name="LevelManager" parent="." instance=ExtResource("8_ivdi8")]
+[node name="LevelManager" parent="." unique_id=883868522 instance=ExtResource("8_ivdi8")]
 
 [connection signal="defeat" from="player" to="HUD/losePopup" method="showPopup"]
 [connection signal="mapClose" from="player" to="HUD/map" method="closeMap"]

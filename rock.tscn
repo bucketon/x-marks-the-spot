@@ -9,10 +9,8 @@ data = PackedVector3Array(-7.5362, 2.1869, -1.5296, -9.2335, 0.3077, -1.6179, -7
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 24)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -32)
 mesh = ExtResource("1_y08wt")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -32)
 shape = SubResource("ConcavePolygonShape3D_vq424")

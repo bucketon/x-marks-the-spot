@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bn4q5wedx124i"]
+[gd_scene format=3 uid="uid://bn4q5wedx124i"]
 
 [ext_resource type="PackedScene" uid="uid://dlgglbiwa7gnn" path="res://level_base.tscn" id="1_rwpei"]
 [ext_resource type="PackedScene" uid="uid://cgue0108h6at7" path="res://popup.tscn" id="2_t4uhy"]
-[ext_resource type="ArrayMesh" uid="uid://wbqblrvd4m2c" path="res://resources/oak.obj" id="3_io5bs"]
+[ext_resource type="PackedScene" uid="uid://c8stgoyj42e3u" path="res://oak.tscn" id="3_ailoo"]
+[ext_resource type="PackedScene" uid="uid://dqri7slei5qoe" path="res://rock.tscn" id="4_6riad"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_chbhc"]
 bg_color = Color(0.201285, 0.619613, 0.976066, 1)
@@ -13,12 +14,12 @@ albedo_color = Color(1, 0, 0, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_mnms1"]
 material = SubResource("StandardMaterial3D_vhqr1")
 
-[node name="main" instance=ExtResource("1_rwpei")]
+[node name="main" unique_id=963246620 instance=ExtResource("1_rwpei")]
 
-[node name="goal" parent="." index="4"]
+[node name="goal" parent="." index="5" unique_id=1716796764]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 15)
 
-[node name="tutorial" parent="HUD" index="4" instance=ExtResource("2_t4uhy")]
+[node name="tutorial" parent="HUD" parent_id_path=PackedInt32Array(1899910361) index="4" unique_id=639417072 instance=ExtResource("2_t4uhy")]
 theme_override_styles/panel = SubResource("StyleBoxFlat_chbhc")
 level = 1
 
@@ -31,24 +32,39 @@ You need to find the [color=\"yellow\"]yellow goal[/color] location marked on yo
 
 Once you think you're standing on the [color=\"yellow\"]yellow goal[/color], plant your flag!"
 
-[node name="X" type="Node3D" parent="." index="7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0306, -0.761076, 15.1249)
+[node name="X" type="Node3D" parent="." index="7" unique_id=1643769139]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0306, 0.23892403, 15.1249)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="X" index="0"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="X" index="0" unique_id=2138886887]
 transform = Transform3D(10.92, 0, 0, 0, 1, 0, 0, 0, 1.9, 0, 0, 0)
 mesh = SubResource("BoxMesh_mnms1")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="X" index="1"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="X" index="1" unique_id=1159506993]
 transform = Transform3D(2.29798, 0, -1.85745, 0, 1, 0, 10.6755, 0, 0.399832, 0, 0, 0)
 mesh = SubResource("BoxMesh_mnms1")
 skeleton = NodePath("../..")
 
-[node name="oak" type="CollisionShape3D" parent="." index="8"]
+[node name="oak" parent="." index="8" unique_id=561721726 instance=ExtResource("3_ailoo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.92006, 1.049984, -13.3002)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="oak" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -16)
-mesh = ExtResource("3_io5bs")
+[node name="oak2" parent="." index="9" unique_id=1789617503 instance=ExtResource("3_ailoo")]
+transform = Transform3D(0.925163, 0, 0.379569, 0, 1, 0, -0.379569, 0, 0.925163, -23.2833, 1, -20.8014)
+
+[node name="oak3" parent="." index="10" unique_id=875193895 instance=ExtResource("3_ailoo")]
+transform = Transform3D(0.865204, 0, 0.50142, 0, 1, 0, -0.50142, 0, 0.865204, 13.7895, 1, 15.3509)
+
+[node name="StaticBody3D" parent="." index="11" unique_id=468476911 instance=ExtResource("4_6riad")]
+transform = Transform3D(0.128397, 0, -0.991723, 0, 1, 0, 0.991723, 0, 0.128397, 0, 0.9319725, -32.2661)
+
+[node name="StaticBody3D2" parent="." index="12" unique_id=1964789229 instance=ExtResource("4_6riad")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.91086, 0.99085116, 26.2648)
+
+[node name="StaticBody3D3" parent="." index="13" unique_id=42343465 instance=ExtResource("4_6riad")]
+transform = Transform3D(-0.473836, 0, 0.644577, 0, 0.8, 0, -0.644577, 0, -0.473836, -3.98764, 0.496544, 4.55609)
+
+[node name="StaticBody3D4" parent="." index="14" unique_id=399647265 instance=ExtResource("4_6riad")]
+transform = Transform3D(-0.081639, 0, -0.0577501, 0, 0.1, 0, 0.0577501, 0, -0.081639, 18.3353, 0.56286097, 1.24216)
 
 [connection signal="closed" from="HUD/tutorial" to="player" method="capture_mouse"]
 [connection signal="closed" from="HUD/tutorial" to="HUD/tutorial" method="hide"]
