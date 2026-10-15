@@ -5,6 +5,14 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_rgx2l"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_61o6a"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_1dvg4"]
+material = SubResource("StandardMaterial3D_61o6a")
+radius = 0.1
+height = 0.2
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_uo2s0"]
 
 [sub_resource type="Environment" id="Environment_0dvor"]
@@ -51,14 +59,6 @@ turbulence_influence_max = 0.246
 size = Vector2(0.05, 0.05)
 orientation = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_61o6a"]
-albedo_color = Color(1, 0, 0, 1)
-
-[sub_resource type="SphereMesh" id="SphereMesh_1dvg4"]
-material = SubResource("StandardMaterial3D_61o6a")
-radius = 0.1
-height = 0.2
-
 [node name="player" type="CharacterBody3D" unique_id=1242312356]
 script = ExtResource("1_5n85r")
 shake_amt = 0.05
@@ -71,6 +71,12 @@ shake_amt = 0.05
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.126825, 0)
 layers = 262144
 mesh = SubResource("CapsuleMesh_rgx2l")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="pivot/character" unique_id=641592746]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5951743, -0.54552007)
+layers = 262144
+mesh = SubResource("SphereMesh_1dvg4")
+skeleton = NodePath("../../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1583761033]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.667469, 0)
@@ -110,10 +116,6 @@ visibility_aabb = AABB(-1.50946, -3.69443, -1.27238, 3.14962, 4.94236, 2.68263)
 trail_lifetime = 0.01
 process_material = SubResource("ParticleProcessMaterial_hyugj")
 draw_pass_1 = SubResource("PlaneMesh_fbc7u")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=641592746]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5951743, -0.54552007)
-mesh = SubResource("SphereMesh_1dvg4")
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="area_exited" from="Area3D" to="." method="_on_area_3d_area_exited"]
