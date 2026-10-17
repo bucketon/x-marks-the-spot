@@ -103,3 +103,4 @@ look_right={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.1254902, 0.5764706, 0.827451, 1)

@@ -1,7 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7j642akrgyes"]
+[gd_scene format=3 uid="uid://b7j642akrgyes"]
 
-[ext_resource type="Script" path="res://level_manager.gd" id="1_pfbjr"]
+[ext_resource type="Script" uid="uid://3q8ngani3nnt" path="res://level_manager.gd" id="1_pfbjr"]
 
-[node name="LevelManager" type="Node"]
+[node name="LevelManager" type="Node" unique_id=1776065488]
 script = ExtResource("1_pfbjr")
-levels = Array[String](["res://level_X.tscn", "res://level_maze.tscn", "res://level_2_latlngs.tscn", "res://level_2_rocks.tscn", "res://level_projector_and_rock.tscn", "res://credits.tscn"])
+levels = Array[String](["res://level_X.tscn", "res://level_maze.tscn", "res://level_2_latlngs.tscn", "res://level_2_rocks.tscn", "res://level_projector_and_rock.tscn", "res://level_single_projector.tscn", "res://credits.tscn"])

@@ -1,14 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8stgoyj42e3u"]
+[gd_scene format=3 uid="uid://c8stgoyj42e3u"]
 
 [ext_resource type="ArrayMesh" uid="uid://wbqblrvd4m2c" path="res://resources/oak.obj" id="1_h4b8n"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qh2bq"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ii3qu"]
+points = PackedVector3Array(3.5968819, 2.1686141, 0.42722276, -1.4191867, 8.939449, 0.8601478, -4.261337, 3.5001416, 0.4278314, 0.3350412, 5.284639, -3.0905113, 2.8142805, 7.0345, 2.3162167, 3.8681788, 7.7840953, -1.0467192, -1.8463476, 4.559507, 2.6010432, -3.039059, 7.9240365, -1.3371254, -3.1133711, 3.4233341, -1.5961715, 3.8586905, 3.081961, -1.4840337, 4.1325407, 3.9703712, 1.8814877, -2.4437237, 7.6238384, 2.1771307, -0.2744678, 2.0156138, 0.60195464, 4.9623737, 4.831757, 0.57919526, -3.9332871, 7.784478, 0.571562, 0.4838237, 5.135224, 3.0785866, 2.6659687, 2.6347935, 1.8408597, -0.11924845, 2.0156138, -0.79101765, -4.588727, 4.980253, -0.46435803, 2.6851907, 8.366385, -0.8977256, 2.5187302, 8.197258, 1.4394059, -4.239075, 5.4296827, 1.1636614, 4.297261, 6.3093014, -1.3367517, -2.9831297, 4.856376, -2.0352888, 4.259102, 6.7390833, 0.8544937, -2.2978444, 7.185631, -2.0647264, -3.9104016, 3.088216, -0.6020179, -1.4047514, 8.03891, 2.1562817, -2.3064601, 8.95392, 0.27592823, -2.410204, 3.9885225, 2.1491995, 1.645179, 4.703242, -2.7832458, 3.5313015, 7.029239, -1.7602062)
 
-[node name="oak" type="StaticBody3D"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ju5s6"]
+points = PackedVector3Array(1.7378056, 2.0149164, -0.17162567, -0.4301722, 1.8597881, 0.13775192, -0.12033981, -0.6176276, -0.79113877, 1.4277611, -0.6176276, 0.7574166, 1.4277611, -0.6176276, -0.79113877, -0.12033981, 2.0149164, -0.79113877, -0.12033981, -0.6176276, 0.7574166, 1.5828893, 2.0149164, 0.60250044, -0.12033981, 2.0149164, 0.60250044, 1.7378056, 2.0149164, -0.48130643, 0.96343684, 1.5500467, 0.7574166, 0.34419653, 2.0149164, -0.79113877, -0.4301722, 2.0149164, 0.44743267, 1.7378056, 1.8597881, -0.17162567, 1.4277611, -0.30788624, -0.79113877, 1.273057, 1.5500467, 0.7574166, -0.12033981, -0.15301555, 0.7574166)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="oak" type="StaticBody3D" unique_id=1732467047]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=575329067]
 mesh = ExtResource("1_h4b8n")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1.5, 0, 0, 0, 2.4, 0, 0, 0, 1.5, 0, 0.62, 0)
-shape = SubResource("CapsuleShape3D_qh2bq")
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1988843897]
+shape = SubResource("ConvexPolygonShape3D_ii3qu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=306329615]
+shape = SubResource("ConvexPolygonShape3D_ju5s6")

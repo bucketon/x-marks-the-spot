@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://5llsxo0xwpjr"]
+
+[ext_resource type="PackedScene" uid="uid://37mjh8yo5tq3" path="res://dead_spruce.tscn" id="1_1fr4e"]
+
+[node name="dead_spruce" unique_id=654551371 instance=ExtResource("1_1fr4e")]
+
+[node name="DeadSpruce3" parent="." index="0" unique_id=526725667]
+layers = 131072
+
+[node name="DeadSpruce4" parent="StaticBody3D" parent_id_path=PackedInt32Array(1165972674) index="0" unique_id=1951842101]
+visible = false

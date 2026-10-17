@@ -1,41 +1,47 @@
-[gd_scene load_steps=6 format=3 uid="uid://cneidob1kh68o"]
+[gd_scene format=3 uid="uid://cneidob1kh68o"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_a87tn"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gq8oj"]
+resource_local_to_scene = true
+shading_mode = 0
+disable_ambient_light = true
+disable_fog = true
+disable_specular_occlusion = true
+albedo_texture = SubResource("ViewportTexture_a87tn")
+disable_receive_shadows = true
 
 [sub_resource type="QuadMesh" id="QuadMesh_6i0yt"]
 resource_local_to_scene = true
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_02bcv"]
-viewport_path = NodePath("SubViewport")
-
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_42wcc"]
-resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_02bcv")
-disable_receive_shadows = true
+material = SubResource("StandardMaterial3D_gq8oj")
 
 [sub_resource type="PrismMesh" id="PrismMesh_qwv0e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yi57n"]
+shading_mode = 0
 albedo_color = Color(0.545098, 0, 0, 1)
 disable_receive_shadows = true
 
-[node name="projector" type="Node3D"]
+[node name="projector" type="Node3D" unique_id=1177895058]
 transform = Transform3D(-5.96046e-08, 0, 1, 0, 1, 0, -1, 0, -5.96046e-08, 0, 0, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2118588609]
 transform = Transform3D(14.15, 8.43406e-07, 5.96047e-08, -8.43406e-07, 0, 1, 8.43406e-07, -14.15, 3.55272e-15, -9.53674e-07, 0, 11)
 layers = 524288
 cast_shadow = 0
 mesh = SubResource("QuadMesh_6i0yt")
-surface_material_override/0 = SubResource("ORMMaterial3D_42wcc")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=546729044]
 transform = Transform3D(14.652, 2.32458e-07, -5.96047e-09, -8.73328e-07, 0, -0.1, 8.73328e-07, -3.9, -3.55272e-16, 0, 0, 2)
 layers = 524288
 mesh = SubResource("PrismMesh_qwv0e")
 surface_material_override/0 = SubResource("StandardMaterial3D_yi57n")
 
-[node name="SubViewport" type="SubViewport" parent="."]
+[node name="SubViewport" type="SubViewport" parent="." unique_id=289475454]
 canvas_cull_mask = 4294180863
 
-[node name="Camera3D" type="Camera3D" parent="SubViewport"]
-transform = Transform3D(-5.96046e-08, 0, 1, 0, 1, 0, -1, 0, -5.96046e-08, 16, 0, -11)
-cull_mask = 262143
+[node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=2109492958]
+transform = Transform3D(-5.96046e-08, 0, 1, 0, 1, 0, -1, 0, -5.96046e-08, 0, 0, 0)
+cull_mask = 196607
+current = true

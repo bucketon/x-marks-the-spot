@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dnc2o34myxqwt"]
+
+[ext_resource type="PackedScene" uid="uid://dlgglbiwa7gnn" path="res://level_base.tscn" id="1_huc8g"]
+[ext_resource type="PackedScene" uid="uid://cuwb2okv50idr" path="res://post.tscn" id="2_26gat"]
+
+[node name="main" unique_id=1561036356 instance=ExtResource("1_huc8g")]
+
+[node name="StaticBody3D" parent="." index="9" unique_id=1777770641 instance=ExtResource("2_26gat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="StaticBody3D2" parent="." index="10" unique_id=1729910670 instance=ExtResource("2_26gat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="StaticBody3D4" parent="." index="11" unique_id=906465664 instance=ExtResource("2_26gat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="StaticBody3D3" parent="." index="12" unique_id=48688112 instance=ExtResource("2_26gat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[editable path="HUD/winPopup"]
+[editable path="HUD/losePopup"]

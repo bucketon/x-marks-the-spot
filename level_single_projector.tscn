@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://coguq7youc1kr"]
+
+[ext_resource type="PackedScene" uid="uid://dlgglbiwa7gnn" path="res://level_base.tscn" id="1_87r2t"]
+[ext_resource type="PackedScene" uid="uid://l2wwctymgysb" path="res://invisible_oak.tscn" id="2_13w7e"]
+[ext_resource type="PackedScene" uid="uid://8d5orpv1u0ek" path="res://invisible_rock.tscn" id="3_mmohl"]
+[ext_resource type="PackedScene" uid="uid://5llsxo0xwpjr" path="res://invisible_dead_spruce.tscn" id="4_13w7e"]
+[ext_resource type="PackedScene" uid="uid://cneidob1kh68o" path="res://projector.tscn" id="5_mmohl"]
+[ext_resource type="PackedScene" uid="uid://cv6cvc3b2vsyi" path="res://latlng.tscn" id="6_n8dhk"]
+[ext_resource type="Material" uid="uid://4ykvbgyqsfk4" path="res://resources/blue_latlng_mat.tres" id="7_nle8j"]
+[ext_resource type="Material" uid="uid://bmtha23p0h340" path="res://resources/black_mat.tres" id="8_vateb"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_8c4sd"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ol6f2"]
+resource_local_to_scene = true
+shading_mode = 0
+disable_ambient_light = true
+disable_fog = true
+disable_specular_occlusion = true
+albedo_texture = SubResource("ViewportTexture_8c4sd")
+disable_receive_shadows = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_n8dhk"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_ol6f2")
+
+[sub_resource type="BoxMesh" id="BoxMesh_mmohl"]
+material = ExtResource("7_nle8j")
+
+[sub_resource type="TextMesh" id="TextMesh_8c4sd"]
+material = ExtResource("8_vateb")
+text = "D, 07"
+
+[node name="main" unique_id=1561036356 instance=ExtResource("1_87r2t")]
+
+[node name="goal" parent="." index="6" unique_id=1716796764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1, -7)
+
+[node name="oak" parent="." index="9" unique_id=718993523 instance=ExtResource("2_13w7e")]
+transform = Transform3D(-0.8660254, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.8660254, -17, 1, -15)
+
+[node name="oak2" parent="." index="10" unique_id=1393882769 instance=ExtResource("2_13w7e")]
+transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, 3, 1, -19)
+
+[node name="oak3" parent="." index="11" unique_id=1103227553 instance=ExtResource("2_13w7e")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, 11, 1, 18)
+
+[node name="oak4" parent="." index="12" unique_id=173371465 instance=ExtResource("2_13w7e")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -6, 1, -8)
+
+[node name="oak5" parent="." index="13" unique_id=943927334 instance=ExtResource("2_13w7e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 11)
+
+[node name="oak6" parent="." index="14" unique_id=1465013433 instance=ExtResource("2_13w7e")]
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, 18, 1, -8)
+
+[node name="StaticBody3D" parent="." index="15" unique_id=1205236365 instance=ExtResource("3_mmohl")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, -18, 3, 6)
+
+[node name="StaticBody3D2" parent="." index="16" unique_id=1524352642 instance=ExtResource("3_mmohl")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 7, 3, 7)
+
+[node name="StaticBody3D3" parent="." index="17" unique_id=1708591345 instance=ExtResource("3_mmohl")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 22, 1, 21)
+
+[node name="StaticBody3D4" parent="." index="18" unique_id=62391853 instance=ExtResource("3_mmohl")]
+transform = Transform3D(-0.07764572, 0, -0.28977776, 0, 0.3, 0, 0.28977776, 0, -0.07764572, 12, 1, 7)
+
+[node name="dead_spruce" parent="." index="19" unique_id=654551371 instance=ExtResource("4_13w7e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 1, 8)
+
+[node name="projector" parent="." index="20" unique_id=1177895058 instance=ExtResource("5_mmohl")]
+transform = Transform3D(-1.0000001, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, -1.0000001, 15, 1, -7)
+
+[node name="MeshInstance3D" parent="projector" index="0" unique_id=2118588609]
+mesh = SubResource("QuadMesh_n8dhk")
+
+[node name="Camera3D" parent="projector/SubViewport" parent_id_path=PackedInt32Array(1177895058, 289475454) index="0" unique_id=2109492958]
+transform = Transform3D(-1, 0, -1.0331598e-07, 0, 1, 0, 1.0331598e-07, 0, -1, 15, 1, -7)
+
+[node name="dead_spruce3" parent="." index="21" unique_id=723035297 instance=ExtResource("4_13w7e")]
+transform = Transform3D(0.25881898, -0.9659258, 0, 0.9659258, 0.25881898, 0, 0, 0, 1, 26, 1, -4)
+
+[node name="MeshInstance3D" parent="." index="22" unique_id=2085237032 instance=ExtResource("6_n8dhk")]
+transform = Transform3D(1, 0, 0, 0, 0.6, 0, 0, 0, 1, -5.9913836, 9.361481, 11.464319)
+mesh = SubResource("BoxMesh_mmohl")
+
+[node name="MeshInstance3D" parent="MeshInstance3D" index="0"]
+mesh = SubResource("TextMesh_8c4sd")
+
+[editable path="goal"]
+[editable path="HUD/winPopup"]
+[editable path="HUD/losePopup"]
+[editable path="dead_spruce"]
+[editable path="projector"]
+[editable path="MeshInstance3D"]

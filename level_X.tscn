@@ -4,9 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://cgue0108h6at7" path="res://popup.tscn" id="2_t4uhy"]
 [ext_resource type="PackedScene" uid="uid://c8stgoyj42e3u" path="res://oak.tscn" id="3_ailoo"]
 [ext_resource type="PackedScene" uid="uid://dqri7slei5qoe" path="res://rock.tscn" id="4_6riad"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_chbhc"]
-bg_color = Color(0.201285, 0.619613, 0.976066, 1)
+[ext_resource type="PackedScene" uid="uid://37mjh8yo5tq3" path="res://dead_spruce.tscn" id="5_dv1et"]
+[ext_resource type="PackedScene" uid="uid://cv6cvc3b2vsyi" path="res://latlng.tscn" id="5_p1ftw"]
+[ext_resource type="Material" uid="uid://4ykvbgyqsfk4" path="res://resources/blue_latlng_mat.tres" id="6_var1p"]
+[ext_resource type="Material" uid="uid://bmtha23p0h340" path="res://resources/black_mat.tres" id="7_dv1et"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vhqr1"]
 albedo_color = Color(1, 0, 0, 1)
@@ -14,23 +15,20 @@ albedo_color = Color(1, 0, 0, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_mnms1"]
 material = SubResource("StandardMaterial3D_vhqr1")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g04nt"]
+bg_color = Color(0.1254902, 0.5764706, 0.827451, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bts60"]
+material = ExtResource("6_var1p")
+
+[sub_resource type="TextMesh" id="TextMesh_brvcf"]
+material = ExtResource("7_dv1et")
+text = "A, 04"
+
 [node name="main" unique_id=963246620 instance=ExtResource("1_rwpei")]
 
-[node name="goal" parent="." index="5" unique_id=1716796764]
+[node name="goal" parent="." index="6" unique_id=1716796764]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 15)
-
-[node name="tutorial" parent="HUD" parent_id_path=PackedInt32Array(1899910361) index="4" unique_id=639417072 instance=ExtResource("2_t4uhy")]
-theme_override_styles/panel = SubResource("StyleBoxFlat_chbhc")
-level = 1
-
-[node name="RichTextLabel" parent="HUD/tutorial" index="0"]
-bbcode_enabled = true
-text = "Welcome to X Marks the Spot!
-
-
-You need to find the [color=\"yellow\"]yellow goal[/color] location marked on your map! See if you can find some sort of reference point to help locate it.
-
-Once you think you're standing on the [color=\"yellow\"]yellow goal[/color], plant your flag!"
 
 [node name="X" type="Node3D" parent="." index="7" unique_id=1643769139]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0306, 0.23892403, 15.1249)
@@ -46,7 +44,7 @@ mesh = SubResource("BoxMesh_mnms1")
 skeleton = NodePath("../..")
 
 [node name="oak" parent="." index="8" unique_id=561721726 instance=ExtResource("3_ailoo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.92006, 1.049984, -13.3002)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.968352, 1.049984, -15.390777)
 
 [node name="oak2" parent="." index="9" unique_id=1789617503 instance=ExtResource("3_ailoo")]
 transform = Transform3D(0.925163, 0, 0.379569, 0, 1, 0, -0.379569, 0, 0.925163, -23.2833, 1, -20.8014)
@@ -55,7 +53,7 @@ transform = Transform3D(0.925163, 0, 0.379569, 0, 1, 0, -0.379569, 0, 0.925163, 
 transform = Transform3D(0.865204, 0, 0.50142, 0, 1, 0, -0.50142, 0, 0.865204, 13.7895, 1, 15.3509)
 
 [node name="StaticBody3D" parent="." index="11" unique_id=468476911 instance=ExtResource("4_6riad")]
-transform = Transform3D(0.128397, 0, -0.991723, 0, 1, 0, 0.991723, 0, 0.128397, 0, 0.9319725, -32.2661)
+transform = Transform3D(0.128397, 0, -0.991723, 0, 1, 0, 0.991723, 0, 0.128397, -2.3911629, 0.9319725, -15.1221695)
 
 [node name="StaticBody3D2" parent="." index="12" unique_id=1964789229 instance=ExtResource("4_6riad")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.91086, 0.99085116, 26.2648)
@@ -66,6 +64,35 @@ transform = Transform3D(-0.473836, 0, 0.644577, 0, 0.8, 0, -0.644577, 0, -0.4738
 [node name="StaticBody3D4" parent="." index="14" unique_id=399647265 instance=ExtResource("4_6riad")]
 transform = Transform3D(-0.081639, 0, -0.0577501, 0, 0.1, 0, 0.0577501, 0, -0.081639, 18.3353, 0.56286097, 1.24216)
 
+[node name="tutorial" parent="HUD" parent_id_path=PackedInt32Array(1899910361) index="4" unique_id=639417072 instance=ExtResource("2_t4uhy")]
+theme_override_styles/panel = SubResource("StyleBoxFlat_g04nt")
+level = 1
+
+[node name="RichTextLabel" parent="HUD/tutorial/PanelContainer2" parent_id_path=PackedInt32Array(639417072, 847651010) index="0" unique_id=1675064360]
+bbcode_enabled = true
+text = "Welcome to X Marks the Spot!
+
+In this game, you need to find the [color=\"yellow\"]yellow spot[/color] and plant your flag there. Use your map to make sure you're standing in the right place! You might need to try to identify some nearby landmarks..."
+
+[node name="DeadSpruce" type="MeshInstance3D" parent="." index="17" unique_id=1092194245]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, -4)
+
+[node name="dead_spruce" parent="." index="18" unique_id=654551371 instance=ExtResource("5_dv1et")]
+transform = Transform3D(1, -8.8811886e-10, 0, 0, 1.0000001, 0, 0, 7.506309e-10, 1.0000001, -11.91884, 1.2463188, -11.113321)
+
+[node name="dead_spruce2" parent="." index="19" unique_id=1398458809 instance=ExtResource("5_dv1et")]
+transform = Transform3D(1, -8.8811886e-10, 0, 0, 1.0000001, 0, 0, 7.506309e-10, 1.0000001, 18.001492, 1.2463183, 9.144604)
+
+[node name="dead_spruce3" parent="." index="20" unique_id=532684850 instance=ExtResource("5_dv1et")]
+transform = Transform3D(0.17717578, 1.646503, -0.102413654, -0.6112661, -0.048299298, 0.02281989, 0.0046395324, 0.1180293, 0.99503493, -3.66013, 1.8497429, -4.733694)
+
+[node name="MeshInstance3D" parent="." index="21" unique_id=260423748 instance=ExtResource("5_p1ftw")]
+transform = Transform3D(0.9521261, 0.064656295, 0.2860831, -0.112460814, 0.59619373, 0, -0.28426823, -0.019303882, 0.9582048, 0.24191332, 7.05321, -17.938793)
+mesh = SubResource("BoxMesh_bts60")
+
+[node name="MeshInstance3D" parent="MeshInstance3D" index="0"]
+mesh = SubResource("TextMesh_brvcf")
+
 [connection signal="closed" from="HUD/tutorial" to="player" method="capture_mouse"]
 [connection signal="closed" from="HUD/tutorial" to="HUD/tutorial" method="hide"]
 [connection signal="opened" from="HUD/tutorial" to="player" method="release_mouse"]
@@ -75,3 +102,4 @@ transform = Transform3D(-0.081639, 0, -0.0577501, 0, 0.1, 0, 0.0577501, 0, -0.08
 [editable path="HUD/winPopup"]
 [editable path="HUD/losePopup"]
 [editable path="HUD/tutorial"]
+[editable path="MeshInstance3D"]

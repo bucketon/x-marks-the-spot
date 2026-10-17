@@ -1,15 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://b13x7wdb5cynq"]
+[gd_scene format=3 uid="uid://b13x7wdb5cynq"]
 
 [ext_resource type="PackedScene" uid="uid://cgue0108h6at7" path="res://popup.tscn" id="1_a57yl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jblul"]
 bg_color = Color(0.84956, 1.99743e-06, 3.85046e-07, 1)
 
-[node name="losePopup" instance=ExtResource("1_a57yl")]
+[node name="losePopup" unique_id=2043942561 instance=ExtResource("1_a57yl")]
 theme_override_styles/panel = SubResource("StyleBoxFlat_jblul")
 
-[node name="RichTextLabel" parent="." index="0"]
-text = "That wasn't the spot..."
+[node name="RichTextLabel" parent="PanelContainer2" parent_id_path=PackedInt32Array(847651010) index="0" unique_id=1675064360]
+text = "That wasn't the right spot..."
 
-[node name="Button" parent="PanelContainer" index="0"]
+[node name="Button" parent="PanelContainer" parent_id_path=PackedInt32Array(891084794) index="0" unique_id=457609611]
 text = "Try again"
