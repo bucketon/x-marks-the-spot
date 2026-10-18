@@ -5,7 +5,6 @@ signal closed
 signal opened
 
 func _ready():
-	$PanelContainer/Button.grab_focus.call_deferred()
 	if level == 0: return
 	
 	var flags = TutorialFlags.flags.duplicate()
@@ -26,4 +25,5 @@ func _ready():
 
 func showPopup():
 	visible = true
+	$PanelContainer/Button.grab_focus.call_deferred()
 	
