@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://ciq1q7m8x3an"]
+
+[ext_resource type="Material" uid="uid://bmtha23p0h340" path="res://resources/black_mat.tres" id="1_38w6q"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tet6o"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_skwly"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_33q86"]
+resource_local_to_scene = true
+shading_mode = 0
+disable_ambient_light = true
+disable_fog = true
+disable_specular_occlusion = true
+albedo_texture = SubResource("ViewportTexture_skwly")
+disable_receive_shadows = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1dvg4"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_33q86")
+size = Vector2(1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1dvg4"]
+
+[sub_resource type="TextMesh" id="TextMesh_1dvg4"]
+resource_local_to_scene = true
+material = ExtResource("1_38w6q")
+text = "C, 02"
+
+[node name="Node3D" type="StaticBody3D" unique_id=1143568939]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=711028225]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+layers = 65536
+mesh = SubResource("BoxMesh_tet6o")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=575503416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.51, 0)
+layers = 65536
+mesh = SubResource("PlaneMesh_1dvg4")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=142190012]
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=1496130317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+cull_mask = 196607
+current = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=434890979]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_1dvg4")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=538828404]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5, 1.25, 0)
+layers = 65536
+mesh = SubResource("TextMesh_1dvg4")
+skeleton = NodePath("../MeshInstance3D3")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=1745595692]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.25, -0.5)
+layers = 65536
+mesh = SubResource("TextMesh_1dvg4")
+skeleton = NodePath("../MeshInstance3D3")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=73997452]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -0.5, 1.25, 0)
+layers = 65536
+mesh = SubResource("TextMesh_1dvg4")
+skeleton = NodePath("../MeshInstance3D3")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1411993733]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0.5)
+layers = 65536
+mesh = SubResource("TextMesh_1dvg4")
