@@ -8,19 +8,19 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ykuof"]
 albedo_color = Color(0.051971, 0.051971, 0.051971, 1)
 
-[sub_resource type="TextMesh" id="TextMesh_cyd5f"]
+[sub_resource type="TextMesh" id="TextMesh_gbkc3"]
 resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_ykuof")
 text = "A, 06"
 font_size = 26
 
-[sub_resource type="TextMesh" id="TextMesh_vd2wj"]
+[sub_resource type="TextMesh" id="TextMesh_77lih"]
 resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_ykuof")
 text = "E, 02"
 font_size = 26
 
-[sub_resource type="TextMesh" id="TextMesh_02ghc"]
+[sub_resource type="TextMesh" id="TextMesh_cyd5f"]
 resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_ykuof")
 text = "B, 06"
@@ -31,7 +31,7 @@ material = ExtResource("3_gbkc3")
 
 [sub_resource type="TextMesh" id="TextMesh_lv0qh"]
 material = ExtResource("4_77lih")
-text = "C, 05"
+text = "F, 02"
 
 [node name="main" unique_id=86687494 instance=ExtResource("1_6epyw")]
 
@@ -45,19 +45,19 @@ transform = Transform3D(0.5, 0, 0.866025, 0, 0.6, 0, -0.866025, 0, 0.5, -8, 0.57
 transform = Transform3D(0.258819, 0, -0.965926, 0, 0.6, 0, 0.965926, 0, 0.258819, 24, 0.570125, -16)
 
 [node name="MeshInstance3D" parent="MeshInstance3D7" index="0"]
-mesh = SubResource("TextMesh_cyd5f")
+mesh = SubResource("TextMesh_gbkc3")
 
 [node name="MeshInstance3D8" parent="." index="9" unique_id=661481431 instance=ExtResource("2_l3yut")]
 transform = Transform3D(0.986286, 0, 0.165048, 0, 0.6, 0, -0.165048, 0, 0.986286, -8, 0.57, 16)
 
 [node name="MeshInstance3D" parent="MeshInstance3D8" index="0"]
-mesh = SubResource("TextMesh_vd2wj")
+mesh = SubResource("TextMesh_77lih")
 
 [node name="MeshInstance3D9" parent="." index="10" unique_id=844383729 instance=ExtResource("2_l3yut")]
 transform = Transform3D(0.676876, 0, -0.736097, 0, 0.6, 0, 0.736097, 0, 0.676876, 16, 0.57, -16)
 
 [node name="MeshInstance3D" parent="MeshInstance3D9" index="0"]
-mesh = SubResource("TextMesh_02ghc")
+mesh = SubResource("TextMesh_cyd5f")
 
 [node name="MeshInstance3D2" parent="." index="11" unique_id=325788243 instance=ExtResource("2_l3yut")]
 transform = Transform3D(-0.25881907, 0, -0.9659258, 0, 0.5999999, 0, 0.9659258, 0, -0.25881907, 58.778145, 0.3611729, 58.71823)
@@ -66,9 +66,6 @@ skeleton = NodePath("../MeshInstance3D9")
 
 [node name="MeshInstance3D" parent="MeshInstance3D2" index="0"]
 mesh = SubResource("TextMesh_lv0qh")
-
-[connection signal="pressed" from="HUD/winPopup/PanelContainer/Button" to="LevelManager" method="progress"]
-[connection signal="pressed" from="HUD/losePopup/PanelContainer/Button" to="LevelManager" method="retry"]
 
 [editable path="MeshInstance3D7"]
 [editable path="MeshInstance3D8"]

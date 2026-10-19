@@ -16,7 +16,7 @@ material = ExtResource("3_lv0qh")
 
 [sub_resource type="TextMesh" id="TextMesh_6tq17"]
 material = ExtResource("4_i113e")
-text = "B, 07"
+text = "D, 03"
 
 [node name="main" unique_id=431957502 instance=ExtResource("1_ccpkd")]
 
@@ -515,9 +515,6 @@ mesh = SubResource("BoxMesh_t4xaj")
 
 [node name="MeshInstance3D" parent="MeshInstance3D" index="0"]
 mesh = SubResource("TextMesh_6tq17")
-
-[connection signal="pressed" from="HUD/winPopup/PanelContainer/Button" to="LevelManager" method="progress"]
-[connection signal="pressed" from="HUD/losePopup/PanelContainer/Button" to="LevelManager" method="retry"]
 
 [editable path="HUD/winPopup"]
 [editable path="HUD/losePopup"]

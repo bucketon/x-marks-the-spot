@@ -23,7 +23,7 @@ material = ExtResource("6_var1p")
 
 [sub_resource type="TextMesh" id="TextMesh_brvcf"]
 material = ExtResource("7_dv1et")
-text = "A, 04"
+text = "B, 02"
 
 [node name="main" unique_id=963246620 instance=ExtResource("1_rwpei")]
 

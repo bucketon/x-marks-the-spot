@@ -12,18 +12,13 @@
 [ext_resource type="Texture2D" uid="uid://bb8vvrly5qf5o" path="res://resources/quad6.png" id="7_nrdm3"]
 [ext_resource type="PackedScene" uid="uid://ciq1q7m8x3an" path="res://local_projector.tscn" id="11_nrdm3"]
 [ext_resource type="Material" uid="uid://bmtha23p0h340" path="res://resources/black_mat.tres" id="12_udm7i"]
+[ext_resource type="Material" uid="uid://4ykvbgyqsfk4" path="res://resources/blue_latlng_mat.tres" id="13_wqdcp"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_61o6a"]
 resource_local_to_scene = true
-albedo_color = Color(0, 0.39676535, 0.9223183, 1)
-orm_texture = ExtResource("2_y28pc")
-emission_enabled = true
-emission = Color(0.15686275, 0.15686275, 0.34117648, 1)
-normal_enabled = true
-normal_texture = ExtResource("2_y28pc")
-clearcoat_enabled = true
-clearcoat_roughness = 0.18
-clearcoat_texture = ExtResource("2_y28pc")
+shading_mode = 0
+albedo_color = Color(0, 0.4627451, 0.88235295, 1)
+albedo_texture = ExtResource("2_y28pc")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_1dvg4"]
 resource_local_to_scene = true
@@ -32,15 +27,9 @@ size = Vector2(4, 4)
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_udm7i"]
 resource_local_to_scene = true
-albedo_color = Color(0, 0.39676535, 0.9223183, 1)
-orm_texture = ExtResource("3_8f00k")
-emission_enabled = true
-emission = Color(0.15686275, 0.15686275, 0.34117648, 1)
-normal_enabled = true
-normal_texture = ExtResource("3_8f00k")
-clearcoat_enabled = true
-clearcoat_roughness = 0.18
-clearcoat_texture = ExtResource("3_8f00k")
+shading_mode = 0
+albedo_color = Color(0, 0.4627451, 0.88235295, 1)
+albedo_texture = ExtResource("3_8f00k")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_y28pc"]
 material = SubResource("ORMMaterial3D_udm7i")
@@ -48,15 +37,9 @@ size = Vector2(4, 4)
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_wqdcp"]
 resource_local_to_scene = true
-albedo_color = Color(0, 0.39676535, 0.9223183, 1)
-orm_texture = ExtResource("4_ldrq8")
-emission_enabled = true
-emission = Color(0.15686275, 0.15686275, 0.34117648, 1)
-normal_enabled = true
-normal_texture = ExtResource("4_ldrq8")
-clearcoat_enabled = true
-clearcoat_roughness = 0.18
-clearcoat_texture = ExtResource("4_ldrq8")
+shading_mode = 0
+albedo_color = Color(0, 0.4627451, 0.88235295, 1)
+albedo_texture = ExtResource("4_ldrq8")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_gd53k"]
 material = SubResource("ORMMaterial3D_wqdcp")
@@ -64,15 +47,9 @@ size = Vector2(4, 4)
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_6gx2s"]
 resource_local_to_scene = true
-albedo_color = Color(0, 0.39676535, 0.9223183, 1)
-orm_texture = ExtResource("5_4ff1h")
-emission_enabled = true
-emission = Color(0.15686275, 0.15686275, 0.34117648, 1)
-normal_enabled = true
-normal_texture = ExtResource("5_4ff1h")
-clearcoat_enabled = true
-clearcoat_roughness = 0.18
-clearcoat_texture = ExtResource("5_4ff1h")
+shading_mode = 0
+albedo_color = Color(0, 0.4627451, 0.88235295, 1)
+albedo_texture = ExtResource("5_4ff1h")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_mhjqy"]
 material = SubResource("ORMMaterial3D_6gx2s")
@@ -80,15 +57,9 @@ size = Vector2(4, 4)
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_5be7r"]
 resource_local_to_scene = true
-albedo_color = Color(0, 0.39676535, 0.9223183, 1)
-orm_texture = ExtResource("6_ekbio")
-emission_enabled = true
-emission = Color(0.15686275, 0.15686275, 0.34117648, 1)
-normal_enabled = true
-normal_texture = ExtResource("6_ekbio")
-clearcoat_enabled = true
-clearcoat_roughness = 0.18
-clearcoat_texture = ExtResource("6_ekbio")
+shading_mode = 0
+albedo_color = Color(0, 0.4627451, 0.88235295, 1)
+albedo_texture = ExtResource("6_ekbio")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8f00k"]
 material = SubResource("ORMMaterial3D_5be7r")
@@ -96,15 +67,9 @@ size = Vector2(4, 4)
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_8nsnj"]
 resource_local_to_scene = true
-albedo_color = Color(0, 0.39676535, 0.9223183, 1)
-orm_texture = ExtResource("7_nrdm3")
-emission_enabled = true
-emission = Color(0.15686275, 0.15686275, 0.34117648, 1)
-normal_enabled = true
-normal_texture = ExtResource("7_nrdm3")
-clearcoat_enabled = true
-clearcoat_roughness = 0.18
-clearcoat_texture = ExtResource("7_nrdm3")
+shading_mode = 0
+albedo_color = Color(0, 0.4627451, 0.88235295, 1)
+albedo_texture = ExtResource("7_nrdm3")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ldrq8"]
 material = SubResource("ORMMaterial3D_8nsnj")
@@ -244,6 +209,9 @@ resource_local_to_scene = true
 material = ExtResource("12_udm7i")
 text = "A, 03"
 
+[sub_resource type="BoxMesh" id="BoxMesh_5m5wd"]
+material = ExtResource("13_wqdcp")
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_yogx1"]
 viewport_path = NodePath("SubViewport")
 
@@ -264,7 +232,7 @@ size = Vector2(1, 1)
 [sub_resource type="TextMesh" id="TextMesh_svsof"]
 resource_local_to_scene = true
 material = ExtResource("12_udm7i")
-text = "A, 05
+text = "C, 04
 "
 
 [node name="main" unique_id=1561036356 instance=ExtResource("1_c08yj")]
@@ -460,6 +428,9 @@ mesh = SubResource("TextMesh_7iak0")
 
 [node name="Node3D7" parent="." index="32" unique_id=112209658 instance=ExtResource("11_nrdm3")]
 transform = Transform3D(-0.86948365, 0, 0.49396166, 0, 1, 0, -0.49396166, 0, -0.86948365, -43.68588, -0.48061943, -23.51923)
+
+[node name="MeshInstance3D" parent="Node3D7" index="0" unique_id=711028225]
+mesh = SubResource("BoxMesh_5m5wd")
 
 [node name="MeshInstance3D2" parent="Node3D7" index="1" unique_id=575503416]
 mesh = SubResource("PlaneMesh_ueccg")

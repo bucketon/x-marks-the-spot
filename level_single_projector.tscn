@@ -9,28 +9,28 @@
 [ext_resource type="Material" uid="uid://4ykvbgyqsfk4" path="res://resources/blue_latlng_mat.tres" id="7_nle8j"]
 [ext_resource type="Material" uid="uid://bmtha23p0h340" path="res://resources/black_mat.tres" id="8_vateb"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_8c4sd"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_vo3dd"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ol6f2"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3yw7h"]
 resource_local_to_scene = true
 shading_mode = 0
 disable_ambient_light = true
 disable_fog = true
 disable_specular_occlusion = true
-albedo_texture = SubResource("ViewportTexture_8c4sd")
+albedo_texture = SubResource("ViewportTexture_vo3dd")
 disable_receive_shadows = true
 
-[sub_resource type="QuadMesh" id="QuadMesh_n8dhk"]
+[sub_resource type="QuadMesh" id="QuadMesh_xpfgm"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_ol6f2")
+material = SubResource("StandardMaterial3D_3yw7h")
 
 [sub_resource type="BoxMesh" id="BoxMesh_mmohl"]
 material = ExtResource("7_nle8j")
 
 [sub_resource type="TextMesh" id="TextMesh_8c4sd"]
 material = ExtResource("8_vateb")
-text = "D, 07"
+text = "D, 06"
 
 [node name="main" unique_id=1561036356 instance=ExtResource("1_87r2t")]
 
@@ -74,7 +74,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 1, 8)
 transform = Transform3D(-1.0000001, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, -1.0000001, 15, 1, -7)
 
 [node name="MeshInstance3D" parent="projector" index="0" unique_id=2118588609]
-mesh = SubResource("QuadMesh_n8dhk")
+mesh = SubResource("QuadMesh_xpfgm")
 
 [node name="Camera3D" parent="projector/SubViewport" parent_id_path=PackedInt32Array(1177895058, 289475454) index="0" unique_id=2109492958]
 transform = Transform3D(-1, 0, -1.0331598e-07, 0, 1, 0, 1.0331598e-07, 0, -1, 15, 1, -7)

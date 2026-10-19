@@ -5,40 +5,41 @@
 [ext_resource type="PackedScene" uid="uid://8d5orpv1u0ek" path="res://invisible_rock.tscn" id="3_yjye6"]
 [ext_resource type="PackedScene" uid="uid://cgue0108h6at7" path="res://popup.tscn" id="4_mgnje"]
 [ext_resource type="PackedScene" uid="uid://l2wwctymgysb" path="res://invisible_oak.tscn" id="4_ta8ke"]
+[ext_resource type="PackedScene" uid="uid://37mjh8yo5tq3" path="res://dead_spruce.tscn" id="4_x7hgt"]
 [ext_resource type="PackedScene" uid="uid://cv6cvc3b2vsyi" path="res://latlng.tscn" id="6_oxqv2"]
 [ext_resource type="Material" uid="uid://4ykvbgyqsfk4" path="res://resources/blue_latlng_mat.tres" id="7_x7hgt"]
 [ext_resource type="Material" uid="uid://bmtha23p0h340" path="res://resources/black_mat.tres" id="8_rf8kp"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_oxqv2"]
+[sub_resource type="QuadMesh" id="QuadMesh_x7hgt"]
 resource_local_to_scene = true
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_x7hgt"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_rf8kp"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_rf8kp"]
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_g04nt"]
 resource_local_to_scene = true
 shading_mode = 0
 disable_ambient_light = true
 disable_fog = true
 disable_specular_occlusion = true
-albedo_texture = SubResource("ViewportTexture_x7hgt")
+albedo_texture = SubResource("ViewportTexture_rf8kp")
 disable_receive_shadows = true
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_g04nt"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_rluv7"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rluv7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gwv8v"]
 resource_local_to_scene = true
 shading_mode = 0
 disable_ambient_light = true
 disable_fog = true
 disable_specular_occlusion = true
-albedo_texture = SubResource("ViewportTexture_g04nt")
+albedo_texture = SubResource("ViewportTexture_rluv7")
 disable_receive_shadows = true
 
-[sub_resource type="QuadMesh" id="QuadMesh_gwv8v"]
+[sub_resource type="QuadMesh" id="QuadMesh_e53oj"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_rluv7")
+material = SubResource("StandardMaterial3D_gwv8v")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yb28g"]
 bg_color = Color(0.1254902, 0.5764706, 0.827451, 1)
@@ -48,7 +49,7 @@ material = ExtResource("7_x7hgt")
 
 [sub_resource type="TextMesh" id="TextMesh_wjngi"]
 material = ExtResource("8_rf8kp")
-text = "D, 05"
+text = "F, 05"
 
 [node name="main" unique_id=625143877 instance=ExtResource("1_f5mto")]
 
@@ -60,8 +61,8 @@ transform = Transform3D(-1, 0, -1.0331598e-07, 0, 1, 0, 1.0331598e-07, 0, -1, -1
 
 [node name="MeshInstance3D" parent="projector" index="0" unique_id=2118588609]
 transform = Transform3D(14.15, 5.6152885e-08, 5.96047e-08, -8.43406e-07, -2.9963788e-21, 1, 5.6152885e-08, -14.15, 2.365365e-16, 9.536743e-07, 0, 11)
-mesh = SubResource("QuadMesh_oxqv2")
-surface_material_override/0 = SubResource("ORMMaterial3D_rf8kp")
+mesh = SubResource("QuadMesh_x7hgt")
+surface_material_override/0 = SubResource("ORMMaterial3D_g04nt")
 
 [node name="Camera3D" parent="projector/SubViewport" parent_id_path=PackedInt32Array(1028398264, 289475454) index="0" unique_id=2109492958]
 transform = Transform3D(-1, 0, -1.0331598e-07, 0, 1, 0, 1.0331598e-07, 0, -1, -16, 2, -7)
@@ -71,13 +72,22 @@ transform = Transform3D(-5.96046e-08, 0, 1, 0, 1, 0, -1, 0, -5.96046e-08, 7, 2, 
 
 [node name="MeshInstance3D" parent="projector2" index="0" unique_id=2118588609]
 transform = Transform3D(2.2488985e-07, -14.15, 9.473153e-16, -8.43406e-07, 0, 1, -14.15, -2.2488985e-07, -5.96047e-08, -9.536743e-07, 0, 11.000001)
-mesh = SubResource("QuadMesh_gwv8v")
+mesh = SubResource("QuadMesh_e53oj")
 
 [node name="Camera3D" parent="projector2/SubViewport" parent_id_path=PackedInt32Array(1177895058, 289475454) index="0" unique_id=2109492958]
 transform = Transform3D(-5.96046e-08, 0, 1, 0, 1, 0, -1, 0, -5.96046e-08, 7, 2, 11)
 
 [node name="rock" parent="." index="9" unique_id=21641208 instance=ExtResource("3_yjye6")]
 transform = Transform3D(0.25881895, 0, 0.96592593, 0, 1, 0, -0.96592593, 0, 0.25881895, -20.118704, 2, -2.779131)
+
+[node name="dead_spruce" parent="." index="10" unique_id=654551371 instance=ExtResource("4_x7hgt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, -16)
+
+[node name="DeadSpruce3" parent="dead_spruce" index="0" unique_id=526725667]
+layers = 131072
+
+[node name="DeadSpruce4" parent="dead_spruce/StaticBody3D" parent_id_path=PackedInt32Array(654551371, 1165972674) index="0" unique_id=1951842101]
+layers = 131072
 
 [node name="tutorial" parent="HUD" parent_id_path=PackedInt32Array(1899910361) index="4" unique_id=517540047 instance=ExtResource("4_mgnje")]
 theme_override_styles/panel = SubResource("StyleBoxFlat_yb28g")
@@ -89,13 +99,13 @@ text = "Those two strange things on your map are [color=\"red\"]projectors...[/c
 
 They show what you would see if you were standing right at the tip of their [color=\"red\"]red arrow[/color] and looking in the direction it points."
 
-[node name="oak" parent="." index="12" unique_id=718993523 instance=ExtResource("4_ta8ke")]
+[node name="oak" parent="." index="13" unique_id=718993523 instance=ExtResource("4_ta8ke")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 1, 18)
 
-[node name="StaticBody3D" parent="." index="13" unique_id=1205236365 instance=ExtResource("3_yjye6")]
+[node name="StaticBody3D" parent="." index="14" unique_id=1205236365 instance=ExtResource("3_yjye6")]
 transform = Transform3D(-8.742278e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.742278e-09, -13, 1, 15.346251)
 
-[node name="MeshInstance3D" parent="." index="14" unique_id=271520266 instance=ExtResource("6_oxqv2")]
+[node name="MeshInstance3D" parent="." index="15" unique_id=271520266 instance=ExtResource("6_oxqv2")]
 transform = Transform3D(1, 0, 0, 0, -0.5417028, -0.42998093, 0, 0.25798857, -0.902838, -17.761198, 4.538293, 19.368626)
 mesh = SubResource("BoxMesh_0nuof")
 
@@ -110,6 +120,7 @@ mesh = SubResource("TextMesh_wjngi")
 
 [editable path="projector"]
 [editable path="projector2"]
+[editable path="dead_spruce"]
 [editable path="HUD/winPopup"]
 [editable path="HUD/losePopup"]
 [editable path="HUD/tutorial"]

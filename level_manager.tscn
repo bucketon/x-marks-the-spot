@@ -4,4 +4,4 @@
 
 [node name="LevelManager" type="Node" unique_id=1776065488]
 script = ExtResource("1_pfbjr")
-levels = Array[String](["res://level_X.tscn", "res://level_maze.tscn", "res://level_2_latlngs.tscn", "res://level_2_rocks.tscn", "res://level_projector_and_rock.tscn", "res://level_single_projector.tscn", "res://level_scavenger.tscn", "res://level_linked_list.tscn", "res://credits.tscn"])
+levels = Array[String](["res://level_X.tscn", "res://level_maze.tscn", "res://level_2_latlngs.tscn", "res://level_2_rocks.tscn", "res://level_projector_and_rock.tscn", "res://level_single_projector.tscn", "res://level_scavenger.tscn", "res://level_linked_list.tscn", "res://level_finale.tscn", "res://credits.tscn"])

@@ -11,7 +11,7 @@ material = ExtResource("4_ebun5")
 
 [sub_resource type="TextMesh" id="TextMesh_x33a7"]
 material = ExtResource("5_hn3uh")
-text = "C, 03"
+text = "E, 04"
 
 [node name="main" unique_id=817110251 instance=ExtResource("1_0d6dx")]
 
