@@ -8,20 +8,34 @@
 script = ExtResource("1_mae5d")
 
 [node name="Button" type="Button" parent="." unique_id=504149591]
-offset_left = 527.0
-offset_top = 537.0
-offset_right = 623.0
-offset_bottom = 568.0
+offset_left = 375.0
+offset_top = 569.0
+offset_right = 471.0
+offset_bottom = 600.0
 focus_neighbor_bottom = NodePath("../Button2")
 text = "New Game"
 
 [node name="Button2" type="Button" parent="." unique_id=1972531149]
-offset_left = 535.0
-offset_top = 577.0
-offset_right = 614.0
-offset_bottom = 608.0
+offset_left = 485.0
+offset_top = 569.0
+offset_right = 564.0
+offset_bottom = 600.0
 focus_neighbor_top = NodePath("../Button")
 text = "Continue"
+
+[node name="Button3" type="Button" parent="." unique_id=1461602428]
+offset_left = 578.0
+offset_top = 569.0
+offset_right = 677.0
+offset_bottom = 600.0
+text = "Level Select"
+
+[node name="Button4" type="Button" parent="." unique_id=1584936830]
+offset_left = 691.0
+offset_top = 569.0
+offset_right = 733.0
+offset_bottom = 600.0
+text = "Quit"
 
 [node name="Xmarksthespotlogo" type="Sprite2D" parent="." unique_id=786204185]
 position = Vector2(575, 299)
@@ -31,3 +45,5 @@ texture = ExtResource("2_kv4c1")
 
 [connection signal="pressed" from="Button" to="LevelManager" method="startNewGame"]
 [connection signal="pressed" from="Button2" to="LevelManager" method="continueGame"]
+[connection signal="pressed" from="Button3" to="." method="loadLevelSelect"]
+[connection signal="pressed" from="Button4" to="." method="quitGame"]

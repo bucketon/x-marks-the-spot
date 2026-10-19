@@ -16,7 +16,7 @@ resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("8_agx4c")
 shader_parameter/max_depth = 9.70000014454164
-shader_parameter/water_level = 0.40000015497247965
+shader_parameter/water_level = 0.4000001549724797
 shader_parameter/underwater_fog_color = Color(0.33199525, 0.5377665, 0.9999904, 1)
 shader_parameter/fade_start_depth = 5.70000008493684
 shader_parameter/sea_height = 0.2000000095
@@ -106,6 +106,9 @@ roughness_texture_channel = 4
 normal_enabled = true
 normal_texture = ExtResource("1_na7lp")
 uv1_scale = Vector3(10, 10, 10)
+
+[sub_resource type="Theme" id="Theme_1dvg4"]
+default_font_size = 40
 
 [node name="main" type="Node3D" unique_id=1561036356]
 
@@ -257,14 +260,39 @@ offset_top = 120.0
 offset_right = 875.0
 offset_bottom = 520.0
 
+[node name="pauseMenu" type="Panel" parent="HUD" unique_id=1906289847]
+visible = false
+offset_right = 1153.0
+offset_bottom = 650.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HUD/pauseMenu" unique_id=527446996]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 100.0
+theme = SubResource("Theme_1dvg4")
+text = "Paused"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="HUD/pauseMenu" unique_id=333525932]
+custom_maximum_size = Vector2(300, 100)
+layout_mode = 0
+offset_left = 433.0
+offset_top = 496.0
+offset_right = 733.0
+offset_bottom = 596.0
+text = "Back to main menu"
+
 [node name="LevelManager" parent="." unique_id=883868522 instance=ExtResource("8_ivdi8")]
 
 [connection signal="defeat" from="player" to="HUD/losePopup" method="showPopup"]
 [connection signal="mapClose" from="player" to="HUD/map" method="closeMap"]
 [connection signal="mapOpen" from="player" to="HUD/map" method="openMap"]
+[connection signal="pause" from="player" to="HUD/pauseMenu" method="show"]
+[connection signal="unpause" from="player" to="HUD/pauseMenu" method="hide"]
 [connection signal="victory" from="player" to="HUD/winPopup" method="showPopup"]
 [connection signal="pressed" from="HUD/winPopup/PanelContainer/Button" to="LevelManager" method="progress"]
 [connection signal="pressed" from="HUD/losePopup/PanelContainer/Button" to="LevelManager" method="retry"]
+[connection signal="pressed" from="HUD/pauseMenu/Button" to="LevelManager" method="goToMainMenu"]
 
 [editable path="HUD/winPopup"]
 [editable path="HUD/losePopup"]

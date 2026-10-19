@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 @export var speed = 8
+@export var sprintSpeed = 12
 @export var fall_acceleration = 75
 @export var flag_time = 2
 @export var shake_amt = 0.5
@@ -9,6 +10,8 @@ signal victory
 signal defeat
 signal mapOpen
 signal mapClose
+signal pause
+signal unpause
 
 var target_velocity = Vector3.ZERO
 var mouse_captured: bool = false
@@ -16,6 +19,7 @@ var look_dir: Vector2
 var is_touching_goal: bool = false
 var flag_held_seconds: float = 0
 var map_is_open = false
+var paused = false
 
 @onready var camera: Camera3D = $camera
 @onready var initialCameraPos = $camera.transform
@@ -54,6 +58,18 @@ func _handle_joypad_camera_rotation(delta: float, sens_mod: float = 2.0) -> void
 	
 
 func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed("pause"):
+		paused = not paused
+		if paused:
+			pause.emit()
+			release_mouse()
+		else:
+			unpause.emit()
+			capture_mouse()
+	
+	if paused:
+		return
+	
 	var direction = Vector3.ZERO
 	if not Input.is_action_pressed("action"):
 		if Input.is_action_pressed("move_right"):
@@ -64,6 +80,10 @@ func _physics_process(delta: float) -> void:
 			direction.z += 1
 		if Input.is_action_pressed("move_forward"):
 			direction.z -= 1
+			
+	var magnitude = speed
+	if Input.is_action_pressed("sprint"):
+		magnitude = sprintSpeed
 		
 	if Input.is_action_pressed("action"):
 		flag_held_seconds += delta
@@ -105,8 +125,8 @@ func _physics_process(delta: float) -> void:
 		target_velocity.y = 30
 		
 	var _forward: Vector3 = camera.global_transform.basis * Vector3(direction.x, 0, direction.z)
-	target_velocity.x = _forward.normalized().x * speed
-	target_velocity.z = _forward.normalized().z * speed
+	target_velocity.x = _forward.normalized().x * magnitude
+	target_velocity.z = _forward.normalized().z * magnitude
 	
 	if not is_on_floor():
 		target_velocity.y = target_velocity.y - (fall_acceleration * delta)

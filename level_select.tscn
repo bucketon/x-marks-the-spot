@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://y3y61v4ml4ko"]
+
+[ext_resource type="PackedScene" uid="uid://b7j642akrgyes" path="res://level_manager.tscn" id="1_il3u1"]
+[ext_resource type="Texture2D" uid="uid://dw0sw37j0slq0" path="res://resources/back_icon.png" id="2_hhsoe"]
+[ext_resource type="Texture2D" uid="uid://dy46lfrg466i1" path="res://resources/level_x_icon.png" id="3_rtb5x"]
+[ext_resource type="Texture2D" uid="uid://bp4g4yoywli6l" path="res://resources/level_maze_icon.png" id="4_vnx2f"]
+[ext_resource type="Texture2D" uid="uid://dkfeg8ktb0pe3" path="res://resources/level_2_latlngs_icon.png" id="5_7pkux"]
+[ext_resource type="Texture2D" uid="uid://j3oioepscswi" path="res://resources/level_2_rocks_icon.png" id="6_851in"]
+[ext_resource type="Texture2D" uid="uid://cbi22sc0c80d4" path="res://resources/level_2_projectors_icon.png" id="7_ehng5"]
+[ext_resource type="Texture2D" uid="uid://dhudgyvrkgvs6" path="res://resources/level_1_projector_icon.png" id="8_p532j"]
+[ext_resource type="Texture2D" uid="uid://cld51nmgw4toa" path="res://resources/level_scavenger_hunt_icon.png" id="9_doruf"]
+[ext_resource type="Texture2D" uid="uid://dpim4rra85c66" path="res://resources/level_linked_list_icon.png" id="10_vebhf"]
+[ext_resource type="Texture2D" uid="uid://cxwxd3eamyy4x" path="res://resources/level_finale_icon.png" id="11_473rj"]
+
+[sub_resource type="GDScript" id="GDScript_w6pwf"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="Theme" id="Theme_1dvg4"]
+default_font_size = 72
+
+[node name="Node2D" type="Node2D" unique_id=2105117347]
+script = SubResource("GDScript_w6pwf")
+
+[node name="LevelManager" parent="." unique_id=1776065488 instance=ExtResource("1_il3u1")]
+
+[node name="ItemList" type="ItemList" parent="." unique_id=1676308938]
+custom_minimum_size = Vector2(265, 265)
+offset_top = 173.0
+offset_right = 1161.0
+offset_bottom = 651.0
+auto_width = true
+item_count = 10
+max_columns = 5
+same_column_width = true
+fixed_column_width = 224
+icon_mode = 0
+fixed_icon_size = Vector2i(200, 200)
+item_0/icon = ExtResource("2_hhsoe")
+item_1/text = "X"
+item_1/icon = ExtResource("3_rtb5x")
+item_2/text = "Maze"
+item_2/icon = ExtResource("4_vnx2f")
+item_3/text = "Locations"
+item_3/icon = ExtResource("5_7pkux")
+item_4/text = "Rocks"
+item_4/icon = ExtResource("6_851in")
+item_5/text = "Projectors"
+item_5/icon = ExtResource("7_ehng5")
+item_6/text = "Perspective"
+item_6/icon = ExtResource("8_p532j")
+item_7/text = "Journey"
+item_7/icon = ExtResource("9_doruf")
+item_8/text = "Links"
+item_8/icon = ExtResource("10_vebhf")
+item_9/text = "Finale"
+item_9/icon = ExtResource("11_473rj")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1922423545]
+offset_right = 1154.0
+offset_bottom = 173.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer" unique_id=580947540]
+layout_mode = 2
+theme = SubResource("Theme_1dvg4")
+text = "Level Select"
+horizontal_alignment = 1
+
+[connection signal="item_activated" from="ItemList" to="LevelManager" method="loadLevelAtIndexOffset"]

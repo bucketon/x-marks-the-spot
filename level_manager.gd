@@ -8,6 +8,12 @@ var highestUnlockedLevel = 0
 func loadLevelAtIndex(index: int):
 	get_tree().change_scene_to_file(levels[index])
 	
+func loadLevelAtIndexOffset(index: int):
+	if index == 0:
+		goToMainMenu()
+	else:
+		loadLevelAtIndex(index-1)
+	
 func progress():
 	loadData()
 	currentLevel += 1
