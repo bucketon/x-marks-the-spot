@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cs3cxfa2ox7bx"
 path.s3tc="res://.godot/imported/quad4.png-c040c35bc59c78e6ffae8bd4a8a0063f.s3tc.ctex"
+path.etc2="res://.godot/imported/quad4.png-c040c35bc59c78e6ffae8bd4a8a0063f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://resources/quad4.png"
-dest_files=["res://.godot/imported/quad4.png-c040c35bc59c78e6ffae8bd4a8a0063f.s3tc.ctex"]
+dest_files=["res://.godot/imported/quad4.png-c040c35bc59c78e6ffae8bd4a8a0063f.s3tc.ctex", "res://.godot/imported/quad4.png-c040c35bc59c78e6ffae8bd4a8a0063f.etc2.ctex"]
 
 [params]
 

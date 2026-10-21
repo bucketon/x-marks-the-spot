@@ -5,15 +5,28 @@ extends Node
 var currentLevel = 0
 var highestUnlockedLevel = 0
 
+func _ready():
+	loadData()
+	
+
+func getHighestUnlockedLevel() -> int:
+	loadData()
+	return highestUnlockedLevel
+	
+
 func loadLevelAtIndex(index: int):
 	get_tree().change_scene_to_file(levels[index])
 	
+
 func loadLevelAtIndexOffset(index: int):
 	if index == 0:
 		goToMainMenu()
 	else:
 		loadLevelAtIndex(index-1)
+		currentLevel = index-1
+		saveData()
 	
+
 func progress():
 	loadData()
 	currentLevel += 1
@@ -30,8 +43,9 @@ func retry():
 func startNewGame():
 	loadData()
 	currentLevel = 0
-	loadLevelAtIndex(currentLevel)
+	highestUnlockedLevel = 0
 	saveData()
+	loadLevelAtIndex(currentLevel)
 	
 
 func continueGame():

@@ -16,16 +16,16 @@ text = "E, 04"
 [node name="main" unique_id=817110251 instance=ExtResource("1_0d6dx")]
 
 [node name="rock" parent="." index="2" unique_id=28223029 instance=ExtResource("2_llshn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 2, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.048132, 2, -8)
 
 [node name="rock2" parent="." index="3" unique_id=1856610317 instance=ExtResource("2_llshn")]
-transform = Transform3D(-0.173205, 0, 0.1, 0, 0.2, 0, -0.1, 0, -0.173205, 0, 1, -16)
+transform = Transform3D(-0.173205, 0, 0.1, 0, 0.2, 0, -0.1, 0, -0.173205, 1.2312293, 1, -16)
 
 [node name="goal" parent="." index="8" unique_id=1716796764]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.973766, 1, -14.167965)
 
 [node name="MeshInstance3D" parent="." index="11" unique_id=2055408556 instance=ExtResource("3_jdi6v")]
-transform = Transform3D(-0.7264903, -0.40837386, 0.094679825, -0.050977893, -0.050412536, -0.99515927, 0.6852835, -0.43668, 0.026343629, -21.2081, 3.2389667, -13.262135)
+transform = Transform3D(-0.7264903, -0.40837386, 0.094679825, -0.050977893, -0.050412536, -0.99515927, 0.6852835, -0.43668, 0.026343629, -19.574245, 3.2389667, -13.262135)
 mesh = SubResource("BoxMesh_b6e7o")
 
 [node name="MeshInstance3D" parent="MeshInstance3D" index="0"]

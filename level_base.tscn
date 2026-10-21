@@ -10,6 +10,7 @@
 [ext_resource type="Shader" uid="uid://55phu14qetap" path="res://water.gdshader" id="8_agx4c"]
 [ext_resource type="PackedScene" uid="uid://b7j642akrgyes" path="res://level_manager.tscn" id="8_ivdi8"]
 [ext_resource type="ArrayMesh" uid="uid://d4a6m4nk1o8n1" path="res://resources/beach_corner.obj" id="9_x6ek4"]
+[ext_resource type="PackedScene" uid="uid://sl0geh0nb3yn" path="res://footprints.tscn" id="11_e6jnn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_a5rkb"]
 resource_local_to_scene = true
@@ -282,12 +283,51 @@ offset_right = 733.0
 offset_bottom = 596.0
 text = "Back to main menu"
 
+[node name="RichTextLabel2" type="RichTextLabel" parent="HUD/pauseMenu" unique_id=709307288]
+visible = false
+layout_mode = 0
+offset_left = 448.0
+offset_top = 302.0
+offset_right = 612.0
+offset_bottom = 326.0
+text = "Look Sensitivity"
+
+[node name="HSlider" type="HSlider" parent="HUD/pauseMenu" unique_id=1730654474]
+visible = false
+layout_mode = 0
+offset_left = 448.0
+offset_top = 329.0
+offset_right = 698.0
+offset_bottom = 345.0
+value = 50.0
+
+[node name="HSlider2" type="HSlider" parent="HUD/pauseMenu" unique_id=1707111373]
+visible = false
+layout_mode = 0
+offset_left = 448.0
+offset_top = 398.0
+offset_right = 698.0
+offset_bottom = 414.0
+value = 50.0
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="HUD/pauseMenu" unique_id=1619095422]
+visible = false
+layout_mode = 0
+offset_left = 448.0
+offset_top = 371.0
+offset_right = 578.0
+offset_bottom = 394.0
+text = "Volume"
+
 [node name="LevelManager" parent="." unique_id=883868522 instance=ExtResource("8_ivdi8")]
+
+[node name="footprints" parent="." unique_id=1337934665 instance=ExtResource("11_e6jnn")]
 
 [connection signal="defeat" from="player" to="HUD/losePopup" method="showPopup"]
 [connection signal="mapClose" from="player" to="HUD/map" method="closeMap"]
 [connection signal="mapOpen" from="player" to="HUD/map" method="openMap"]
 [connection signal="pause" from="player" to="HUD/pauseMenu" method="show"]
+[connection signal="step" from="player" to="footprints" method="placeFootprint"]
 [connection signal="unpause" from="player" to="HUD/pauseMenu" method="hide"]
 [connection signal="victory" from="player" to="HUD/winPopup" method="showPopup"]
 [connection signal="pressed" from="HUD/winPopup/PanelContainer/Button" to="LevelManager" method="progress"]

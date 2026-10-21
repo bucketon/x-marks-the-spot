@@ -75,136 +75,136 @@ albedo_texture = ExtResource("7_nrdm3")
 material = SubResource("ORMMaterial3D_8nsnj")
 size = Vector2(4, 4)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_udm7i"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_wqdcp"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wqdcp"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6gx2s"]
 resource_local_to_scene = true
 shading_mode = 0
 disable_ambient_light = true
 disable_fog = true
 disable_specular_occlusion = true
-albedo_texture = SubResource("ViewportTexture_udm7i")
+albedo_texture = SubResource("ViewportTexture_wqdcp")
 disable_receive_shadows = true
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_6gx2s"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_5be7r"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_wqdcp")
+material = SubResource("StandardMaterial3D_6gx2s")
 size = Vector2(1, 1)
 
-[sub_resource type="TextMesh" id="TextMesh_5be7r"]
+[sub_resource type="TextMesh" id="TextMesh_8nsnj"]
 resource_local_to_scene = true
 material = ExtResource("12_udm7i")
 text = "C, 02"
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_8nsnj"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_5l7je"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5l7je"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w7mn1"]
 resource_local_to_scene = true
 shading_mode = 0
 disable_ambient_light = true
 disable_fog = true
 disable_specular_occlusion = true
-albedo_texture = SubResource("ViewportTexture_8nsnj")
+albedo_texture = SubResource("ViewportTexture_5l7je")
 disable_receive_shadows = true
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_w7mn1"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_fnni5"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_5l7je")
+material = SubResource("StandardMaterial3D_w7mn1")
 size = Vector2(1, 1)
 
-[sub_resource type="TextMesh" id="TextMesh_fnni5"]
+[sub_resource type="TextMesh" id="TextMesh_fka07"]
 resource_local_to_scene = true
 material = ExtResource("12_udm7i")
 text = "E, 04"
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_fka07"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_r8g32"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r8g32"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rxi0q"]
 resource_local_to_scene = true
 shading_mode = 0
 disable_ambient_light = true
 disable_fog = true
 disable_specular_occlusion = true
-albedo_texture = SubResource("ViewportTexture_fka07")
+albedo_texture = SubResource("ViewportTexture_r8g32")
 disable_receive_shadows = true
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_rxi0q"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_r44ek"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_r8g32")
+material = SubResource("StandardMaterial3D_rxi0q")
 size = Vector2(1, 1)
 
-[sub_resource type="TextMesh" id="TextMesh_r44ek"]
+[sub_resource type="TextMesh" id="TextMesh_jloet"]
 resource_local_to_scene = true
 material = ExtResource("12_udm7i")
 text = "E, 06"
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_jloet"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_j6cvl"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j6cvl"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b36ym"]
 resource_local_to_scene = true
 shading_mode = 0
 disable_ambient_light = true
 disable_fog = true
 disable_specular_occlusion = true
-albedo_texture = SubResource("ViewportTexture_jloet")
+albedo_texture = SubResource("ViewportTexture_j6cvl")
 disable_receive_shadows = true
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_b36ym"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_pd55y"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_j6cvl")
+material = SubResource("StandardMaterial3D_b36ym")
 size = Vector2(1, 1)
 
-[sub_resource type="TextMesh" id="TextMesh_pd55y"]
+[sub_resource type="TextMesh" id="TextMesh_rx6yt"]
 resource_local_to_scene = true
 material = ExtResource("12_udm7i")
 text = "C, 06
 "
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_rx6yt"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_llcyp"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_llcyp"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hr06t"]
 resource_local_to_scene = true
 shading_mode = 0
 disable_ambient_light = true
 disable_fog = true
 disable_specular_occlusion = true
-albedo_texture = SubResource("ViewportTexture_rx6yt")
+albedo_texture = SubResource("ViewportTexture_llcyp")
 disable_receive_shadows = true
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_hr06t"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_1ufw4"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_llcyp")
+material = SubResource("StandardMaterial3D_hr06t")
 size = Vector2(1, 1)
 
-[sub_resource type="TextMesh" id="TextMesh_1ufw4"]
+[sub_resource type="TextMesh" id="TextMesh_phwpb"]
 resource_local_to_scene = true
 material = ExtResource("12_udm7i")
 text = "F, 02
 "
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_phwpb"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_0rmwt"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0rmwt"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ixvne"]
 resource_local_to_scene = true
 shading_mode = 0
 disable_ambient_light = true
 disable_fog = true
 disable_specular_occlusion = true
-albedo_texture = SubResource("ViewportTexture_phwpb")
+albedo_texture = SubResource("ViewportTexture_0rmwt")
 disable_receive_shadows = true
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_ixvne"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_7iak0"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_0rmwt")
+material = SubResource("StandardMaterial3D_ixvne")
 size = Vector2(1, 1)
 
-[sub_resource type="TextMesh" id="TextMesh_7iak0"]
+[sub_resource type="TextMesh" id="TextMesh_yogx1"]
 resource_local_to_scene = true
 material = ExtResource("12_udm7i")
 text = "A, 03"
@@ -212,24 +212,24 @@ text = "A, 03"
 [sub_resource type="BoxMesh" id="BoxMesh_5m5wd"]
 material = ExtResource("13_wqdcp")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_yogx1"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_msdc7"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_msdc7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ueccg"]
 resource_local_to_scene = true
 shading_mode = 0
 disable_ambient_light = true
 disable_fog = true
 disable_specular_occlusion = true
-albedo_texture = SubResource("ViewportTexture_yogx1")
+albedo_texture = SubResource("ViewportTexture_msdc7")
 disable_receive_shadows = true
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_ueccg"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_svsof"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_msdc7")
+material = SubResource("StandardMaterial3D_ueccg")
 size = Vector2(1, 1)
 
-[sub_resource type="TextMesh" id="TextMesh_svsof"]
+[sub_resource type="TextMesh" id="TextMesh_rtobm"]
 resource_local_to_scene = true
 material = ExtResource("12_udm7i")
 text = "C, 04
@@ -271,160 +271,160 @@ transform = Transform3D(0.29999998, 0, 0.51961523, 0, 0.59999996, 0, -0.51961523
 transform = Transform3D(-0.17320508, 0, 0.10000002, 0, 0.2, 0, -0.10000002, 0, -0.17320508, 46, 1, 12)
 
 [node name="goal" parent="." index="17" unique_id=1716796764]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -8)
 
 [node name="MeshInstance3D" parent="goal" index="1"]
 layers = 262144
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." index="20" unique_id=975928589]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.558, 0)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4, 0.558, -8)
 mesh = SubResource("PlaneMesh_1dvg4")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." index="21" unique_id=1436511616]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.558, 0)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -10, 0.558, 0)
 mesh = SubResource("PlaneMesh_y28pc")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="." index="22" unique_id=1984254424]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.558, -8)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 10, 0.558, 0)
 mesh = SubResource("PlaneMesh_gd53k")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="." index="23" unique_id=1133817435]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.558, -8)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4, 0.558, -8)
 mesh = SubResource("PlaneMesh_mhjqy")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="." index="24" unique_id=818960386]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.558, 8)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4, 0.558, 8)
 mesh = SubResource("PlaneMesh_8f00k")
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="." index="25" unique_id=778453251]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.558, 8)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4, 0.558, 8)
 mesh = SubResource("PlaneMesh_ldrq8")
 
 [node name="Node3D" parent="." index="26" unique_id=822417478 instance=ExtResource("11_nrdm3")]
 transform = Transform3D(0.8832718, 0, 0.46886128, 0, 1, 0, -0.46886128, 0, 0.8832718, -47, -0.48061943, 22.847725)
 
 [node name="MeshInstance3D2" parent="Node3D" index="1" unique_id=575503416]
-mesh = SubResource("PlaneMesh_6gx2s")
+mesh = SubResource("PlaneMesh_5be7r")
 
 [node name="Camera3D" parent="Node3D/SubViewport" parent_id_path=PackedInt32Array(822417478, 142190012) index="0" unique_id=1496130317]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 7, 13, -42)
 
 [node name="MeshInstance3D4" parent="Node3D" index="4" unique_id=538828404]
-mesh = SubResource("TextMesh_5be7r")
+mesh = SubResource("TextMesh_8nsnj")
 
 [node name="MeshInstance3D5" parent="Node3D" index="5" unique_id=1745595692]
-mesh = SubResource("TextMesh_5be7r")
+mesh = SubResource("TextMesh_8nsnj")
 
 [node name="MeshInstance3D6" parent="Node3D" index="6" unique_id=73997452]
-mesh = SubResource("TextMesh_5be7r")
+mesh = SubResource("TextMesh_8nsnj")
 
 [node name="MeshInstance3D3" parent="Node3D" index="7" unique_id=1411993733]
-mesh = SubResource("TextMesh_5be7r")
+mesh = SubResource("TextMesh_8nsnj")
 
 [node name="Node3D2" parent="." index="27" unique_id=1143568939 instance=ExtResource("11_nrdm3")]
 transform = Transform3D(0.21389848, 0, 0.9768559, 0, 1, 0, -0.9768559, 0, 0.21389848, 9.219152, -0.48061943, -44.455715)
 
 [node name="MeshInstance3D2" parent="Node3D2" index="1" unique_id=575503416]
-mesh = SubResource("PlaneMesh_w7mn1")
+mesh = SubResource("PlaneMesh_fnni5")
 
 [node name="Camera3D" parent="Node3D2/SubViewport" parent_id_path=PackedInt32Array(1143568939, 142190012) index="0" unique_id=1496130317]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 44.48376, 13, 15.473562)
 
 [node name="MeshInstance3D4" parent="Node3D2" index="4" unique_id=538828404]
-mesh = SubResource("TextMesh_fnni5")
+mesh = SubResource("TextMesh_fka07")
 
 [node name="MeshInstance3D5" parent="Node3D2" index="5" unique_id=1745595692]
-mesh = SubResource("TextMesh_fnni5")
+mesh = SubResource("TextMesh_fka07")
 
 [node name="MeshInstance3D6" parent="Node3D2" index="6" unique_id=73997452]
-mesh = SubResource("TextMesh_fnni5")
+mesh = SubResource("TextMesh_fka07")
 
 [node name="MeshInstance3D3" parent="Node3D2" index="7" unique_id=1411993733]
-mesh = SubResource("TextMesh_fnni5")
+mesh = SubResource("TextMesh_fka07")
 
 [node name="Node3D3" parent="." index="28" unique_id=2064919765 instance=ExtResource("11_nrdm3")]
 transform = Transform3D(-0.7315386, 0, 0.6818, 0, 1, 0, -0.6818, 0, -0.7315386, 45.90587, -0.48061752, 15.132814)
 
 [node name="MeshInstance3D2" parent="Node3D3" index="1" unique_id=575503416]
-mesh = SubResource("PlaneMesh_rxi0q")
+mesh = SubResource("PlaneMesh_r44ek")
 
 [node name="Camera3D" parent="Node3D3/SubViewport" parent_id_path=PackedInt32Array(2064919765, 142190012) index="0" unique_id=1496130317]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 43.053467, 13, -26.728437)
 
 [node name="MeshInstance3D4" parent="Node3D3" index="4" unique_id=538828404]
-mesh = SubResource("TextMesh_r44ek")
+mesh = SubResource("TextMesh_jloet")
 
 [node name="MeshInstance3D5" parent="Node3D3" index="5" unique_id=1745595692]
-mesh = SubResource("TextMesh_r44ek")
+mesh = SubResource("TextMesh_jloet")
 
 [node name="MeshInstance3D6" parent="Node3D3" index="6" unique_id=73997452]
-mesh = SubResource("TextMesh_r44ek")
+mesh = SubResource("TextMesh_jloet")
 
 [node name="MeshInstance3D3" parent="Node3D3" index="7" unique_id=1411993733]
-mesh = SubResource("TextMesh_r44ek")
+mesh = SubResource("TextMesh_jloet")
 
 [node name="Node3D4" parent="." index="29" unique_id=364234464 instance=ExtResource("11_nrdm3")]
 transform = Transform3D(-0.9918846, 0, 0.12714157, 0, 1, 0, -0.12714157, 0, -0.9918846, 42.680824, -0.48061752, -28.420912)
 
 [node name="MeshInstance3D2" parent="Node3D4" index="1" unique_id=575503416]
-mesh = SubResource("PlaneMesh_b36ym")
+mesh = SubResource("PlaneMesh_pd55y")
 
 [node name="Camera3D" parent="Node3D4/SubViewport" parent_id_path=PackedInt32Array(364234464, 142190012) index="0" unique_id=1496130317]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -46.796818, 17.351604, 23.90621)
 
 [node name="MeshInstance3D4" parent="Node3D4" index="4" unique_id=538828404]
-mesh = SubResource("TextMesh_pd55y")
+mesh = SubResource("TextMesh_rx6yt")
 
 [node name="MeshInstance3D5" parent="Node3D4" index="5" unique_id=1745595692]
-mesh = SubResource("TextMesh_pd55y")
+mesh = SubResource("TextMesh_rx6yt")
 
 [node name="MeshInstance3D6" parent="Node3D4" index="6" unique_id=73997452]
-mesh = SubResource("TextMesh_pd55y")
+mesh = SubResource("TextMesh_rx6yt")
 
 [node name="MeshInstance3D3" parent="Node3D4" index="7" unique_id=1411993733]
-mesh = SubResource("TextMesh_pd55y")
+mesh = SubResource("TextMesh_rx6yt")
 
 [node name="Node3D5" parent="." index="30" unique_id=1354288362 instance=ExtResource("11_nrdm3")]
 transform = Transform3D(-0.9918846, 0, 0.12714157, 0, 1, 0, -0.12714157, 0, -0.9918846, 33.776855, -0.48061943, 41.041054)
 
 [node name="MeshInstance3D2" parent="Node3D5" index="1" unique_id=575503416]
-mesh = SubResource("PlaneMesh_hr06t")
+mesh = SubResource("PlaneMesh_1ufw4")
 
 [node name="Camera3D" parent="Node3D5/SubViewport" parent_id_path=PackedInt32Array(1354288362, 142190012) index="0" unique_id=1496130317]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.782845, 17.351604, -30.729616)
 
 [node name="MeshInstance3D4" parent="Node3D5" index="4" unique_id=538828404]
-mesh = SubResource("TextMesh_1ufw4")
+mesh = SubResource("TextMesh_phwpb")
 
 [node name="MeshInstance3D5" parent="Node3D5" index="5" unique_id=1745595692]
-mesh = SubResource("TextMesh_1ufw4")
+mesh = SubResource("TextMesh_phwpb")
 
 [node name="MeshInstance3D6" parent="Node3D5" index="6" unique_id=73997452]
-mesh = SubResource("TextMesh_1ufw4")
+mesh = SubResource("TextMesh_phwpb")
 
 [node name="MeshInstance3D3" parent="Node3D5" index="7" unique_id=1411993733]
-mesh = SubResource("TextMesh_1ufw4")
+mesh = SubResource("TextMesh_phwpb")
 
 [node name="Node3D6" parent="." index="31" unique_id=734279880 instance=ExtResource("11_nrdm3")]
 transform = Transform3D(-0.86948365, 0, 0.49396166, 0, 1, 0, -0.49396166, 0, -0.86948365, -4.3929243, -0.48061943, 44.859623)
 
 [node name="MeshInstance3D2" parent="Node3D6" index="1" unique_id=575503416]
-mesh = SubResource("PlaneMesh_ixvne")
+mesh = SubResource("PlaneMesh_7iak0")
 
 [node name="Camera3D" parent="Node3D6/SubViewport" parent_id_path=PackedInt32Array(734279880, 142190012) index="0" unique_id=1496130317]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.044979095, 17.351604, 0.30548668)
 
 [node name="MeshInstance3D4" parent="Node3D6" index="4" unique_id=538828404]
-mesh = SubResource("TextMesh_7iak0")
+mesh = SubResource("TextMesh_yogx1")
 
 [node name="MeshInstance3D5" parent="Node3D6" index="5" unique_id=1745595692]
-mesh = SubResource("TextMesh_7iak0")
+mesh = SubResource("TextMesh_yogx1")
 
 [node name="MeshInstance3D6" parent="Node3D6" index="6" unique_id=73997452]
-mesh = SubResource("TextMesh_7iak0")
+mesh = SubResource("TextMesh_yogx1")
 
 [node name="MeshInstance3D3" parent="Node3D6" index="7" unique_id=1411993733]
-mesh = SubResource("TextMesh_7iak0")
+mesh = SubResource("TextMesh_yogx1")
 
 [node name="Node3D7" parent="." index="32" unique_id=112209658 instance=ExtResource("11_nrdm3")]
 transform = Transform3D(-0.86948365, 0, 0.49396166, 0, 1, 0, -0.49396166, 0, -0.86948365, -43.68588, -0.48061943, -23.51923)
@@ -433,22 +433,22 @@ transform = Transform3D(-0.86948365, 0, 0.49396166, 0, 1, 0, -0.49396166, 0, -0.
 mesh = SubResource("BoxMesh_5m5wd")
 
 [node name="MeshInstance3D2" parent="Node3D7" index="1" unique_id=575503416]
-mesh = SubResource("PlaneMesh_ueccg")
+mesh = SubResource("PlaneMesh_svsof")
 
 [node name="Camera3D" parent="Node3D7/SubViewport" parent_id_path=PackedInt32Array(112209658, 142190012) index="0" unique_id=1496130317]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -40.53883, 17.351604, -30.548248)
 
 [node name="MeshInstance3D4" parent="Node3D7" index="4" unique_id=538828404]
-mesh = SubResource("TextMesh_svsof")
+mesh = SubResource("TextMesh_rtobm")
 
 [node name="MeshInstance3D5" parent="Node3D7" index="5" unique_id=1745595692]
-mesh = SubResource("TextMesh_svsof")
+mesh = SubResource("TextMesh_rtobm")
 
 [node name="MeshInstance3D6" parent="Node3D7" index="6" unique_id=73997452]
-mesh = SubResource("TextMesh_svsof")
+mesh = SubResource("TextMesh_rtobm")
 
 [node name="MeshInstance3D3" parent="Node3D7" index="7" unique_id=1411993733]
-mesh = SubResource("TextMesh_svsof")
+mesh = SubResource("TextMesh_rtobm")
 
 [editable path="goal"]
 [editable path="HUD/winPopup"]

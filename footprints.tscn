@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://sl0geh0nb3yn"]
+
+[ext_resource type="Texture2D" uid="uid://bxnqhoaejffne" path="res://resources/footprint.png" id="1_168lu"]
+[ext_resource type="Script" uid="uid://ddpxkmpgqj5fc" path="res://footprints.gd" id="1_l2t51"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_61o6a"]
+transparency = 1
+albedo_texture = ExtResource("1_168lu")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1dvg4"]
+material = SubResource("StandardMaterial3D_61o6a")
+size = Vector2(1, 1)
+
+[node name="footprints" type="Node3D" unique_id=1337934665]
+script = ExtResource("1_l2t51")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1505835083]
+mesh = SubResource("PlaneMesh_1dvg4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=9539982]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_1dvg4")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=816534133]
+mesh = SubResource("PlaneMesh_1dvg4")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=2007675057]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_1dvg4")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=454917225]
+mesh = SubResource("PlaneMesh_1dvg4")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=2107158814]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_1dvg4")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="." unique_id=488846536]
+mesh = SubResource("PlaneMesh_1dvg4")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="." unique_id=516689874]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_1dvg4")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="." unique_id=1048469693]
+mesh = SubResource("PlaneMesh_1dvg4")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="." unique_id=705715876]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_1dvg4")

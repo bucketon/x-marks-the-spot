@@ -12,6 +12,7 @@ signal mapOpen
 signal mapClose
 signal pause
 signal unpause
+signal step(loc:Vector2, rot:Vector3)
 
 var target_velocity = Vector3.ZERO
 var mouse_captured: bool = false
@@ -20,6 +21,7 @@ var is_touching_goal: bool = false
 var flag_held_seconds: float = 0
 var map_is_open = false
 var paused = false
+var footprintTimer = 0
 
 @onready var camera: Camera3D = $camera
 @onready var initialCameraPos = $camera.transform
@@ -127,6 +129,11 @@ func _physics_process(delta: float) -> void:
 	var _forward: Vector3 = camera.global_transform.basis * Vector3(direction.x, 0, direction.z)
 	target_velocity.x = _forward.normalized().x * magnitude
 	target_velocity.z = _forward.normalized().z * magnitude
+	
+	footprintTimer += delta
+	if footprintTimer > 0.5:
+		footprintTimer = 0
+		step.emit(Vector2(position.x, position.z), _forward)
 	
 	if not is_on_floor():
 		target_velocity.y = target_velocity.y - (fall_acceleration * delta)
