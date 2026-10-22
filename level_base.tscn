@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b7j642akrgyes" path="res://level_manager.tscn" id="8_ivdi8"]
 [ext_resource type="ArrayMesh" uid="uid://d4a6m4nk1o8n1" path="res://resources/beach_corner.obj" id="9_x6ek4"]
 [ext_resource type="PackedScene" uid="uid://sl0geh0nb3yn" path="res://footprints.tscn" id="11_e6jnn"]
+[ext_resource type="PackedScene" uid="uid://bbmel2vq6bbbp" path="res://footstep_sounds.tscn" id="12_fdc3t"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_a5rkb"]
 resource_local_to_scene = true
@@ -323,11 +324,14 @@ text = "Volume"
 
 [node name="footprints" parent="." unique_id=1337934665 instance=ExtResource("11_e6jnn")]
 
+[node name="footstepSounds" parent="." unique_id=624338110 instance=ExtResource("12_fdc3t")]
+
 [connection signal="defeat" from="player" to="HUD/losePopup" method="showPopup"]
 [connection signal="mapClose" from="player" to="HUD/map" method="closeMap"]
 [connection signal="mapOpen" from="player" to="HUD/map" method="openMap"]
 [connection signal="pause" from="player" to="HUD/pauseMenu" method="show"]
 [connection signal="step" from="player" to="footprints" method="placeFootprint"]
+[connection signal="step" from="player" to="footstepSounds" method="playFootstepSoundsRouter"]
 [connection signal="unpause" from="player" to="HUD/pauseMenu" method="hide"]
 [connection signal="victory" from="player" to="HUD/winPopup" method="showPopup"]
 [connection signal="pressed" from="HUD/winPopup/PanelContainer/Button" to="LevelManager" method="progress"]

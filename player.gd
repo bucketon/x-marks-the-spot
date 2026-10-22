@@ -72,20 +72,27 @@ func _physics_process(delta: float) -> void:
 	if paused:
 		return
 	
+	var is_moving = false
 	var direction = Vector3.ZERO
 	if not Input.is_action_pressed("action"):
 		if Input.is_action_pressed("move_right"):
 			direction.x += 1
+			is_moving = true
 		if Input.is_action_pressed("move_left"):
 			direction.x -= 1
+			is_moving = true
 		if Input.is_action_pressed("move_back"):
 			direction.z += 1
+			is_moving = true
 		if Input.is_action_pressed("move_forward"):
 			direction.z -= 1
+			is_moving = true
 			
 	var magnitude = speed
+	var footstepPeriod = 0.4
 	if Input.is_action_pressed("sprint"):
 		magnitude = sprintSpeed
+		footstepPeriod = 0.3
 		
 	if Input.is_action_pressed("action"):
 		flag_held_seconds += delta
@@ -100,7 +107,6 @@ func _physics_process(delta: float) -> void:
 		
 	if mouse_captured: _handle_joypad_camera_rotation(delta)
 	
-		
 	if Input.is_action_just_pressed("map"):
 		if map_is_open:
 			mapClose.emit()
@@ -130,10 +136,13 @@ func _physics_process(delta: float) -> void:
 	target_velocity.x = _forward.normalized().x * magnitude
 	target_velocity.z = _forward.normalized().z * magnitude
 	
-	footprintTimer += delta
-	if footprintTimer > 0.5:
+	if (is_on_floor() and is_moving):
+		footprintTimer += delta
+		if footprintTimer > footstepPeriod:
+			footprintTimer = 0
+			step.emit(Vector2(position.x, position.z), $camera.rotation)
+	else:
 		footprintTimer = 0
-		step.emit(Vector2(position.x, position.z), _forward)
 	
 	if not is_on_floor():
 		target_velocity.y = target_velocity.y - (fall_acceleration * delta)

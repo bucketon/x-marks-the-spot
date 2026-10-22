@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bxnqhoaejffne" path="res://resources/footprint.png" id="1_168lu"]
 [ext_resource type="Script" uid="uid://ddpxkmpgqj5fc" path="res://footprints.gd" id="1_l2t51"]
+[ext_resource type="Texture2D" uid="uid://bsql48oxsp0q1" path="res://resources/footprint_r.png" id="3_gm7p0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_61o6a"]
 transparency = 1
@@ -11,40 +12,53 @@ albedo_texture = ExtResource("1_168lu")
 material = SubResource("StandardMaterial3D_61o6a")
 size = Vector2(1, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gm7p0"]
+transparency = 1
+albedo_texture = ExtResource("3_gm7p0")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_l2t51"]
+material = SubResource("StandardMaterial3D_gm7p0")
+size = Vector2(1, 1)
+
 [node name="footprints" type="Node3D" unique_id=1337934665]
 script = ExtResource("1_l2t51")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1505835083]
+layers = 131072
 mesh = SubResource("PlaneMesh_1dvg4")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=9539982]
-transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("PlaneMesh_1dvg4")
+layers = 131072
+mesh = SubResource("PlaneMesh_l2t51")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=816534133]
+layers = 131072
 mesh = SubResource("PlaneMesh_1dvg4")
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=2007675057]
-transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("PlaneMesh_1dvg4")
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=330406974]
+layers = 131072
+mesh = SubResource("PlaneMesh_l2t51")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=454917225]
+layers = 131072
 mesh = SubResource("PlaneMesh_1dvg4")
 
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=2107158814]
-transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("PlaneMesh_1dvg4")
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=1928097419]
+layers = 131072
+mesh = SubResource("PlaneMesh_l2t51")
 
 [node name="MeshInstance3D7" type="MeshInstance3D" parent="." unique_id=488846536]
+layers = 131072
 mesh = SubResource("PlaneMesh_1dvg4")
 
-[node name="MeshInstance3D8" type="MeshInstance3D" parent="." unique_id=516689874]
-transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("PlaneMesh_1dvg4")
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="." unique_id=149875878]
+layers = 131072
+mesh = SubResource("PlaneMesh_l2t51")
 
 [node name="MeshInstance3D9" type="MeshInstance3D" parent="." unique_id=1048469693]
+layers = 131072
 mesh = SubResource("PlaneMesh_1dvg4")
 
-[node name="MeshInstance3D10" type="MeshInstance3D" parent="." unique_id=705715876]
-transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("PlaneMesh_1dvg4")
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="." unique_id=797913144]
+layers = 131072
+mesh = SubResource("PlaneMesh_l2t51")
