@@ -22,8 +22,13 @@ func _ready():
 		closed.emit()
 	else:
 		opened.emit()
+		
 
 func showPopup():
 	visible = true
+	grabFocus()
+	
+
+func grabFocus():
 	$PanelContainer/Button.grab_focus.call_deferred()
 	

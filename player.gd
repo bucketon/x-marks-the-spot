@@ -24,6 +24,7 @@ var map_is_open = false
 var paused = false
 var footprintTimer = 0
 var camera_default = Vector3.ZERO
+var sens_factor = 1
 
 @onready var camera: Camera3D = $camera
 @onready var initialCameraPos = $camera.transform
@@ -31,11 +32,16 @@ var camera_default = Vector3.ZERO
 func _ready() -> void:
 	camera_default = $camera.transform.origin
 	capture_mouse()
+	
+
+func setSensitivity(sensitivity:float):
+	sens_factor = sensitivity
+	
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		look_dir = event.relative * 0.001
-		if mouse_captured: _rotate_camera()
+		if mouse_captured: _rotate_camera(1.0 * sens_factor)
 	
 
 func capture_mouse() -> void:
@@ -63,6 +69,9 @@ func _handle_joypad_camera_rotation(delta: float, sens_mod: float = 2.0) -> void
 	
 
 func _physics_process(delta: float) -> void:
+	if is_level_ended:
+		return
+	
 	if Input.is_action_just_pressed("pause"):
 		paused = not paused
 		if paused:
@@ -112,7 +121,7 @@ func _physics_process(delta: float) -> void:
 		$camera.transform.origin = camera_default
 		$FlagAudio.stop()
 		
-	if mouse_captured: _handle_joypad_camera_rotation(delta)
+	if mouse_captured: _handle_joypad_camera_rotation(delta, 2.0 * sens_factor)
 	
 	if Input.is_action_just_pressed("map"):
 		if map_is_open:

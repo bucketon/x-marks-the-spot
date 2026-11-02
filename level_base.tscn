@@ -10,6 +10,7 @@
 [ext_resource type="Shader" uid="uid://55phu14qetap" path="res://water.gdshader" id="8_agx4c"]
 [ext_resource type="PackedScene" uid="uid://b7j642akrgyes" path="res://level_manager.tscn" id="8_ivdi8"]
 [ext_resource type="ArrayMesh" uid="uid://d4a6m4nk1o8n1" path="res://resources/beach_corner.obj" id="9_x6ek4"]
+[ext_resource type="Script" uid="uid://dais5u7j81h6u" path="res://pause_menu.gd" id="10_fbe54"]
 [ext_resource type="PackedScene" uid="uid://sl0geh0nb3yn" path="res://footprints.tscn" id="11_e6jnn"]
 [ext_resource type="PackedScene" uid="uid://bbmel2vq6bbbp" path="res://footstep_sounds.tscn" id="12_fdc3t"]
 
@@ -21,8 +22,8 @@ shader_parameter/max_depth = 9.70000014454164
 shader_parameter/water_level = 0.4000001549724797
 shader_parameter/underwater_fog_color = Color(0.33199525, 0.5377665, 0.9999904, 1)
 shader_parameter/fade_start_depth = 5.70000008493684
-shader_parameter/sea_height = 0.2000000095
-shader_parameter/sea_choppy = 4.8500002303750005
+shader_parameter/sea_height = 0.18000000855
+shader_parameter/sea_choppy = 2.8050001332375
 shader_parameter/sea_speed = 1.5
 shader_parameter/sea_freq = 0.08
 shader_parameter/ITER_GEOMETRY = 3
@@ -240,11 +241,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1, -16)
 [node name="HUD" type="Node2D" parent="." unique_id=1899910361]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HUD" unique_id=1506658587]
-offset_left = 438.0
-offset_top = 16.0
-offset_right = 704.0
-offset_bottom = 57.0
-text = "Q: Open Map, LMB: Plant Flag"
+offset_left = 323.66
+offset_right = 923.66003
+offset_bottom = 50.0
+text = "Q/X: Open Map, LMB/RT: Plant Flag"
+scroll_active = false
+horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="map" parent="HUD" unique_id=1229233451 instance=ExtResource("5_iqilm")]
@@ -267,6 +269,7 @@ offset_bottom = 520.0
 visible = false
 offset_right = 1153.0
 offset_bottom = 650.0
+script = ExtResource("10_fbe54")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HUD/pauseMenu" unique_id=527446996]
 layout_mode = 0
@@ -283,10 +286,10 @@ offset_left = 433.0
 offset_top = 496.0
 offset_right = 733.0
 offset_bottom = 596.0
+focus_neighbor_top = NodePath("../HSlider2")
 text = "Back to main menu"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="HUD/pauseMenu" unique_id=709307288]
-visible = false
 layout_mode = 0
 offset_left = 448.0
 offset_top = 302.0
@@ -295,25 +298,30 @@ offset_bottom = 326.0
 text = "Look Sensitivity"
 
 [node name="HSlider" type="HSlider" parent="HUD/pauseMenu" unique_id=1730654474]
-visible = false
 layout_mode = 0
 offset_left = 448.0
 offset_top = 329.0
 offset_right = 698.0
 offset_bottom = 345.0
-value = 50.0
+focus_neighbor_bottom = NodePath("../HSlider2")
+min_value = 0.1
+max_value = 2.0
+step = 0.1
+value = 1.0
 
 [node name="HSlider2" type="HSlider" parent="HUD/pauseMenu" unique_id=1707111373]
-visible = false
 layout_mode = 0
 offset_left = 448.0
 offset_top = 398.0
 offset_right = 698.0
 offset_bottom = 414.0
-value = 50.0
+focus_neighbor_top = NodePath("../HSlider")
+focus_neighbor_bottom = NodePath("../Button")
+max_value = 1.0
+step = 0.01
+value = 0.75
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="HUD/pauseMenu" unique_id=1619095422]
-visible = false
 layout_mode = 0
 offset_left = 448.0
 offset_top = 371.0
@@ -330,6 +338,7 @@ text = "Volume"
 [connection signal="defeat" from="player" to="HUD/losePopup" method="showPopup"]
 [connection signal="mapClose" from="player" to="HUD/map" method="closeMap"]
 [connection signal="mapOpen" from="player" to="HUD/map" method="openMap"]
+[connection signal="pause" from="player" to="HUD/pauseMenu" method="grab_Focus"]
 [connection signal="pause" from="player" to="HUD/pauseMenu" method="show"]
 [connection signal="step" from="player" to="footprints" method="placeFootprint"]
 [connection signal="step" from="player" to="footstepSounds" method="playFootstepSoundsRouter"]
@@ -338,6 +347,10 @@ text = "Volume"
 [connection signal="pressed" from="HUD/winPopup/PanelContainer/Button" to="LevelManager" method="progress"]
 [connection signal="pressed" from="HUD/losePopup/PanelContainer/Button" to="LevelManager" method="retry"]
 [connection signal="pressed" from="HUD/pauseMenu/Button" to="LevelManager" method="goToMainMenu"]
+[connection signal="value_changed" from="HUD/pauseMenu/HSlider" to="player" method="setSensitivity"]
+[connection signal="value_changed" from="HUD/pauseMenu/HSlider" to="HUD/pauseMenu" method="saveDataForwarder"]
+[connection signal="value_changed" from="HUD/pauseMenu/HSlider2" to="HUD/pauseMenu" method="saveDataForwarder"]
+[connection signal="value_changed" from="HUD/pauseMenu/HSlider2" to="HUD/pauseMenu" method="set_master_volume"]
 
 [editable path="HUD/winPopup"]
 [editable path="HUD/losePopup"]

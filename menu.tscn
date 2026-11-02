@@ -12,7 +12,7 @@ offset_left = 375.0
 offset_top = 569.0
 offset_right = 471.0
 offset_bottom = 600.0
-focus_neighbor_bottom = NodePath("../Button2")
+focus_neighbor_right = NodePath("../Button2")
 text = "New Game"
 
 [node name="Button2" type="Button" parent="." unique_id=1972531149]
@@ -20,7 +20,8 @@ offset_left = 485.0
 offset_top = 569.0
 offset_right = 564.0
 offset_bottom = 600.0
-focus_neighbor_top = NodePath("../Button")
+focus_neighbor_left = NodePath("../Button")
+focus_neighbor_right = NodePath("../Button3")
 text = "Continue"
 
 [node name="Button3" type="Button" parent="." unique_id=1461602428]
@@ -28,6 +29,8 @@ offset_left = 578.0
 offset_top = 569.0
 offset_right = 677.0
 offset_bottom = 600.0
+focus_neighbor_left = NodePath("../Button2")
+focus_neighbor_right = NodePath("../Button4")
 text = "Level Select"
 
 [node name="Button4" type="Button" parent="." unique_id=1584936830]
@@ -35,6 +38,7 @@ offset_left = 691.0
 offset_top = 569.0
 offset_right = 733.0
 offset_bottom = 600.0
+focus_neighbor_left = NodePath("../Button3")
 text = "Quit"
 
 [node name="Xmarksthespotlogo" type="Sprite2D" parent="." unique_id=786204185]

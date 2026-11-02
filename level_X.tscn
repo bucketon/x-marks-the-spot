@@ -96,6 +96,7 @@ mesh = SubResource("TextMesh_brvcf")
 [connection signal="closed" from="HUD/tutorial" to="player" method="capture_mouse"]
 [connection signal="closed" from="HUD/tutorial" to="HUD/tutorial" method="hide"]
 [connection signal="opened" from="HUD/tutorial" to="player" method="release_mouse"]
+[connection signal="opened" from="HUD/tutorial" to="HUD/tutorial" method="grabFocus"]
 [connection signal="pressed" from="HUD/tutorial/PanelContainer/Button" to="player" method="capture_mouse"]
 [connection signal="pressed" from="HUD/tutorial/PanelContainer/Button" to="HUD/tutorial" method="hide"]
 

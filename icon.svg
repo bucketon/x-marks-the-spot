@@ -1,1 +1,95 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128"><rect width="124" height="124" x="2" y="2" fill="#363d52" stroke="#212532" stroke-width="4" rx="14"/><g fill="#fff" transform="translate(12.322 12.322)scale(.101)"><path d="M105 673v33q407 354 814 0v-33z"/><path fill="#478cbf" d="m105 673 152 14q12 1 15 14l4 67 132 10 8-61q2-11 15-15h162q13 4 15 15l8 61 132-10 4-67q3-13 15-14l152-14V427q30-39 56-81-35-59-83-108-43 20-82 47-40-37-88-64 7-51 8-102-59-28-123-42-26 43-46 89-49-7-98 0-20-46-46-89-64 14-123 42 1 51 8 102-48 27-88 64-39-27-82-47-48 49-83 108 26 42 56 81zm0 33v39c0 276 813 276 814 0v-39l-134 12-5 69q-2 10-14 13l-162 11q-12 0-16-11l-10-65H446l-10 65q-4 11-16 11l-162-11q-12-3-14-13l-5-69z"/><path d="M483 600c0 34 58 34 58 0v-86c0-34-58-34-58 0z"/><circle cx="725" cy="526" r="90"/><circle cx="299" cy="526" r="90"/></g><g fill="#414042" transform="translate(12.322 12.322)scale(.101)"><circle cx="307" cy="532" r="60"/><circle cx="717" cy="532" r="60"/></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100"
+   height="100"
+   viewBox="0 0 26.458333 26.458333"
+   version="1.1"
+   id="svg1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1.3229167"
+       spacingy="1.3229167"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+    <inkscape:page
+       x="0"
+       y="0"
+       width="26.458332"
+       height="26.458332"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="perspective-envelope"
+       up_left_point="79.374999,105.83333"
+       up_right_point="132.29166,105.83333"
+       down_left_point="59.531249,152.13541"
+       down_right_point="152.13541,152.13541"
+       id="path-effect4"
+       is_visible="true"
+       lpeversion="1"
+       deform_type="perspective"
+       horizontal_mirror="false"
+       vertical_mirror="false"
+       overflow_perspective="false" />
+    <rect
+       x="50"
+       y="49.999996"
+       width="700"
+       height="499.99997"
+       id="rect1" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#d54949;fill-opacity:1;stroke-width:0.381;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+       d="m 59.531249,152.13541 h 30.868052 l 15.434029,-19.84374 15.43403,19.84374 h 30.86805 l -35.07733,-29.46496 15.23358,-16.83712 h -17.63889 l -8.81944,9.1086 -8.819445,-9.1086 H 79.374999 l 15.233582,16.83712 z"
+       id="path3"
+       sodipodi:nodetypes="ccccccccccccc"
+       inkscape:path-effect="#path-effect4"
+       inkscape:original-d="m 66.145835,152.1354 h 26.45833 l 13.229165,-19.84374 13.22917,19.84374 h 26.45833 L 119.0625,119.06249 145.52083,85.989576 H 119.0625 L 105.83333,105.83332 92.604165,85.989576 h -26.45833 l 26.45833,33.072914 z"
+       transform="matrix(0.2765262,0,0,0.2765262,-16.052858,-16.540683)" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.05182311,0,0,0.05182311,-7.5000765,-3.3029205)"
+       id="text1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1.5;font-family:'LEMON MILK';-inkscape-font-specification:'LEMON MILK';text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1);display:inline;fill:#d5cb49;stroke-width:1.44;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"><tspan
+         x="178.23438"
+         y="152.32695"
+         id="tspan1">x marks
+</tspan><tspan
+         x="164.80469"
+         y="296.32695"
+         id="tspan4">the spot</tspan></text>
+  </g>
+</svg>

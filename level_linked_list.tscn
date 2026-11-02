@@ -117,7 +117,7 @@ size = Vector2(1, 1)
 [sub_resource type="TextMesh" id="TextMesh_fka07"]
 resource_local_to_scene = true
 material = ExtResource("12_udm7i")
-text = "E, 04"
+text = "E, 02"
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_r8g32"]
 viewport_path = NodePath("SubViewport")
@@ -271,7 +271,7 @@ transform = Transform3D(0.29999998, 0, 0.51961523, 0, 0.59999996, 0, -0.51961523
 transform = Transform3D(-0.17320508, 0, 0.10000002, 0, 0.2, 0, -0.10000002, 0, -0.17320508, 46, 1, 12)
 
 [node name="goal" parent="." index="17" unique_id=1716796764]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, -8)
 
 [node name="MeshInstance3D" parent="goal" index="1"]
 layers = 262144
@@ -328,7 +328,7 @@ transform = Transform3D(0.21389848, 0, 0.9768559, 0, 1, 0, -0.9768559, 0, 0.2138
 mesh = SubResource("PlaneMesh_fnni5")
 
 [node name="Camera3D" parent="Node3D2/SubViewport" parent_id_path=PackedInt32Array(1143568939, 142190012) index="0" unique_id=1496130317]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 44.48376, 13, 15.473562)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 42.48376, 13, -26.526438)
 
 [node name="MeshInstance3D4" parent="Node3D2" index="4" unique_id=538828404]
 mesh = SubResource("TextMesh_fka07")
@@ -370,7 +370,7 @@ transform = Transform3D(-0.9918846, 0, 0.12714157, 0, 1, 0, -0.12714157, 0, -0.9
 mesh = SubResource("PlaneMesh_pd55y")
 
 [node name="Camera3D" parent="Node3D4/SubViewport" parent_id_path=PackedInt32Array(364234464, 142190012) index="0" unique_id=1496130317]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -46.796818, 17.351604, 23.90621)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -46.51624, 18, 23.473562)
 
 [node name="MeshInstance3D4" parent="Node3D4" index="4" unique_id=538828404]
 mesh = SubResource("TextMesh_rx6yt")
