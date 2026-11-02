@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://drvyvlcvia8ou"]
+
+[ext_resource type="PackedScene" uid="uid://dlgglbiwa7gnn" path="res://level_base.tscn" id="1_v4n66"]
+[ext_resource type="PackedScene" uid="uid://c8stgoyj42e3u" path="res://oak.tscn" id="2_7wk72"]
+[ext_resource type="PackedScene" uid="uid://c74reiv6rrpgn" path="res://spruce.tscn" id="3_vcx6c"]
+[ext_resource type="PackedScene" uid="uid://dqri7slei5qoe" path="res://rock.tscn" id="4_rbsif"]
+[ext_resource type="PackedScene" uid="uid://37mjh8yo5tq3" path="res://dead_spruce.tscn" id="5_77s5y"]
+[ext_resource type="PackedScene" uid="uid://cv6cvc3b2vsyi" path="res://latlng.tscn" id="6_vcx6c"]
+[ext_resource type="Material" uid="uid://4ykvbgyqsfk4" path="res://resources/blue_latlng_mat.tres" id="7_rbsif"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ykuof"]
+albedo_color = Color(0.051971, 0.051971, 0.051971, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_77s5y"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_ykuof")
+text = "D, 03"
+font_size = 26
+
+[node name="main" unique_id=1561036356 instance=ExtResource("1_v4n66")]
+
+[node name="oak" parent="." index="11" unique_id=1732467047 instance=ExtResource("2_7wk72")]
+transform = Transform3D(0.3630676, 0, -0.823518, 0, 0.9, 0, 0.823518, 0, 0.3630676, -14.976594, 1.040194, -16.847414)
+
+[node name="oak2" parent="." index="12" unique_id=1993603436 instance=ExtResource("2_7wk72")]
+transform = Transform3D(0.49055386, 0, 0.9845593, 0, 1.1, 0, -0.9845593, 0, 0.49055386, -6.297291, 1.040194, 13.211977)
+
+[node name="oak3" parent="." index="13" unique_id=1201575836 instance=ExtResource("2_7wk72")]
+transform = Transform3D(0.70276433, 0, -0.38225946, 0, 0.8, 0, 0.38225946, 0, 0.70276433, -16.55519, 1.040194, 5.3316054)
+
+[node name="oak4" parent="." index="14" unique_id=698369470 instance=ExtResource("2_7wk72")]
+transform = Transform3D(0.2807312, 0, 0.9597864, 0, 1, 0, -0.9597864, 0, 0.2807312, 0.45035362, 1.040194, -18.231266)
+
+[node name="spruce" parent="." index="15" unique_id=605437180 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(1.7897735, 0, 0.8925868, 0, 2, 0, -0.8925868, 0, 1.7897735, -17.477453, 0.88347965, -5.2636414)
+
+[node name="spruce2" parent="." index="16" unique_id=1490278254 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(0.117453486, 0, 2.4972394, 0, 2.5, 0, -2.4972394, 0, 0.117453486, -6.615242, 0.88348347, -3.308652)
+
+[node name="spruce3" parent="." index="17" unique_id=1813331293 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(-2.7555718, 0, -1.1860963, 0, 3, 0, 1.1860963, 0, -2.7555718, -11.107448, 0.88348156, -7.3953924)
+
+[node name="spruce4" parent="." index="18" unique_id=1674201181 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(2.1979566, 0, -1.5681152, 0, 2.6999998, 0, 1.5681152, 0, 2.1979566, -13.818292, 0.88347965, 14.929869)
+
+[node name="spruce5" parent="." index="19" unique_id=221374556 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(-0.75115746, 0, -2.4891286, 0, 2.6, 0, 2.4891286, 0, -0.75115746, -21.843557, 0.88347965, 11.103457)
+
+[node name="spruce6" parent="." index="20" unique_id=1438148168 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(0.9402593, 0, -2.2081468, 0, 2.3999999, 0, 2.2081468, 0, 0.9402593, -23.66681, 0.88348156, 3.5601053)
+
+[node name="spruce7" parent="." index="21" unique_id=1067361090 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, -22.384998, 0.88348156, 18.454967)
+
+[node name="spruce8" parent="." index="22" unique_id=1828362690 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(2.8, 0, 0, 0, 2.8, 0, 0, 0, 2.8, -16.42905, 0.88348156, 23.4776)
+
+[node name="StaticBody3D" parent="." index="23" unique_id=1628678158 instance=ExtResource("4_rbsif")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -8.466507, 1.6583037, -39.50709)
+
+[node name="StaticBody3D2" parent="." index="24" unique_id=1125942405 instance=ExtResource("4_rbsif")]
+transform = Transform3D(-0.47428718, 0, -1.1022938, 0, 1.1999999, 0, 1.1022938, 0, -0.47428718, 7.2117023, 2.4016967, -38.78899)
+
+[node name="StaticBody3D3" parent="." index="25" unique_id=616839899 instance=ExtResource("4_rbsif")]
+transform = Transform3D(-0.15872489, 0, 0.25457102, 0, 0.29999998, 0, -0.25457102, 0, -0.15872489, 24.945559, 1.0013704, 38.419064)
+
+[node name="StaticBody3D4" parent="." index="26" unique_id=474426288 instance=ExtResource("4_rbsif")]
+transform = Transform3D(-0.5427172, 0, -0.25584757, 0, 0.59999996, 0, 0.25584757, 0, -0.5427172, 2.883627, 1.2952127, 41.091026)
+
+[node name="StaticBody3D5" parent="." index="27" unique_id=2053362071 instance=ExtResource("4_rbsif")]
+transform = Transform3D(0.060529158, 0, 0.4963227, 0, 0.5, 0, -0.4963227, 0, 0.060529158, 36.571724, 1.2729635, 14.340517)
+
+[node name="StaticBody3D6" parent="." index="28" unique_id=1001455858 instance=ExtResource("4_rbsif")]
+transform = Transform3D(-0.8068853, 0, -0.5907082, 0, 1, 0, 0.5907082, 0, -0.8068853, 25.013994, 1.9566636, -28.115837)
+
+[node name="dead_spruce" parent="." index="29" unique_id=654551371 instance=ExtResource("5_77s5y")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 17.064474, 1.2463194, 35.532455)
+
+[node name="dead_spruce2" parent="." index="30" unique_id=1427132921 instance=ExtResource("5_77s5y")]
+transform = Transform3D(0.68629724, 0, -0.41109142, 0, 0.8, 0, 0.41109142, 0, 0.68629724, -22.226402, 1.2463194, -23.608707)
+
+[node name="dead_spruce3" parent="." index="31" unique_id=109233899 instance=ExtResource("5_77s5y")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -23.820917, 1.2463175, -4.9734087)
+
+[node name="dead_spruce4" parent="." index="32" unique_id=32423148 instance=ExtResource("5_77s5y")]
+transform = Transform3D(0.3158862, 0, -1.0536679, 0, 1.1, 0, 1.0536679, 0, 0.3158862, -15.9655905, 1.2463194, 36.339996)
+
+[node name="dead_spruce5" parent="." index="33" unique_id=1262430842 instance=ExtResource("5_77s5y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.483498, 1.2463194, -12.423157)
+
+[node name="dead_spruce6" parent="." index="34" unique_id=1584449280 instance=ExtResource("5_77s5y")]
+transform = Transform3D(0.6523894, 0, -1.1244501, 0, 1.3, 0, 1.1244501, 0, 0.6523894, -41.141907, 1.2463194, -6.736889)
+
+[node name="dead_spruce7" parent="." index="35" unique_id=1802834219 instance=ExtResource("5_77s5y")]
+transform = Transform3D(-0.044301823, -1.0891986, -0.14725293, 1.099091, -0.044704188, 0, -0.0059843846, -0.14713126, 1.0900992, 34.709595, 1.2463194, -3.4882624)
+
+[node name="dead_spruce8" parent="." index="36" unique_id=1469237161 instance=ExtResource("5_77s5y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.094032, 1.2463194, 24.492287)
+
+[node name="spruce9" parent="." index="37" unique_id=1763555227 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(1.747036, 0, -0.9735838, 0, 2, 0, 0.9735838, 0, 1.747036, 45.11177, 0.88348156, 16.119627)
+
+[node name="spruce10" parent="." index="38" unique_id=533109008 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(0.62355447, 0, -2.9344811, 0, 3, 0, 2.9344811, 0, 0.62355447, 44.366924, 0.88348156, -6.2056236)
+
+[node name="spruce11" parent="." index="39" unique_id=2120953289 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(0.2512231, 0, 2.788707, 0, 2.8, 0, -2.788707, 0, 0.2512231, 14.853788, 0.88348156, -4.0682945)
+
+[node name="spruce12" parent="." index="40" unique_id=1029454937 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, 8.786547, 0.88348156, -8.589804)
+
+[node name="spruce13" parent="." index="41" unique_id=519316824 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(1.3099823, 0, -2.3609202, 0, 2.6999998, 0, 2.3609202, 0, 1.3099823, 42.296875, 0.88348156, -16.137188)
+
+[node name="spruce14" parent="." index="42" unique_id=32714626 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(-0.66722345, 0, 2.7193403, 0, 2.8, 0, -2.7193403, 0, -0.66722345, 21.612837, 0.88348156, 0.4132223)
+
+[node name="spruce15" parent="." index="43" unique_id=1427766046 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(-1.330884, 0, 1.7517842, 0, 2.2, 0, -1.7517842, 0, -1.330884, 50.29445, 0.88348156, -33.170185)
+
+[node name="spruce16" parent="." index="44" unique_id=809764643 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(-0.39925447, 0, 2.265082, 0, 2.3, 0, -2.265082, 0, -0.39925447, 38.502422, 0.88348156, -30.764694)
+
+[node name="spruce17" parent="." index="45" unique_id=747350000 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(2.7, 0, 0, 0, 2.7, 0, 0, 0, 2.7, 38.36188, 0.88348156, -22.943634)
+
+[node name="spruce18" parent="." index="46" unique_id=89810052 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(0.46028918, 0, -2.7619076, 0, 2.8, 0, 2.7619076, 0, 0.46028918, 38.303238, 0.88348156, -42.28586)
+
+[node name="spruce19" parent="." index="47" unique_id=1901946144 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(2.721929, 0, -1.261389, 0, 3, 0, 1.261389, 0, 2.721929, -3.6559954, 0.88348156, -34.6)
+
+[node name="spruce20" parent="." index="48" unique_id=1423400663 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, -34.19686, 0.88348156, 40.0403)
+
+[node name="spruce21" parent="." index="49" unique_id=2064021973 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -43.203766, 0.88348156, 31.175232)
+
+[node name="spruce22" parent="." index="50" unique_id=385543340 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(2.1, 0, 0, 0, 2.1, 0, 0, 0, 2.1, -38.420532, 0.88348156, 12.610851)
+
+[node name="spruce23" parent="." index="51" unique_id=569133186 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(3.1, 0, 0, 0, 3.1, 0, 0, 0, 3.1, -48.600174, 0.88348156, 17.889982)
+
+[node name="spruce24" parent="." index="52" unique_id=1791085773 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -46.201767, 0.88348156, 8.234467)
+
+[node name="spruce25" parent="." index="53" unique_id=1684908411 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(-0.6822155, 0, 2.7156181, 0, 2.8, 0, -2.7156181, 0, -0.6822155, -29.00935, 0.88348156, 33.257412)
+
+[node name="spruce26" parent="." index="54" unique_id=1603936174 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(-1.7525029, 0, 2.053955, 0, 2.6999998, 0, -2.053955, 0, -1.7525029, 13.100979, 0.88348156, 47.840393)
+
+[node name="spruce27" parent="." index="55" unique_id=586918453 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(2.7, 0, 0, 0, 2.7, 0, 0, 0, 2.7, 40.71053, 0.88348156, 48.69332)
+
+[node name="spruce28" parent="." index="56" unique_id=158325390 instance=ExtResource("3_vcx6c")]
+transform = Transform3D(1.4003545, 0, 2.0709918, 0, 2.5, 0, -2.0709918, 0, 1.4003545, 41.851814, 0.88348156, 42.857822)
+
+[node name="StaticBody3D7" parent="." index="57" unique_id=689929389 instance=ExtResource("4_rbsif")]
+transform = Transform3D(-0.5955925, -0.074147634, 1.9078188, 0.24708042, -1.9846791, -2.3282079e-10, 1.8932039, 0.23569229, 0.60019016, 13.659647, -3.396278, 19.797867)
+
+[node name="StaticBody3D8" parent="." index="58" unique_id=426892029 instance=ExtResource("4_rbsif")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -37.224022, 1.9951968, -35.66032)
+
+[node name="MeshInstance3D" parent="." index="59" unique_id=369452586 instance=ExtResource("6_vcx6c")]
+transform = Transform3D(-0.8524521, -0.011694777, -0.5224412, 0.004576914, 0.599393, -0.044738166, 0.52278477, -0.024316981, -0.85150063, -42.65013, 14.335788, -39.210114)
+surface_material_override/0 = ExtResource("7_rbsif")
+
+[node name="MeshInstance3D" parent="MeshInstance3D" index="0"]
+mesh = SubResource("TextMesh_77s5y")
+
+[node name="oak5" parent="." index="60" unique_id=2023532057 instance=ExtResource("2_7wk72")]
+transform = Transform3D(0.90130687, 0, 0.6305918, 0, 1.1, 0, -0.6305918, 0, 0.90130687, -20.444635, 1.040194, -41.871616)
+
+[node name="StaticBody3D9" parent="." index="61" unique_id=1800788271 instance=ExtResource("4_rbsif")]
+transform = Transform3D(0.11292996, 0.16506611, 0, -0.16506611, 0.11292996, 0, 0, 0, 0.2, -31.817612, 10.093579, -39.261307)
+
+[connection signal="pressed" from="HUD/winPopup/PanelContainer/Button" to="LevelManager" method="progress"]
+[connection signal="pressed" from="HUD/losePopup/PanelContainer/Button" to="LevelManager" method="retry"]
+
+[editable path="HUD/winPopup"]
+[editable path="HUD/losePopup"]
+[editable path="MeshInstance3D"]

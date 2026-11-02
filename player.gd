@@ -22,11 +22,13 @@ var flag_held_seconds: float = 0
 var map_is_open = false
 var paused = false
 var footprintTimer = 0
+var camera_default = Vector3.ZERO
 
 @onready var camera: Camera3D = $camera
 @onready var initialCameraPos = $camera.transform
 
 func _ready() -> void:
+	camera_default = $camera.transform.origin
 	capture_mouse()
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -103,7 +105,7 @@ func _physics_process(delta: float) -> void:
 		$camera.transform = $camera.transform.translated(cameraShake)
 	else:
 		flag_held_seconds = 0
-		$camera.transform.origin = Vector3.ZERO
+		$camera.transform.origin = camera_default
 		
 	if mouse_captured: _handle_joypad_camera_rotation(delta)
 	

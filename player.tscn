@@ -18,6 +18,23 @@ height = 0.2
 [sub_resource type="Environment" id="Environment_0dvor"]
 background_mode = 1
 background_color = Color(0.409047, 0.578269, 1, 1)
+ssao_enabled = true
+glow_enabled = true
+glow_intensity = 0.0
+glow_bloom = 0.04
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.34509128, 0.5674791, 1, 1)
+fog_light_energy = 2.14
+fog_sun_scatter = 0.35
+fog_density = 1.0
+fog_sky_affect = 0.44
+fog_depth_curve = 1.414214
+fog_depth_begin = 0.0
+fog_depth_end = 200.5
+adjustment_enabled = true
+adjustment_brightness = 0.73
+adjustment_saturation = 1.31
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_61vq8"]
 
@@ -83,6 +100,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.667469, 0)
 shape = SubResource("SphereShape3D_uo2s0")
 
 [node name="camera" type="Camera3D" parent="." unique_id=1554569888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9183173, 0)
 cull_mask = 262143
 environment = SubResource("Environment_0dvor")
 

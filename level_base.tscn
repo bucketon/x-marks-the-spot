@@ -225,9 +225,10 @@ transform = Transform3D(1, 0, 0, 0, -0.25881898, 0.9659259, 0, -0.9659259, -0.25
 light_color = Color(0.9067464, 0.83857113, 0.60590863, 1)
 light_energy = 2.387
 light_indirect_energy = 1.895
+light_volumetric_fog_energy = 2.818
 light_bake_mode = 1
 shadow_enabled = true
-shadow_opacity = 0.6
+shadow_opacity = 0.26
 shadow_blur = 2.367
 
 [node name="player" parent="." unique_id=1680852924 instance=ExtResource("2_84uvl")]

@@ -18,6 +18,6 @@ func playFootstepSound():
 		next = 1
 	
 
-func playFootstepSoundsRouter(pos:Vector2, rot:Vector3):
+func playFootstepSoundsRouter(_pos:Vector2, _rot:Vector3):
 	playFootstepSound()
 	
