@@ -22,6 +22,7 @@ config/icon="uid://cbemqkq7s1vb4"
 [autoload]
 
 TutorialFlags="*res://tutorial_flag.gd"
+Bgm="*uid://d0ifktj6tsf3a"
 
 [display]
 

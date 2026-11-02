@@ -19,6 +19,7 @@ var mouse_captured: bool = false
 var look_dir: Vector2 
 var is_touching_goal: bool = false
 var flag_held_seconds: float = 0
+var is_level_ended = false
 var map_is_open = false
 var paused = false
 var footprintTimer = 0
@@ -96,6 +97,9 @@ func _physics_process(delta: float) -> void:
 		magnitude = sprintSpeed
 		footstepPeriod = 0.3
 		
+	if Input.is_action_just_pressed("action"):
+		$FlagAudio.play()
+	
 	if Input.is_action_pressed("action"):
 		flag_held_seconds += delta
 		var rng = RandomNumberGenerator.new()
@@ -106,6 +110,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		flag_held_seconds = 0
 		$camera.transform.origin = camera_default
+		$FlagAudio.stop()
 		
 	if mouse_captured: _handle_joypad_camera_rotation(delta)
 	
@@ -119,12 +124,17 @@ func _physics_process(delta: float) -> void:
 			release_mouse()
 			map_is_open = true
 	
-	if flag_held_seconds >= flag_time:
+	if flag_held_seconds >= flag_time and not is_level_ended:
+		is_level_ended = true
 		if is_touching_goal:
 			$victory.emitting = true
+			$FlagAudio.stop()
+			$VictoryAudio.play()
 			victory.emit()
 			release_mouse()
 		else:
+			$FlagAudio.stop()
+			$FailureAudio.play()
 			defeat.emit()
 			release_mouse()
 		

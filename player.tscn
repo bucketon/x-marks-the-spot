@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dnvsj54d5mxd3" path="res://player.gd" id="1_5n85r"]
 [ext_resource type="Texture2D" uid="uid://dcrlu46xm21jr" path="res://resources/radial.png" id="2_h4jp6"]
+[ext_resource type="AudioStream" uid="uid://c64braujtvyip" path="res://resources/victory.wav" id="3_sweqy"]
+[ext_resource type="AudioStream" uid="uid://7l3qslcw1lk5" path="res://resources/failure.wav" id="4_2hs0m"]
+[ext_resource type="AudioStream" uid="uid://bx2i0iujtko7o" path="res://resources/flag.wav" id="5_1jxqw"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_rgx2l"]
 
@@ -134,6 +137,15 @@ visibility_aabb = AABB(-1.50946, -3.69443, -1.27238, 3.14962, 4.94236, 2.68263)
 trail_lifetime = 0.01
 process_material = SubResource("ParticleProcessMaterial_hyugj")
 draw_pass_1 = SubResource("PlaneMesh_fbc7u")
+
+[node name="VictoryAudio" type="AudioStreamPlayer" parent="." unique_id=241736135]
+stream = ExtResource("3_sweqy")
+
+[node name="FailureAudio" type="AudioStreamPlayer" parent="." unique_id=1940228942]
+stream = ExtResource("4_2hs0m")
+
+[node name="FlagAudio" type="AudioStreamPlayer" parent="." unique_id=1909501546]
+stream = ExtResource("5_1jxqw")
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="area_exited" from="Area3D" to="." method="_on_area_3d_area_exited"]

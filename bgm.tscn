@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://d0ifktj6tsf3a"]
+
+[ext_resource type="AudioStream" uid="uid://du7j0r4dd03m4" path="res://resources/orienteering.ogg" id="1_l7bcd"]
+
+[node name="BGM" type="AudioStreamPlayer" unique_id=1512012803]
+stream = ExtResource("1_l7bcd")
+autoplay = true
+parameters/looping = true
