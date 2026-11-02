@@ -43,7 +43,6 @@ func retry():
 func startNewGame():
 	loadData()
 	currentLevel = 0
-	highestUnlockedLevel = 0
 	saveData()
 	loadLevelAtIndex(currentLevel)
 	

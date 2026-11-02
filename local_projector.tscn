@@ -45,7 +45,7 @@ skeleton = NodePath("../MeshInstance3D")
 
 [node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=1496130317]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-cull_mask = 196607
+cull_mask = 180223
 current = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=434890979]

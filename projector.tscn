@@ -43,5 +43,5 @@ canvas_cull_mask = 4294180863
 
 [node name="Camera3D" type="Camera3D" parent="SubViewport" unique_id=2109492958]
 transform = Transform3D(-5.96046e-08, 0, 1, 0, 1, 0, -1, 0, -5.96046e-08, 0, 0, 0)
-cull_mask = 196607
+cull_mask = 180223
 current = true

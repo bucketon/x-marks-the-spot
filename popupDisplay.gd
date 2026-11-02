@@ -22,7 +22,7 @@ func _ready():
 		closed.emit()
 	else:
 		opened.emit()
-		
+	
 
 func showPopup():
 	visible = true

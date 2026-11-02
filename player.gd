@@ -154,6 +154,7 @@ func _physics_process(delta: float) -> void:
 		target_velocity.y = 30
 		
 	var _forward: Vector3 = camera.global_transform.basis * Vector3(direction.x, 0, direction.z)
+	_forward.y = 0
 	target_velocity.x = _forward.normalized().x * magnitude
 	target_velocity.z = _forward.normalized().z * magnitude
 	
